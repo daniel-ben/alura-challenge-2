@@ -1,0 +1,65 @@
+.header {
+  height: 56px;
+  width: 100%;
+  margin: 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  height: 34.05px;
+  width: auto;
+}
+
+.nav__text-field {
+  display: none;
+  max-width: 752px;
+}
+
+.nav__user {
+  display: none;
+
+  color: white;
+  font-size: 16px;
+
+  padding: 12px;
+}
+
+.nav__user-photo  {
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.nav__icon {
+  height: 20px;
+  padding: 14px;
+  fill: white;
+}
+
+@media screen and (min-width: 670px) {
+  .nav__search-icon {
+    display: none;
+  }
+
+  .nav__text-field {
+    display: block;
+
+    background: rgba(255, 255, 255, 0.16);
+    margin: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__menu-icon {
+    display: none;
+  }
+
+  .nav__user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
