@@ -7,7 +7,6 @@
 
 .project-menu__select-language {
   border: none;
-  color: rgba(255, 255, 255, 0.64);
 }
 
 .project-menu__color {
@@ -35,7 +34,7 @@
 }
 
 @media screen and (min-width: 1320px) {
-  .project-menu__subtitle:nth-child(3) {
+  .project-menu__sidebar-title:nth-child(3) {
     margin-top: 40px;
   }
 }

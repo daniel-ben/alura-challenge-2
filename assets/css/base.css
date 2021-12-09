@@ -1,7 +1,113 @@
 :root {
   --cor-fundo: #051D3B;
-  --cor-icones: white;
 }
+
+/* TYPOGRAPHY */
+.title-typ {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 31px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.body-typ {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px; 
+}
+
+.sidebar-title-typ {
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+
+  margin-top: 40px;
+}
+
+/* BUTTONS */
+.button-filled {
+  background: #5081FB;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #051D3B;
+}
+
+.button-filled:hover {
+  background: #7BA4FC;
+}
+
+.button-filled:active {
+  background: #7BA4FC;
+  border: 4px solid rgba(80, 129, 251, 0.72)
+}
+
+.button-filled:focus {
+  background: #96B9FD;
+}
+
+.button-outlined {
+  background: rgba(80, 129, 251, 0.08);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.button-outlined:hover {
+  background: rgba(80, 129, 251, 0.16);
+}
+
+.button-outlined:active {
+  background: rgba(80, 129, 251, 0.24);
+  border: 4px solid rgba(80, 129, 251, 0.24)
+}
+
+.button-outlined:focus {
+  background: rgba(80, 129, 251, 0.24);
+}
+
+/* INPUT */
+.input {
+  width: 100%;
+  max-width: 752px;
+  padding: 16px 14px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.text-input {
+  max-width: 724px;
+  width: calc(100% - 28px);
+
+  background: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.select-input {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.text-input:hover, .select-input:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* STRUCTURE */
 
 body {
   background: var(--cor-fundo);
@@ -13,41 +119,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.input {
-  width: 100%;
-  max-width: 752px;
-  padding: 16px 14px;
-  margin-top: 16px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.16);
-
-  color: rgba(255, 255, 255, 1);
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.text-field {
-  max-width: 724px;
-  width: calc(100% - 28px);
-}
-
-
-.subtitle {
-  color: white;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-
-  margin-top: 40px;
 }
 
 @media screen and (min-width: 920px) {
@@ -64,7 +135,7 @@ body {
     align-items: start;
   }
 
-  .subtitle {
+  .sidebar-title {
     margin: 0;
   }
 }

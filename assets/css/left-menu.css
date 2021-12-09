@@ -10,21 +10,21 @@
   flex-direction: row;
   align-items: center;
   gap: 16px;
+
+  opacity: 0.56;
+}
+
+.left-menu__link-Active {
+  opacity: 1;
 }
 
 .left-menu__img {
-  background: #5081FB;
   border-radius: 16px;
   height: 16px;
   padding: 16px 14px;
 }
 
 .left-menu__text {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
   color: white;
 }
 
