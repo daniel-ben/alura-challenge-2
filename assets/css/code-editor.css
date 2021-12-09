@@ -1,0 +1,68 @@
+.code-editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 752px;
+/* when desktop, display changes to grid */
+  grid-column: 2 / 3;
+}
+
+.code-editor__container {
+  background: #141414;
+  width: auto;
+
+  border: 32px solid #6bd1ff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* 3 dots on top of editor */
+.code-editor__dots {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.dots {
+  height: 12px;
+  width: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.first_dot {
+  background: #FF5F56;
+}
+
+.second_dot {
+  background: #FFBD2E;
+}
+
+.three_dot {
+  background: #27C93F;
+}
+
+/* code text */
+.code-editor__code {
+  color: white;
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* button */
+.code-editor__button {
+  background: rgba(80, 129, 251, 0.08);
+  border-radius: 8px;
+  margin-top: 32px;
+  padding: 16px;
+
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}

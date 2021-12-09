@@ -1,0 +1,35 @@
+.left-menu {
+  display: none;
+  flex-direction: column;
+}
+
+.left-menu__link {
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.left-menu__img {
+  background: #5081FB;
+  border-radius: 16px;
+  height: 16px;
+  padding: 16px 14px;
+}
+
+.left-menu__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+@media screen and (min-width: 1320px) {
+  .left-menu {
+    display: flex;
+  }
+}

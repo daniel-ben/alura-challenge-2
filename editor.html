@@ -7,12 +7,15 @@
     <link rel="stylesheet"  href="./assets/css/_reset.css">
     <link rel="stylesheet"  href="./assets/css/base.css">
     <link rel="stylesheet"  href="./assets/css/header.css">
+    <link rel="stylesheet"  href="./assets/css/code-editor.css">
+    <link rel="stylesheet"  href="./assets/css/project-menu.css">
+    <link rel="stylesheet" href="./assets/css/left-menu.css">
 </head>
 
 <body>
   <nav class="header">
     <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="nav__logo">
-    <input type="text" placeholder="Busque por algo" class="text-field nav__text-field"></input>
+    <input type="text" placeholder="Busque por algo" class="input text-field nav__text-field"></input>
     <div>
       <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="nav__icon nav__search-icon">
       <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="nav__icon nav__menu-icon">
@@ -22,7 +25,65 @@
       <p>Harry</p>
     </div>
   </nav>
-  <main>
 
+  <main class="content">
+
+    <section class="left-menu">
+      <p class="subtitle">menu</p>
+      <a href="#" class="left-menu__link">
+        <img src="./assets/img/code.svg" class="left-menu__img left-menu__code-editor">
+        <p class="left-menu__text">Editor de código</p>
+      </a>
+      <a href="#" class="left-menu__link">
+        <img src="./assets/img/community.svg" class="left-menu__img left-menu__community">
+        <p class="left-menu__text">Comunidade</p>
+      </a>
+    </section>
+
+    <section class="code-editor">
+      <div class="code-editor__container">
+        <div class="code-editor__dots">
+          <div class="dots first_dot"></div>
+          <div class="dots second_dot"></div>
+          <div class="dots three_dot"></div>
+        </div>
+        <p class="code-editor__code">
+          const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          <br><br>
+          const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+          <br><br>
+          const unfold = (f, seed) => {
+            const go = (f, seed, acc) => {
+              const res = f(seed)
+              return res ? go(f, res[1], acc.concat([res[0]])) : acc
+            }
+            return go(f, seed, [])
+          }
+        </p>
+      </div>
+      <button class="code-editor__button">Visualizar com o highlight</button>
+    </section>
+
+    <section class="project-menu">
+      <form class="project-menu__form">
+        <p class="subtitle project-menu__subtitle">seu projeto</p>
+        <fieldset class="project-menu__project-info">
+          <input type="text" placeholder="Nome do seu projeto" class="project-menu__name input text-field"></input>
+          <textarea placeholder="Descrição do seu projeto" class="project-menu__description input text-field"></textarea>
+        </fieldset>
+
+        <p class="subtitle project-menu__subtitle">Personalização</p>
+        <fieldset class="project-menu__customization">
+          <select class="project-menu__select-language input">
+            <option>Javascript</option>
+            <option>CSS</option>
+            <option>HTML</option>
+          </select>
+          <input class="project-menu__color" value="#6BD1FF" type="color"></input>
+        </fieldset>
+        <input type="submit" value="Salvar projeto" class="project-menu__submit-button input"></input>
+
+      </form>
+    </section>
   </main>
 </body>
