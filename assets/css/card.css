@@ -27,10 +27,16 @@
 .card-actions {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: space-between;
 
   margin-top: 24px;
+}
+
+.card-actions__buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .card-actions__buttons {
