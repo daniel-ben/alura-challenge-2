@@ -4,94 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge</title>
-    <link rel="stylesheet"  href="./assets/css/_reset.css">
-    <link rel="stylesheet"  href="./assets/css/base.css">
-    <link rel="stylesheet"  href="./assets/css/header.css">
-    <link rel="stylesheet"  href="./assets/css/code-editor.css">
-    <link rel="stylesheet"  href="./assets/css/project-menu.css">
+    <link rel="stylesheet" href="./assets/css/_reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/code-editor.css">
+    <link rel="stylesheet" href="./assets/css/project-menu.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
-</head>
+  </head>
 
-<body>
-  <nav class="header">
-    <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo">
-    <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-field"></input>
-    <div>
-      <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-header__search-icon>
-      <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-header__menu-icon>
-      <img src="./assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-header__close-icon>
-    </div>
-    <div class="user header__user">
-      <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
-      <p class="body-typ">Harry</p>
-    </div>
-  </nav>
-
-  <main class="content">
-
-    <section class="menu" data-menu>
-      <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-      <a href="#" class="menu__link menu__link-Active">
-        <img src="./assets/img/code.svg" class="menu-button menu__code-editor">
-        <p class="menu__text body-typ">Editor de código</p>
-      </a>
-      <a href="#" class="menu__link">
-        <img src="./assets/img/community.svg" class="menu-button menu__community">
-        <p class="menu__text body-typ">Comunidade</p>
-      </a>
-      <span class="menu__separator"></span>
-      <div class="user menu__user">
-        <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo menu__user-photo">
+  <body>
+    <nav class="header">
+      <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo">
+      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-field"></input>
+      <div>
+        <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-header__search-icon>
+        <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-header__menu-icon>
+        <img src="./assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-header__close-icon>
+      </div>
+      <div class="user header__user">
+        <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
         <p class="body-typ">Harry</p>
       </div>
-    </section>
+    </nav>
 
-    <section class="code-editor">
-      <div class="code-editor__container">
-        <div class="code-editor__dots">
-          <div class="dots first_dot"></div>
-          <div class="dots second_dot"></div>
-          <div class="dots three_dot"></div>
+    <main class="content">
+
+      <section class="menu" data-menu>
+        <p class="sidebar-title-typ menu__sidebar-title">menu</p>
+        <a href="./editor.html" class="menu__link menu__link-Active">
+          <img src="./assets/img/code.svg" class="menu-button menu__code-editor">
+          <p class="menu__text body-typ">Editor de código</p>
+        </a>
+        <a href="./comunidade.html" class="menu__link">
+          <img src="./assets/img/community.svg" class="menu-button menu__community">
+          <p class="menu__text body-typ">Comunidade</p>
+        </a>
+        <span class="menu__separator"></span>
+        <div class="user menu__user">
+          <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo menu__user-photo">
+          <p class="body-typ">Harry</p>
         </div>
-        <p class="code-editor__code">
-          const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-          <br><br>
-          const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-          <br><br>
-          const unfold = (f, seed) => {
-            const go = (f, seed, acc) => {
-              const res = f(seed)
-              return res ? go(f, res[1], acc.concat([res[0]])) : acc
+      </section>
+
+      <section class="code-editor">
+        <div class="code-editor__container">
+          <div class="code-editor__dots">
+            <div class="dots first_dot"></div>
+            <div class="dots second_dot"></div>
+            <div class="dots three_dot"></div>
+          </div>
+          <p class="code-editor__code">
+            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+            <br><br>
+            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            <br><br>
+            const unfold = (f, seed) => {
+              const go = (f, seed, acc) => {
+                const res = f(seed)
+                return res ? go(f, res[1], acc.concat([res[0]])) : acc
+              }
+              return go(f, seed, [])
             }
-            return go(f, seed, [])
-          }
-        </p>
-      </div>
-      <button class="code-editor__button button-outlined body-typ">Visualizar com o highlight</button>
-    </section>
+          </p>
+        </div>
+        <button class="code-editor__button button-outlined body-typ">Visualizar com o highlight</button>
+      </section>
 
-    <section class="project-menu">
-      <form class="project-menu__form">
-        <p class="sidebar-title-typ project-menu__sidebar-title">seu projeto</p>
-        <fieldset class="project-menu__project-info">
-          <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-menu__name"></input>
-          <textarea placeholder="Descrição do seu projeto" class="body-typ input text-input project-menu__description"></textarea>
-        </fieldset>
+      <section class="project-menu">
+        <form class="project-menu__form">
+          <p class="sidebar-title-typ project-menu__sidebar-title">seu projeto</p>
+          <fieldset class="project-menu__project-info">
+            <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-menu__name"></input>
+            <textarea placeholder="Descrição do seu projeto" class="body-typ input text-input project-menu__description"></textarea>
+          </fieldset>
 
-        <p class="sidebar-title-typ project-menu__sidebar-title">Personalização</p>
-        <fieldset class="project-menu__customization">
-          <select class="body-typ input select-input project-menu__select-language">
-            <option>Javascript</option>
-            <option>CSS</option>
-            <option>HTML</option>
-          </select>
-          <input type="color" value="#6BD1FF" class="project-menu__color"></input>
-        </fieldset>
-        <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-menu__submit-button"></input>
+          <p class="sidebar-title-typ project-menu__sidebar-title">Personalização</p>
+          <fieldset class="project-menu__customization">
+            <select class="body-typ input select-input project-menu__select-language">
+              <option>Javascript</option>
+              <option>CSS</option>
+              <option>HTML</option>
+            </select>
+            <input type="color" value="#6BD1FF" class="project-menu__color"></input>
+          </fieldset>
+          <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-menu__submit-button"></input>
 
-      </form>
-    </section>
-  </main>
+        </form>
+      </section>
+    </main>
 
-  <script src="./components/menu.js"></script>
-</body>
+    <script src="./components/menu.js"></script>
+  </body>
+</html>
