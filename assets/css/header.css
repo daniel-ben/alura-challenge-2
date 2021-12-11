@@ -25,27 +25,6 @@
 
 .header__user {
   display: none;
-
-  color: white;
-  font-size: 16px;
-
-  padding: 12px;
-
-  /* when desktop, display changes to grid */
-  grid-column: 3 / 4;
-  grid-row: 1 / 1;
-}
-
-.header__user-photo  {
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.header__icon {
-  height: 20px;
-  padding: 14px;
-  fill: white;
 }
 
 @media screen and (min-width: 670px) {
@@ -59,22 +38,26 @@
   }
 }
 
-@media screen and (min-width: 1120px) {  
+@media screen and (min-width: 1320px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 752px 1fr;
+  }
+
   .header__user {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-self: end;
+
+    grid-column: 3 / 4;
+    grid-row: 1 / 1;
   }
   
   .header__menu-icon {
     display: none;
   }
-}
 
-@media screen and (min-width: 1320px) {
-  .header {
-    display: grid;
-    grid-template-columns: 1fr 752px 1fr;
+  .header__close-icon {
+    display: none;
   }
 
   .header__text-field {

@@ -1,0 +1,99 @@
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+
+  position: absolute;
+  top: 92px;
+  right: 0;
+
+  width: 228px;
+  height: calc(100vh - 92px);
+  padding: 24px;
+
+  background: rgba(45, 65, 91, 1);
+  border-radius: 8px;
+}
+
+.menu-Active {
+  display: flex;
+}
+
+.menu__sidebar-title {
+  display: none;
+}
+
+.menu__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+  opacity: 0.56;
+}
+
+.menu__link:hover {
+  opacity: 0.72;
+}
+
+.menu__link:hover > .menu-button {
+  background: rgba(80, 129, 251, 0.64);
+}
+
+.menu__link:active {
+  opacity: 1;
+}
+
+.menu__link:active > .menu-button {
+  background: rgba(80, 129, 251, 1);
+}
+
+.menu__link-Active {
+  opacity: 1;
+}
+
+.menu__link-Active > .menu-button {
+  background: rgba(80, 129, 251, 1);
+}
+
+.menu__code-editor {
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+}
+
+.menu__community {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu__text {
+  color: white;
+}
+
+.menu__separator {
+  width: calc(100%);
+  border: 1px solid rgba(255, 255, 255, 1);
+  opacity: 0.08;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 1320px) {
+  .menu {
+    display: flex;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .menu__sidebar-title {
+    display: block;
+  }
+
+  .menu__separator {
+    display: none;
+  }
+
+  .menu__user {
+    display: none;
+  }
+}

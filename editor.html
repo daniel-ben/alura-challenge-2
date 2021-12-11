@@ -9,7 +9,7 @@
     <link rel="stylesheet"  href="./assets/css/header.css">
     <link rel="stylesheet"  href="./assets/css/code-editor.css">
     <link rel="stylesheet"  href="./assets/css/project-menu.css">
-    <link rel="stylesheet" href="./assets/css/left-menu.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 
 <body>
@@ -17,27 +17,33 @@
     <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo">
     <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-field"></input>
     <div>
-      <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="header__icon header__search-icon">
-      <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="header__icon header__menu-icon">
+      <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-header__search-icon>
+      <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-header__menu-icon>
+      <img src="./assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-header__close-icon>
     </div>
-    <div class="header__user">
-      <img src="./assets/img/Photo.png" alt="Foto do usuário" class="header__user-photo user-photo">
+    <div class="user header__user">
+      <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
       <p class="body-typ">Harry</p>
     </div>
   </nav>
 
   <main class="content">
 
-    <section class="left-menu">
-      <p class="sidebar-title-typ">menu</p>
-      <a href="#" class="left-menu__link left-menu__link-Active">
-        <img src="./assets/img/code.svg" class="button-filled left-menu__img left-menu__code-editor">
-        <p class="left-menu__text body-typ">Editor de código</p>
+    <section class="menu" data-menu>
+      <p class="sidebar-title-typ menu__sidebar-title">menu</p>
+      <a href="#" class="menu__link menu__link-Active">
+        <img src="./assets/img/code.svg" class="menu-button menu__code-editor">
+        <p class="menu__text body-typ">Editor de código</p>
       </a>
-      <a href="#" class="left-menu__link">
-        <img src="./assets/img/community.svg" class="button-outlined left-menu__img left-menu__community">
-        <p class="left-menu__text body-typ">Comunidade</p>
+      <a href="#" class="menu__link">
+        <img src="./assets/img/community.svg" class="menu-button menu__community">
+        <p class="menu__text body-typ">Comunidade</p>
       </a>
+      <span class="menu__separator"></span>
+      <div class="user menu__user">
+        <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo menu__user-photo">
+        <p class="body-typ">Harry</p>
+      </div>
     </section>
 
     <section class="code-editor">
@@ -86,4 +92,6 @@
       </form>
     </section>
   </main>
+
+  <script src="./components/menu.js"></script>
 </body>
