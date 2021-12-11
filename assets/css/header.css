@@ -18,9 +18,6 @@
 
 .header__text-field {
   display: none;
-
-  /* when desktop, display changes to grid */
-  grid-column: 2 / 3;
 }
 
 .header__user {
@@ -35,8 +32,21 @@
   .header__text-field {
     display: block;
     margin: 0 40px;
+    /* when desktop, display changes to grid */
+    grid-column: 2 / 3;
   }
 }
+
+/* make header text input align with content as screen grows */
+@media screen and (min-width: 952px) {
+  .header__text-field {
+    position: absolute;
+    right: calc( (100vw - 752px) / 2 - 42px );
+
+    width: calc(100vw / 1.5);
+  }
+}
+/*  */
 
 @media screen and (min-width: 1320px) {
   .header {
@@ -62,5 +72,6 @@
 
   .header__text-field {
     margin: 0;
+    position: static;
   }
 }
