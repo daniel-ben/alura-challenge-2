@@ -16,7 +16,7 @@
   border-radius: 8px;
 }
 
-.menu-Active {
+.menu--active {
   display: flex;
 }
 
@@ -49,11 +49,11 @@
   background: rgba(80, 129, 251, 1);
 }
 
-.menu__link-Active {
+.menu__link--active {
   opacity: 1;
 }
 
-.menu__link-Active > .menu-button {
+.menu__link--active > .menu-button {
   background: rgba(80, 129, 251, 1);
 }
 

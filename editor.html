@@ -14,12 +14,12 @@
 
   <body>
     <nav class="header">
-      <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo">
-      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-field"></input>
+      <img src="./assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
+      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
       <div>
-        <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-header__search-icon>
-        <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-header__menu-icon>
-        <img src="./assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-header__close-icon>
+        <img src="./assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-search-icon>
+        <img src="./assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-menu-icon>
+        <img src="./assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-close-icon>
       </div>
       <div class="user header__user">
         <img src="./assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
@@ -31,7 +31,7 @@
 
       <section class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-        <a href="./editor.html" class="menu__link menu__link-Active">
+        <a href="./editor.html" class="menu__link menu__link--active">
           <img src="./assets/img/code.svg" class="menu-button menu__code-editor">
           <p class="menu__text body-typ">Editor de código</p>
         </a>
@@ -80,7 +80,7 @@
 
           <p class="sidebar-title-typ project-menu__sidebar-title">Personalização</p>
           <fieldset class="project-menu__customization">
-            <select class="body-typ input select-input project-menu__select-language">
+            <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-menu__select-language">
               <option>Javascript</option>
               <option>CSS</option>
               <option>HTML</option>
@@ -94,5 +94,6 @@
     </main>
 
     <script src="./components/menu.js"></script>
+    <script src="./components/searchButton.js"></script>
   </body>
 </html>

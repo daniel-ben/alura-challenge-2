@@ -150,8 +150,8 @@
   margin-right: 8px;
 }
 
-.hidden {
-  display: none;
+.user-photo-small {
+  height: 24px;
 }
 
 /* STRUCTURE */
@@ -166,6 +166,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Utilities */
+.hidden {
+  display: none !important;
+}
+
+.active {
+  display: block !important;
 }
 
 @media screen and (min-width: 1320px) {

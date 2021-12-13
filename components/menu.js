@@ -1,24 +1,24 @@
-const button = document.querySelector('[data-header__menu-icon]');
-const close_icon = document.querySelector('[data-header__close-icon]');
+const menuButton = document.querySelector('[data-menu-icon]');
+const closeButton = document.querySelector('[data-close-icon]');
 const menu = document.querySelector('[data-menu]');
 
 let menu_isOpen = false;
 
-button.addEventListener('click', () => {  
+menuButton.addEventListener('click', () => {  
  
-  close_icon.classList.remove('hidden');
-  button.classList.add('hidden');
+  closeButton.classList.remove('hidden');
+  menuButton.classList.add('hidden');
 
-  menu.classList.add('menu-Active');
+  menu.classList.add('menu--active');
 
   menu_isOpen = !menu_isOpen;
 })
 
-close_icon.addEventListener('click', () => {
-  close_icon.classList.add('hidden');
-  button.classList.remove('hidden');
+closeButton.addEventListener('click', () => {
+  closeButton.classList.add('hidden');
+  menuButton.classList.remove('hidden');
 
-  menu.classList.remove('menu-Active');
+  menu.classList.remove('menu--active');
 
   menu_isOpen = !menu_isOpen;
 })

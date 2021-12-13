@@ -16,8 +16,9 @@
   grid-column: 1 / 2;
 }
 
-.header__text-field {
+.header__text-input {
   display: none;
+  margin: 0 40px;
 }
 
 .header__user {
@@ -29,17 +30,14 @@
     display: none;
   }
 
-  .header__text-field {
+  .header__text-input {
     display: block;
-    margin: 0 40px;
-    /* when desktop, display changes to grid */
-    grid-column: 2 / 3;
   }
 }
 
 /* make header text input align with content as screen grows */
 @media screen and (min-width: 952px) {
-  .header__text-field {
+  .header__text-input {
     position: absolute;
     right: calc( (100vw - 752px) / 2 - 42px );
 
@@ -70,8 +68,10 @@
     display: none;
   }
 
-  .header__text-field {
+  .header__text-input {
     margin: 0;
     position: static;
+
+    grid-column: 2 / 3;
   }
 }
