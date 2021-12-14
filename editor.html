@@ -47,7 +47,7 @@
       </section>
 
       <section class="code-editor">
-        <div class="code-editor__container">
+        <div class="code-editor__container" data-code-container>
           <div class="code-editor__dots">
             <div class="dots first_dot"></div>
             <div class="dots second_dot"></div>
@@ -81,11 +81,11 @@
           <p class="sidebar-title-typ project-menu__sidebar-title">Personalização</p>
           <fieldset class="project-menu__customization">
             <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-menu__select-language">
-              <option>Javascript</option>
-              <option>CSS</option>
-              <option>HTML</option>
+              <option class="option">Javascript</option>
+              <option class="option">CSS</option>
+              <option class="option">HTML</option>
             </select>
-            <input type="color" value="#6BD1FF" class="project-menu__color"></input>
+            <input type="color" value="#1ed457" class="project-menu__color" data-color-picker></input>
           </fieldset>
           <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-menu__submit-button"></input>
 
@@ -95,5 +95,6 @@
 
     <script src="./components/menu.js"></script>
     <script src="./components/searchButton.js"></script>
+    <script src="./components/changeCodeColor.js"></script>
   </body>
 </html>

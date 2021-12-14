@@ -9,6 +9,11 @@
   border: none;
 }
 
+.option {
+  background: #2D415B;
+  color: rgba(255, 255, 255, 0.64);  
+}
+
 .project-menu__color {
   width: 100%;
   height: 56px;
