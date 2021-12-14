@@ -50,6 +50,10 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+
+  background: transparent;
+  width: 100%;
+  height: fit-content;
 }
 
 /* button */
