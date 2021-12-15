@@ -1,6 +1,5 @@
-import { createCard } from "../components/createCard.js";
+import { showCards } from "../controller/showCards.js";
 
-const cards_section = document.querySelector('[data-cards-section]');
 const user = 
 {
   name: 'Harry',
@@ -17,8 +16,6 @@ http.onload = () => {
   const data = http.response;
   const cards = JSON.parse(data);
 
-  cards.forEach(card => {
-    cards_section.appendChild(createCard(card, user));
-  })
+  showCards(cards, user);
 }
 
