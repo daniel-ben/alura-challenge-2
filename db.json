@@ -1,0 +1,11 @@
+{
+  "cards": [
+    {
+      "name": "Primeiro Card",
+      "description": "Descrição do primeiro card",
+      "language": "JavaScript",
+      "color": "#32a852",
+      "content": "console.log('Hello World')"
+    }
+  ]
+}
