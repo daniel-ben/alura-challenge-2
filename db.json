@@ -10,12 +10,5 @@
       "isLiked": false,
       "comments": []
     }
-  ],
-
-  "users": [
-    {
-      "name": "Harry",
-      "photo": "./assets/img/Photo.png"
-    }
   ]
 }

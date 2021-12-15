@@ -43,6 +43,15 @@
 }
 
 /* code text */
+.code-highlighter__code {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  color: white;
+}
+
 .code-highlighter__code-editor {
   color: white;
   font-family: Roboto Mono;
