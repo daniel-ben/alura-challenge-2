@@ -9,6 +9,16 @@
       "likes": 0,
       "isLiked": false,
       "comments": []
+    },
+    {
+      "title": "Segundo Card",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim nulla ante, sed efficitur sapien dictum ac. In nec leo elit. Nulla commodo aliquet faucibus.",
+      "language": "JavaScript",
+      "color": "#eb3a34",
+      "content": "console.log('Hello World')",
+      "likes": 5,
+      "isLiked": false,
+      "comments": ["nice", "great"]
     }
   ]
 }

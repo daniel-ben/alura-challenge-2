@@ -2,13 +2,13 @@ const Card = (card, user) => {
 
   return (
     `
-    <div class="code-highlighter__container" data-code-container>
+    <div class="code-highlighter__container" style="border-color:${card.color}" data-code-container>
       <div class="code-highlighter__dots">
         <div class="dots first_dot"></div>
         <div class="dots second_dot"></div>
         <div class="dots third_dot"></div>
       </div>
-      <p class="code-highlighter__code" border-color="${card.color}" data-code-highlighter>${card.content}</p>
+      <p class="code-highlighter__code" data-code-highlighter>${card.content}</p>
     </div>
 
     <div class="card-content">
@@ -19,12 +19,12 @@ const Card = (card, user) => {
         <div class="card-actions__buttons-container">
 
           <div class="card-actions__buttons card-actions__comments">
-            <img src="../assets/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
+            <img src="../../public/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
             <span class="body-typ card-actions__numbers">${card.comments.length}</span>
           </div>
           
           <div class="card-actions__buttons card-actions__likes">
-            <img src="../assets/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
+            <img src="../../public/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
             <span class="body-typ card-actions__numbers">${card.likes}</span>
 
           </div>

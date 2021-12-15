@@ -1,4 +1,4 @@
-import { Card } from '../components/Card.js';
+import { Card } from './Card.js';
 
 const createCard = (card, user) => {
   const newCard = document.createElement('div');
