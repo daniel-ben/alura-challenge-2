@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/code-highlighter.css">
-    <link rel="stylesheet" href="../assets/css/project-menu.css">
+    <link rel="stylesheet" href="../assets/css/project-info.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
   </head>
 
@@ -60,24 +60,27 @@
         <button class="body-typ button-outlined code-highlighter__button ">Visualizar com o highlight</button>
       </section>
 
-      <section class="project-menu">
-        <form class="project-menu__form">
-          <p class="sidebar-title-typ project-menu__sidebar-title">seu projeto</p>
-          <fieldset class="project-menu__project-info">
-            <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-menu__name"></input>
-            <textarea placeholder="Descrição do seu projeto" class="body-typ input text-input project-menu__description"></textarea>
+      <section class="project-info">
+
+        <form class="project-info__form">
+
+          <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
+          <fieldset class="project-info__info">
+            <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title"></input>
+            <textarea placeholder="Descrição do seu projeto" class="body-typ input text-input project-info__description"></textarea>
           </fieldset>
 
-          <p class="sidebar-title-typ project-menu__sidebar-title">Personalização</p>
-          <fieldset class="project-menu__customization">
-            <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-menu__select-language">
+          <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
+          <fieldset class="project-info__customization">
+            <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-info__language">
               <option class="option">Javascript</option>
               <option class="option">CSS</option>
               <option class="option">HTML</option>
             </select>
-            <input type="color" value="#1ed457" class="project-menu__color" data-color-picker></input>
+            <input type="color" value="#1ed457" class="project-info__color" data-color-picker></input>
           </fieldset>
-          <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-menu__submit-button"></input>
+          
+          <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-info__submit-button"></input>
 
         </form>
       </section>

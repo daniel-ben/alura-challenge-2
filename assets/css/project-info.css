@@ -1,11 +1,11 @@
-.project-menu {
+.project-info {
   width: 100%;
   max-width: 752px;
   /* when desktop, display changes to grid */
   grid-column: 3 / 3;
 }
 
-.project-menu__select-language {
+.project-info__language {
   border: none;
 }
 
@@ -14,7 +14,7 @@
   color: rgba(255, 255, 255, 0.64);  
 }
 
-.project-menu__color {
+.project-info__color {
   width: 100%;
   height: 56px;
   padding: 8px;
@@ -26,12 +26,12 @@
   box-sizing: border-box;
 }
 
-.project-menu__submit-button {
+.project-info__submit-button {
   background: #5081FB;
 }
 
 @media screen and (min-width: 670px) {
-  .project-menu__customization {
+  .project-info__customization {
     display: flex;
     flex-direction: row;
     column-gap: 16px;
@@ -39,7 +39,7 @@
 }
 
 @media screen and (min-width: 1320px) {
-  .project-menu__sidebar-title:nth-child(3) {
+  .project-info__sidebar-title:nth-child(3) {
     margin-top: 40px;
   }
 }
