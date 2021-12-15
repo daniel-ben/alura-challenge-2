@@ -2,9 +2,9 @@
 
 #alurachallengefront2
 
-## Description
-
 Leia isto em [português](./README.md)
+
+## Description
 
 Website created during Alura's Front-end Challenge 2. The challenge objective is to simulate a real work situation, where the user must create a site for a client following a request.
 
