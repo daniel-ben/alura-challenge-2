@@ -1,4 +1,4 @@
-.code-editor {
+.code-highlighter {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   grid-column: 2 / 3;
 }
 
-.code-editor__container {
+.code-highlighter__container {
   background: #141414;
   width: auto;
 
@@ -18,7 +18,7 @@
 }
 
 /* 3 dots on top of editor */
-.code-editor__dots {
+.code-highlighter__dots {
   display: flex;
   margin-bottom: 24px;
 }
@@ -38,12 +38,12 @@
   background: #FFBD2E;
 }
 
-.three_dot {
+.third_dot {
   background: #27C93F;
 }
 
 /* code text */
-.code-editor__code {
+.code-highlighter__code-editor {
   color: white;
   font-family: Roboto Mono;
   font-style: normal;
@@ -59,7 +59,7 @@
 }
 
 /* button */
-.code-editor__button {
+.code-highlighter__button {
   background: rgba(80, 129, 251, 0.08);
   border-radius: 8px;
   margin-top: 32px;

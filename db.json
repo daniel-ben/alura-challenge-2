@@ -1,11 +1,21 @@
 {
   "cards": [
     {
-      "name": "Primeiro Card",
+      "title": "Primeiro Card",
       "description": "Descrição do primeiro card",
       "language": "JavaScript",
       "color": "#32a852",
-      "content": "console.log('Hello World')"
+      "content": "console.log('Hello World')",
+      "likes": 0,
+      "isLiked": false,
+      "comments": []
+    }
+  ],
+
+  "users": [
+    {
+      "name": "Harry",
+      "photo": "./assets/img/Photo.png"
     }
   ]
 }

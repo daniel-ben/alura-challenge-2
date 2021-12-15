@@ -14,11 +14,11 @@
   max-width: 752px;
 }
 
-.card-info {
+.card-content {
   padding: 24px;
 }
 
-.card-info__description {
+.card-content__description {
   color: white;
   opacity: 0.8;
   margin-top: 8px;
@@ -79,7 +79,7 @@
     display: none;
   }
 
-  .card:hover > .card-info .card-actions{
+  .card:hover > .card-content .card-actions{
     display: flex;
   }
 }

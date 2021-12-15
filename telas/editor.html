@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/_reset.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/code-editor.css">
+    <link rel="stylesheet" href="../assets/css/code-highlighter.css">
     <link rel="stylesheet" href="../assets/css/project-menu.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
   </head>
@@ -32,7 +32,7 @@
       <section class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
         <a href="./editor.html" class="menu__link menu__link--active">
-          <img src="../assets/img/code.svg" class="menu-button menu__code-editor">
+          <img src="../assets/img/code.svg" class="menu-button menu__code-highlighter">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
         <a href="./comunidade.html" class="menu__link">
@@ -46,16 +46,18 @@
         </div>
       </section>
 
-      <section class="code-editor">
-        <div class="code-editor__container" data-code-container>
-          <div class="code-editor__dots">
+      <section class="code-highlighter">
+        <div class="code-highlighter__container" data-code-container>
+
+          <div class="code-highlighter__dots">
             <div class="dots first_dot"></div>
             <div class="dots second_dot"></div>
-            <div class="dots three_dot"></div>
+            <div class="dots third_dot"></div>
           </div>
-          <textarea class="code-editor__code" placeholder="Escreva seu código aqui"></textarea>
+          
+          <textarea class="code-highlighter__code-editor" placeholder="Escreva seu código aqui"></textarea>
         </div>
-        <button class="code-editor__button button-outlined body-typ">Visualizar com o highlight</button>
+        <button class="body-typ button-outlined code-highlighter__button ">Visualizar com o highlight</button>
       </section>
 
       <section class="project-menu">
