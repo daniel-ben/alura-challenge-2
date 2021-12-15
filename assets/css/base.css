@@ -81,17 +81,17 @@
   background: rgba(80, 129, 251, 0.24);
 }
 
-.icon-button {
+.icon {
   height: 20px;
   padding: 14px;
   border-radius: 16px;
 }
 
-.icon-button:hover {
+.icon:hover {
   background: rgba(80, 129, 251, 0.08);
 }
 
-.icon-button:active {
+.icon:active {
   background: rgba(80, 129, 251, 0.16);
 }
 

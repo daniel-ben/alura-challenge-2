@@ -18,9 +18,9 @@
       <img src="../assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
       <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
       <div>
-        <img src="../assets/img/search-solid.svg" alt="Ícone de busca" class="icon-button header__icon header__search-icon" data-search-icon>
-        <img src="../assets/img/bars-solid.svg" alt="Ícone de menu" class="icon-button header__icon header__menu-icon" data-menu-icon>
-        <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon-button header__icon header__close-icon hidden" data-close-icon>
+        <img src="../assets/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
+        <img src="../assets/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
+        <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
       </div>
       <div class="user header__user">
         <img src="../assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
@@ -49,65 +49,12 @@
 
       <section class="cards-section">
         
-        <div class="card">
-
-          <div class="code-editor__container">
-
-            <div class="code-editor__dots">
-              <div class="dots first_dot"></div>
-              <div class="dots second_dot"></div>
-              <div class="dots three_dot"></div>
-            </div>
-
-            <p class="code-editor__code">
-              const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-              <br><br>
-              const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-              <br><br>
-              const unfold = (f, seed) => {
-                const go = (f, seed, acc) => {
-                  const res = f(seed)
-                  return res ? go(f, res[1], acc.concat([res[0]])) : acc
-                }
-                return go(f, seed, [])
-              }
-            </p>
-          </div>
-
-          <div class="card-info">
-            <p class="title-typ card-info__title">Título do projeto</p>
-            <p class="body-typ card-info__description">Essa é a descrição do projeto</p>
-            
-            <div class="card-actions">
-
-              <div class="card-actions__buttons-container">
-
-                <div class="card-actions__buttons card-actions__comments">
-                  <img src="../assets/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
-                  <span class="body-typ card-actions__numbers">9</span>
-                </div>
-                
-                <div class="card-actions__buttons card-actions__likes">
-                  <img src="../assets/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
-                  <span class="body-typ card-actions__numbers">9</span>
-                </div>
-              
-              </div>
-
-              <div class="user card__user">
-                <img src="../assets/img/Photo.png" alt="Foto do usuário" class="user-photo user-photo-small">
-                <p class="body-typ">@Harry</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        
       </section>
     </main>
 
     <script src="../components/menu.js"></script>
     <script src="../components/searchButton.js"></script>
     <script src="../components/like.js"></script>
+    <script src="../service/client-service.js"></script>
   </body>
 </html>
