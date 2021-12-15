@@ -8,7 +8,6 @@ const close_Button = document.querySelector('[data-close-icon]');
 let isActive = false;
 
 searchButton.addEventListener('click', () => {
-  console.log('click');
   if (!isActive) {
     logo.classList.add('hidden');
     searchInput.classList.add('active');
