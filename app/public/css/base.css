@@ -161,13 +161,6 @@ body {
   padding: 16px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Utilities */
 .hidden {
   display: none !important;
@@ -180,13 +173,6 @@ body {
 @media screen and (min-width: 1320px) {
   body {
     padding: 32px;
-  }
-
-  .content {
-    display: grid;
-    grid-gap: 0 40px;
-    align-items: start;
-    grid-template-columns: 1fr 752px 1fr;
   }
 
   .sidebar-title-typ  {

@@ -1,6 +1,7 @@
 {
   "cards": [
     {
+      "id": "0",
       "title": "Primeiro Card",
       "description": "Descrição do primeiro card",
       "language": "JavaScript",
@@ -11,6 +12,7 @@
       "comments": []
     },
     {
+      "id": "1",
       "title": "Segundo Card",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim nulla ante, sed efficitur sapien dictum ac. In nec leo elit. Nulla commodo aliquet faucibus.",
       "language": "JavaScript",
@@ -18,7 +20,32 @@
       "content": "console.log('Hello World')",
       "likes": 5,
       "isLiked": false,
-      "comments": ["nice", "great"]
+      "comments": [
+        "nice",
+        "great"
+      ]
+    },
+    {
+      "title": "teste",
+      "description": "teste",
+      "language": "Javascript",
+      "color": "#1ed457",
+      "content": "teste",
+      "likes": 0,
+      "isLiked": false,
+      "comments": [],
+      "id": "cqjfbnE"
+    },
+    {
+      "title": "Criar cartão",
+      "description": "Código para criar novo cartão",
+      "language": "Javascript",
+      "color": "#8a1ed2",
+      "content": "const createCard = (card) => {\n  return fetch('http://localhost:3000/cards', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      title: card.title,\n      description: card.description,\n      language: card.language,\n      color: card.color,\n      content: card.content,\n      likes: 0,\n      isLiked: false,\n      comments: [],\n    })\n  })\n  .then(response => console.log(response))\n}",
+      "likes": 0,
+      "isLiked": false,
+      "comments": [],
+      "id": "WYS_SE-"
     }
   ]
 }

@@ -3,7 +3,7 @@ const getCards = () => {
   .then(response => response.json())
 }
 
-const saveCard = (card) => {
+const createCard = (card) => {
   return fetch('http://localhost:3000/cards', {
     method: 'POST',
     headers: {
@@ -15,12 +15,15 @@ const saveCard = (card) => {
       language: card.language,
       color: card.color,
       content: card.content,
+      likes: 0,
+      isLiked: false,
+      comments: [],
     })
   })
-  .then(response => response.body)
+  .then(response => console.log(response))
 }
 
 export const clientService = { 
   getCards,
-  saveCard 
+  createCard 
 };
