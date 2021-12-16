@@ -28,8 +28,14 @@ const editCard = (id) => {
   })
 }
 
+const openCard = (id) => {
+  return fetch(`http://localhost:3000/cards/${id}`)
+  .then(response => response.json())
+}
+
 export const clientService = { 
   showCards,
   createCard,
-  editCard
+  editCard,
+  openCard
 };
