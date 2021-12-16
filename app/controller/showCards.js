@@ -17,7 +17,7 @@ const showCards = (cards, user) => {
 
 }
 
-clientService.fetchCards()
+clientService.getCards()
 .then(cards => {
   showCards(cards, user);
 });
