@@ -1,4 +1,4 @@
-const getCards = () => {
+const showCards = () => {
   return fetch('http://localhost:3000/cards')
   .then(response => response.json())
 }
@@ -20,7 +20,6 @@ const createCard = (card) => {
       comments: [],
     })
   })
-  .then(response => console.log(response))
 }
 
 const editCard = (id) => {
@@ -30,7 +29,7 @@ const editCard = (id) => {
 }
 
 export const clientService = { 
-  getCards,
+  showCards,
   createCard,
   editCard
 };
