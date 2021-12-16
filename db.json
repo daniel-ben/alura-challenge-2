@@ -14,10 +14,10 @@
     {
       "id": "1",
       "title": "Segundo Card",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim nulla ante, sed efficitur sapien dictum ac. In nec leo elit. Nulla commodo aliquet faucibus.",
+      "description": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit",
       "language": "JavaScript",
       "color": "#eb3a34",
-      "content": "console.log('Hello World')",
+      "content": "código longo com várias linhas",
       "likes": 5,
       "isLiked": false,
       "comments": [

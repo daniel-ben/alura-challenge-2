@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge - Editor</title>
-    <link rel="stylesheet" href="../css/_reset.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/content.css">
-    <link rel="stylesheet" href="../css/code-highlighter.css">
-    <link rel="stylesheet" href="../css/project-info.css">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../assets/css/_reset.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/content.css">
+    <link rel="stylesheet" href="../assets/css/code-highlighter.css">
+    <link rel="stylesheet" href="../assets/css/project-info.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
   </head>
 
   <body>
     <nav class="header">
-      <img src="../img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
+      <img src="../assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
       <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
       <div>
-        <img src="../img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
-        <img src="../img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
-        <img src="../img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
+        <img src="../assets/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
+        <img src="../assets/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
+        <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
       </div>
       <div class="user header__user">
-        <img src="../img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
+        <img src="../assets/img/Photo.png" alt="Foto do usuário" class="user-photo header__user-photo">
         <p class="body-typ">Harry</p>
       </div>
     </nav>
@@ -33,16 +33,16 @@
       <section class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
         <a href="./editor.html" class="menu__link menu__link--active">
-          <img src="../img/code.svg" class="menu-button menu__code-highlighter">
+          <img src="../assets/img/code.svg" class="menu-button menu__code-highlighter">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
         <a href="./comunidade.html" class="menu__link">
-          <img src="../img/community.svg" class="menu-button menu__community">
+          <img src="../assets/img/community.svg" class="menu-button menu__community">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
         <span class="menu__separator"></span>
         <div class="user menu__user">
-          <img src="../img/Photo.png" alt="Foto do usuário" class="user-photo menu__user-photo">
+          <img src="../assets/img/Photo.png" alt="Foto do usuário" class="user-photo menu__user-photo">
           <p class="body-typ">Harry</p>
         </div>
       </section>
@@ -67,7 +67,7 @@
           <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
           <fieldset class="project-info__info">
             <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title" data-title></input>
-            <textarea placeholder="Descrição do seu projeto" class="body-typ input text-input project-info__description" data-description></textarea>
+            <textarea placeholder="Descrição do seu projeto" maxlength="200" class="body-typ input text-input project-info__description" data-description></textarea>
           </fieldset>
 
           <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
@@ -85,10 +85,10 @@
       </form>
     </main>
 
-    <script src="../js/menu.js"></script>
-    <script src="../js/searchButton.js"></script>
-    <script src="../js/changeCodeColor.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/searchButton.js"></script>
+    <script src="../assets/js/changeCodeColor.js"></script>
 
-    <script type="module" src="../../controller/createCard.js"></script>
+    <script type="module" src="../controller/createCard.js"></script>
   </body>
 </html>

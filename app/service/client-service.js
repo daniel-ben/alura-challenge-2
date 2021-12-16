@@ -23,7 +23,14 @@ const createCard = (card) => {
   .then(response => console.log(response))
 }
 
+const editCard = (id) => {
+  return fetch(`http://localhost:3000/cards/${id}`, {
+    method: 'PATCH',
+  })
+}
+
 export const clientService = { 
   getCards,
-  createCard 
+  createCard,
+  editCard
 };

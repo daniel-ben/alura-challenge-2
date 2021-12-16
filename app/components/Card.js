@@ -19,12 +19,12 @@ const Card = (card, user) => {
         <div class="card-actions__buttons-container">
 
           <div class="card-actions__buttons card-actions__comments">
-            <img src="../../public/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
+            <img src="../assets/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
             <span class="body-typ card-actions__numbers">${card.comments.length}</span>
           </div>
           
           <div class="card-actions__buttons card-actions__likes">
-            <img src="../../public/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
+            <img src="../assets/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
             <span class="body-typ card-actions__numbers">${card.likes}</span>
 
           </div>
