@@ -5,6 +5,9 @@ const form = document.querySelector('[data-form]');
 form.addEventListener('submit', event => {
   event.preventDefault();
 
+  const url = new URL(window.location);
+  const id = url.searchParams.get("id");
+
   const content = event.target.querySelector('[data-content]').value;
 
   const title = event.target.querySelector('[data-title]').value;
@@ -15,5 +18,17 @@ form.addEventListener('submit', event => {
 
   const card = { title, description, language, color, content };
 
-  clientService.createCard(card);
+  //if (id) { edit instead of creating }
+  if (!id) {
+    clientService.createCard(card);
+  } else {
+    clientService.openCard(id)
+    .then(data => {
+      card.id = data.id;
+      card.likes = data.likes;
+      card.isLiked = data.isLiked;
+      card.comments = data.comments;
+      clientService.editCard(card.id, card);
+    })
+  }
 })

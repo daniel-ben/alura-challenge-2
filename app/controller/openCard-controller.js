@@ -11,14 +11,16 @@ const inputDescription = document.querySelector('[data-description]');
 const inputLanguage = document.querySelector('[data-language]');
 const inputColor = document.querySelector('[data-color-picker]');
 
-clientService.openCard(id)
-.then(card => {
-  inputContent.value = card.content;
-  inputContent.parentElement.style.borderColor = card.color;
-
-  inputTitle.value = card.title;
-  inputDescription.value = card.description;
-
-  inputLanguage.value = card.language;
-  inputColor.value = card.color;
-})
+if (id) {
+  clientService.openCard(id)
+  .then(card => {
+    inputContent.value = card.content;
+    inputContent.parentElement.style.borderColor = card.color;
+  
+    inputTitle.value = card.title;
+    inputDescription.value = card.description;
+  
+    inputLanguage.value = card.language;
+    inputColor.value = card.color;
+  })
+}
