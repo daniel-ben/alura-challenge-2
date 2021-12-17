@@ -19,6 +19,6 @@ clientService.openCard(id)
   inputTitle.value = card.title;
   inputDescription.value = card.description;
 
-  // inputLanguage.{card.language};
+  inputLanguage.value = card.language;
   inputColor.value = card.color;
 })
