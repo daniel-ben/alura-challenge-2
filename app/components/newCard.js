@@ -6,6 +6,9 @@ const newCard = (card, user) => {
   newCard.classList.add('card');
   newCard.innerHTML = Card(card, user);
 
+  const code = newCard.querySelector('[data-code-wrapper]')
+  hljs.highlightElement(code);
+
   return newCard;
 };
 

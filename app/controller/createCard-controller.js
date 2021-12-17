@@ -8,7 +8,7 @@ form.addEventListener('submit', event => {
   const url = new URL(window.location);
   const id = url.searchParams.get("id");
 
-  const content = event.target.querySelector('[data-content]').value;
+  const content = event.target.querySelector('[data-content]').innerText;
 
   const title = event.target.querySelector('[data-title]').value;
   const description = event.target.querySelector('[data-description]').value;

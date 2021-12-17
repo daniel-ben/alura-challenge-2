@@ -14,8 +14,8 @@ const inputColor = document.querySelector('[data-color-picker]');
 if (id) {
   clientService.openCard(id)
   .then(card => {
-    inputContent.value = card.content;
-    inputContent.parentElement.style.borderColor = card.color;
+    inputContent.innerText = card.content;
+    inputContent.parentElement.parentElement.style.borderColor = card.color;
   
     inputTitle.value = card.title;
     inputDescription.value = card.description;

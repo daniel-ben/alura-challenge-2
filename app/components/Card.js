@@ -8,7 +8,9 @@ const Card = (card, user) => {
         <div class="dots second_dot"></div>
         <div class="dots third_dot"></div>
       </div>
-      <p class="code-highlighter__code" data-code-highlighter>${card.content}</p>
+      <div class="code-wrapper" data-code-wrapper>
+        <pre><code class="code-highlighter__code hljs ${card.language}" data-code-highlighter>${card.content}</code></pre>
+      </div>
     </div>
 
     <div class="card-content">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge - Editor</title>
     <link rel="stylesheet" href="../assets/css/_reset.css">
+    <link rel="stylesheet" href="../assets/css/code-themes/dracula.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/content.css">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/menu.css">
   </head>
 
-  <body>
+  <body spellcheck="false">
     <nav class="header">
       <img src="../assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
       <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
@@ -57,10 +58,13 @@
               <div class="dots second_dot"></div>
               <div class="dots third_dot"></div>
             </div>
-            
-            <textarea class="code-highlighter__code-editor" placeholder="Escreva seu código aqui" data-content required></textarea>
+
+            <div class="code-wrapper" data-code-wrapper>
+              <code class="code-highlighter__code-editor hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
+            </div>
+
           </div>
-          <button class="body-typ button-outlined code-highlighter__button ">Visualizar com o highlight</button>
+          <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
         </section>
   
         <section class="project-info">
@@ -84,11 +88,15 @@
         </section>
       </form>
     </main>
-
+    <!-- static js -->
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/searchButton.js"></script>
     <script src="../assets/js/changeCodeColor.js"></script>
+    <script src="../assets/js/clearCode.js"></script>
+    <script src="../assets/js/highlight.js"></script>
 
+    <!-- api -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script type="module" src="../controller/createCard-controller.js"></script>
     <script type="module" src="../controller/openCard-controller.js"></script>
     <script type="module" src="../controller/createCard-controller.js"></script>
