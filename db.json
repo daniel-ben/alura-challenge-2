@@ -37,11 +37,11 @@
       "id": "WYS_SE-"
     },
     {
-      "title": "teste",
+      "title": "Editável",
       "description": "Este é um card editado",
       "language": "HTML",
       "color": "#d26f1e",
-      "content": "teste",
+      "content": "<h1> Este card é editável </h1>",
       "likes": 0,
       "isLiked": false,
       "comments": [],

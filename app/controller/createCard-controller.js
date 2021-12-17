@@ -20,7 +20,10 @@ form.addEventListener('submit', event => {
 
   //if (id) { edit instead of creating }
   if (!id) {
-    clientService.createCard(card);
+    clientService.createCard(card)
+    .then(() => {
+      window.location.href = '../telas/comunidade.html';
+    })
   } else {
     clientService.openCard(id)
     .then(data => {
@@ -29,6 +32,9 @@ form.addEventListener('submit', event => {
       card.isLiked = data.isLiked;
       card.comments = data.comments;
       clientService.editCard(card.id, card);
+    })
+    .then(() => {
+      window.location.href = '../telas/comunidade.html';
     })
   }
 })
