@@ -50,8 +50,10 @@
   font-weight: normal;
   font-size: 11px;
   line-height: 15px;
+  white-space: pre-wrap;
   
   background-color: transparent;
+  overflow-y: hidden;
 }
 
 .code-highlighter__code-editor {
@@ -66,8 +68,6 @@
   background: transparent;
   width: 100%;
   height: fit-content;
-
-  overflow-y: hidden;
 }
 
 /* button */

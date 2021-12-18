@@ -9,7 +9,7 @@ const Card = (card, user) => {
         <div class="dots third_dot"></div>
       </div>
       <div class="code-wrapper" data-code-wrapper>
-        <pre><code class="code-highlighter__code hljs ${card.language}" data-code-highlighter>${card.content}</code></pre>
+        <pre><code class="code-highlighter__code hljs ${card.language}" data-code-highlighter></code></pre>
       </div>
     </div>
 

@@ -1,26 +1,15 @@
 {
   "cards": [
     {
-      "title": "Primeiro card",
-      "description": "Olá mundo",
-      "language": "Javascript",
-      "color": "#1ed2b4",
-      "content": "console.log('Hello World')",
+      "title": "HTML",
+      "description": "teste html",
+      "language": "HTML",
+      "color": "#d21e1e",
+      "content": "<div> \n    <h1> testando html </h1>\n</div>\n\n<div> \n    <h1> testando html </h1>\n</div>\n",
       "likes": 0,
       "isLiked": false,
       "comments": [],
       "id": 1
-    },
-    {
-      "title": "Highlight text",
-      "description": "Highlight text button code",
-      "language": "Javascript",
-      "color": "#2d1ed2",
-      "content": "const language = document.querySelector('[data-language]');\nconst code_container = document.querySelector('[data-code-wrapper]');\nconst highlighter_button = document.querySelector('[data-highlighter-button]');\n\n\nconst highlight = event => {\n  event.preventDefault();\n\n\n  const code = code_container.innerText;\n  code_container.innerHTML = `<code class=\"code-highlighter__code-editor hljs ${language.value}\" contenteditable=\"true\" aria-label=\"Editor de código\" data-content required></code>`\n  code_container.querySelector('[data-content]').textContent = code;\n  hljs.highlightElement(code_container.querySelector('[data-content]'));\n} \n\n\nhighlighter_button.addEventListener('click', highlight);",
-      "likes": 0,
-      "isLiked": false,
-      "comments": [],
-      "id": 2
     }
   ]
 }
