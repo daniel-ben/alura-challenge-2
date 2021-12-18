@@ -2,11 +2,11 @@ const Card = (card, user) => {
 
   return (
     `
-    <div class="code-highlighter__container" style="border-color:${card.color}" data-code-container>
+    <div class="code-highlighter__container code-highlighter__container-community" style="border-color:${card.color}" data-code-container>
       <div class="code-highlighter__dots">
-        <div class="dots first_dot"></div>
-        <div class="dots second_dot"></div>
-        <div class="dots third_dot"></div>
+        <div class="dots dots-community first_dot"></div>
+        <div class="dots dots-community second_dot"></div>
+        <div class="dots dots-community third_dot"></div>
       </div>
       <div class="code-wrapper" data-code-wrapper>
         <pre><code class="code-highlighter__code hljs ${card.language}" data-code-highlighter></code></pre>

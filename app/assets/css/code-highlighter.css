@@ -18,10 +18,13 @@
   padding: 16px;
 }
 
+.code-highlighter__container-community {
+  padding: 12px;
+}
+
 /* 3 dots on top of editor */
 .code-highlighter__dots {
   display: flex;
-  margin-bottom: 24px;
 }
 
 .dots {
@@ -29,6 +32,11 @@
   width: 12px;
   margin-right: 8px;
   border-radius: 50%;
+}
+
+.dots-community {
+  height: 9px;
+  width: 9px;
 }
 
 .first_dot {
@@ -44,6 +52,11 @@
 }
 
 /* code text */
+.code-wrapper-editor {
+  margin-top: 16px;
+  margin-left: -6px;
+}
+
 .code-highlighter__code {
   font-family: Roboto Mono;
   font-style: normal;
@@ -51,6 +64,7 @@
   font-size: 11px;
   line-height: 15px;
   white-space: pre-wrap;
+  margin-left: -10px;
   
   background-color: transparent;
   overflow-y: hidden;
