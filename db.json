@@ -21,28 +21,6 @@
       "isLiked": false,
       "comments": [],
       "id": 2
-    },
-    {
-      "title": "Teste",
-      "description": "Highlight funcionando e cor mudando",
-      "language": "Javascript",
-      "color": "#1e96d2",
-      "content": "console.log('hello world')",
-      "likes": 0,
-      "isLiked": false,
-      "comments": [],
-      "id": 3
-    },
-    {
-      "title": "teste",
-      "description": "teste",
-      "language": "Javascript",
-      "color": "#1e84d2",
-      "content": "teste",
-      "likes": 0,
-      "isLiked": false,
-      "comments": [],
-      "id": 4
     }
   ]
 }
