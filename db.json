@@ -3,7 +3,7 @@
   "users": [
     {
       "id": "1",
-      "name": "User",
+      "username": "User",
       "login": "user",
       "photo": "./app/assets/img/user-solid.svg"
     },

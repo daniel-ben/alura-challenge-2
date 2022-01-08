@@ -49,7 +49,15 @@ const openCard = (id) => {
 
 const login = (user) => {
   return fetch(`https://api.github.com/users/${user}`)
-  .then(response => response.json())
+  // .then(response => response.json())
+  .then(response => {
+    if(response.status == 404) {
+      alert('User not found')
+      throw new Error('User not found')
+    } else {
+      return response.json()
+    }
+  })
 }
 
 const getUsers = () => {
