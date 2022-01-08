@@ -80,6 +80,10 @@ const createUser = (user) => {
   })
 }
 
+const showUser = (id) => {
+  return fetch(`http://localhost:3000/users/${id}`)
+  .then(response => response.json())
+}
 
 export const clientService = { 
   showCards,
@@ -88,5 +92,6 @@ export const clientService = {
   openCard,
   login,
   getUsers,
-  createUser
+  createUser,
+  showUser
 };

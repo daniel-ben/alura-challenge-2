@@ -23,11 +23,11 @@ login.addEventListener('submit', event => {
           clientService.createUser(user)
           .then(user => {
             //redirect to user page
-            window.location.href = `./editor.html`;
+            window.location.href = `./editor.html?userId=${user.id}`;
           })
         })
       } else {
-        window.location.href = `./editor.html`;
+        window.location.href = `./editor.html?userId=${user.id}`;
       }
     })
   } else {

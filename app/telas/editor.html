@@ -24,28 +24,23 @@
         <img src="../assets/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
         <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
       </div>
-      <div class="user header__user">
-        <img src="../assets/img/user-solid.svg" alt="Foto do usuário" class="user-photo header__user-photo">
-        <p class="body-typ">User</p>
-      </div>
+      <div class="user header__user" data-user-card></div>
     </nav>
 
     <main class="content">
 
       <section class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-        <a href="./editor.html" class="menu__link menu__link--active">
+        <a class="menu__link menu__link--active" data-link-editor>
           <img src="../assets/img/code.svg" class="menu-button menu__code-highlighter">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
-        <a href="./comunidade.html" class="menu__link">
+        <a class="menu__link" data-link-community>
           <img src="../assets/img/community.svg" class="menu-button menu__community">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
         <span class="menu__separator"></span>
-        <div class="user menu__user">
-          <img src="../assets/img/user-solid.svg" alt="Foto do usuário" class="user-photo menu__user-photo">
-          <p class="body-typ">User</p>
+        <div class="user menu__user" data-user-card>
         </div>
       </section>
 
@@ -96,11 +91,13 @@
     <script src="../assets/js/clearCode.js"></script>
     <script src="../assets/js/highlight.js"></script>
     <script src="../assets/js/unformattedPaste.js"></script>
+    <script src="../assets/js/addLinkHref.js"></script>
 
     <!-- api -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script type="module" src="../controller/createCard-controller.js"></script>
     <script type="module" src="../controller/openCard-controller.js"></script>
     <script type="module" src="../controller/createCard-controller.js"></script>
+    <script type="module" src="../controller/showUser-controller.js"></script>
   </body>
 </html>
