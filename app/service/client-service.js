@@ -47,9 +47,15 @@ const openCard = (id) => {
   .then(response => response.json())
 }
 
+const login = (user) => {
+  return fetch(`https://api.github.com/users/${user}`)
+  .then(response => response.json())
+}
+
 export const clientService = { 
   showCards,
   createCard,
   editCard,
-  openCard
+  openCard,
+  login
 };

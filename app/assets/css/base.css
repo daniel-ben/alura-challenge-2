@@ -1,5 +1,6 @@
 :root {
-  --cor-fundo: #051D3B;
+  --dark-color: #051D3B;
+  --dark-color-hover: #0A2A4D;
 }
 
 a, a:hover, a:visited, a:active {
@@ -162,7 +163,7 @@ a, a:hover, a:visited, a:active {
 /* STRUCTURE */
 
 body {
-  background: var(--cor-fundo);
+  background: var(--dark-color);
   padding: 16px;
 }
 
