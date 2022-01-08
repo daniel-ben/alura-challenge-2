@@ -7,6 +7,7 @@ form.addEventListener('submit', event => {
 
   const url = new URL(window.location);
   const id = url.searchParams.get("id");
+  const userId = url.searchParams.get("userId");
 
   const content = event.target.querySelector('[data-content]').innerText;
 
@@ -20,9 +21,12 @@ form.addEventListener('submit', event => {
 
   //if (id) { edit instead of creating }
   if (!id) {
-    clientService.createCard(card)
-    .then(() => {
-      window.location.href = '../telas/comunidade.html';
+    clientService.showUser(userId)
+    .then(user => {
+      clientService.createCard(card, user)
+      .then(() => {
+        window.location.href = `../telas/comunidade.html?userId=${userId}`;
+      })
     })
   } else {
     clientService.openCard(id)
@@ -34,7 +38,7 @@ form.addEventListener('submit', event => {
       clientService.editCard(card.id, card);
     })
     .then(() => {
-      window.location.href = '../telas/comunidade.html';
+      window.location.href = `../telas/comunidade.html?userId=${userId}`;
     })
   }
 })

@@ -35,7 +35,7 @@ const Card = (card, user) => {
         
         <div class="user card__user">
           <img src=${user.photo} alt="Foto do usuário" class="user-photo user-photo-small">
-          <p class="body-typ">${user.name}</p>
+          <p class="body-typ">${user.username}</p>
         </div>
       </div>
     </div>

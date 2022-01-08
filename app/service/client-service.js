@@ -3,7 +3,7 @@ const showCards = () => {
   .then(response => response.json())
 }
 
-const createCard = (card) => {
+const createCard = (card, user) => {
   return fetch('http://localhost:3000/cards', {
     method: 'POST',
     headers: {
@@ -18,6 +18,7 @@ const createCard = (card) => {
       likes: 0,
       isLiked: false,
       comments: [],
+      user: user.id
     })
   })
 }
@@ -37,6 +38,7 @@ const editCard = (id, card) => {
       likes: card.likes,
       isLiked: card.isLiked,
       comments: card.comments,
+      user: card.user
     })
   })
   .then(response => response.json())

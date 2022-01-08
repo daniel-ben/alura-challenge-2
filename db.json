@@ -1,14 +1,15 @@
 {
   "cards": [
     {
-      "title": "Login",
-      "description": "Código de login ",
+      "title": "texs",
+      "description": "teste",
       "language": "Javascript",
-      "color": "#931ed2",
-      "content": "const login = document.querySelector('[data-login-form]');\n\nlogin.addEventListener('submit', event => {\n\n  event.preventDefault();\n\n\n  const username = event.target.querySelector('[data-login-username]').value;\n\n\n\n  //if username is not empty\n\n  if (username) {\n\n    //get users from db\n\n    clientService.getUsers()\n\n    .then(users => {\n\n      //check if user is in db\n\n      const user = users.find(user => user.login === username)\n\n      //if user is not in db\n\n      if (user === undefined) {\n\n        //get user from github\n\n        clientService.login(username)\n\n        .then(user => {\n\n          //create user in db\n\n          clientService.createUser(user)\n\n          .then(user => {\n\n            //redirect to user page\n\n            window.location.href = `./editor.html`;\n\n          })\n\n        })\n\n      } else {\n\n        window.location.href = `./editor.html`;\n\n      }\n\n    })\n\n  } else {\n\n    alert('Please enter a username')\n\n  }\n\n});\n\n",
+      "color": "#1ed457",
+      "content": "teste",
       "likes": 0,
       "isLiked": false,
       "comments": [],
+      "user": 74229068,
       "id": 1
     }
   ],
