@@ -1,26 +1,17 @@
 {
-  "cards": [
+  "cards": [],
+  "users": [
     {
-      "title": "HTML",
-      "description": "teste html",
-      "language": "HTML",
-      "color": "#d21e1e",
-      "content": "<div> \n    <h1> testando html </h1>\n</div>\n\n<div> \n    <h1> testando html </h1>\n</div>\n",
-      "likes": 0,
-      "isLiked": false,
-      "comments": [],
-      "id": 1
+      "id": "1",
+      "name": "User",
+      "login": "user",
+      "photo": "./app/assets/img/user-solid.svg"
     },
     {
-      "title": "Código longo",
-      "description": "Testando código longo",
-      "language": "HTML",
-      "color": "#d2ab1e",
-      "content": "<section class=\"menu\" data-menu>\n        <p class=\"sidebar-title-typ menu__sidebar-title\">menu</p>\n        <a href=\"./editor.html\" class=\"menu__link menu__link--active\">\n          <img src=\"../assets/img/code.svg\" class=\"menu-button menu__code-highlighter\">\n          <p class=\"body-typ menu__text\">Editor de código</p>\n        </a>\n        <a href=\"./comunidade.html\" class=\"menu__link\">\n          <img src=\"../assets/img/community.svg\" class=\"menu-button menu__community\">\n          <p class=\"body-typ menu__text\">Comunidade</p>\n        </a>\n        <span class=\"menu__separator\"></span>\n        <div class=\"user menu__user\">\n          <img src=\"../assets/img/Photo.png\" alt=\"Foto do usuário\" class=\"user-photo menu__user-photo\">\n          <p class=\"body-typ\">Harry</p>\n        </div>\n      </section>\n<section class=\"menu\" data-menu>\n        <p class=\"sidebar-title-typ menu__sidebar-title\">menu</p>\n        <a href=\"./editor.html\" class=\"menu__link menu__link--active\">\n          <img src=\"../assets/img/code.svg\" class=\"menu-button menu__code-highlighter\">\n          <p class=\"body-typ menu__text\">Editor de código</p>\n        </a>\n        <a href=\"./comunidade.html\" class=\"menu__link\">\n          <img src=\"../assets/img/community.svg\" class=\"menu-button menu__community\">\n          <p class=\"body-typ menu__text\">Comunidade</p>\n        </a>\n        <span class=\"menu__separator\"></span>\n        <div class=\"user menu__user\">\n          <img src=\"../assets/img/Photo.png\" alt=\"Foto do usuário\" class=\"user-photo menu__user-photo\">\n          <p class=\"body-typ\">Harry</p>\n        </div>\n      </section>\n",
-      "likes": 0,
-      "isLiked": false,
-      "comments": [],
-      "id": 2
+      "id": 74229068,
+      "login": "daniel-ben",
+      "username": "Daniel Ben",
+      "photo": "https://github.com/daniel-ben.png?size=32"
     }
   ]
 }

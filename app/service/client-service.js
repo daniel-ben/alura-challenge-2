@@ -52,10 +52,33 @@ const login = (user) => {
   .then(response => response.json())
 }
 
+const getUsers = () => {
+  return fetch('http://localhost:3000/users')
+  .then(response => response.json())
+}
+
+const createUser = (user) => {
+  return fetch('http://localhost:3000/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      id: user.id,
+      login: user.login,
+      username: user.name,
+      photo: `https://github.com/${user.login}.png?size=32`,
+    })
+  })
+}
+
+
 export const clientService = { 
   showCards,
   createCard,
   editCard,
   openCard,
-  login
+  login,
+  getUsers,
+  createUser
 };

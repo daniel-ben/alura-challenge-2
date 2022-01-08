@@ -50,6 +50,11 @@
   color: var(--font-color);
 }
 
+.login__link {
+  padding: 12px;
+  font-size: 14px;
+}
+
 .login__button {
   background-color: var(--dark-color);
   color: white;
