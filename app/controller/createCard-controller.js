@@ -35,6 +35,7 @@ form.addEventListener('submit', event => {
       card.likes = data.likes;
       card.isLiked = data.isLiked;
       card.comments = data.comments;
+      card.author = data.author;
       clientService.editCard(card.id, card);
     })
     .then(() => {

@@ -18,7 +18,7 @@ const createCard = (card, user) => {
       likes: 0,
       isLiked: false,
       comments: [],
-      user: user.id
+      author: user.id
     })
   })
 }
@@ -38,7 +38,7 @@ const editCard = (id, card) => {
       likes: card.likes,
       isLiked: card.isLiked,
       comments: card.comments,
-      user: card.user
+      author: card.author
     })
   })
   .then(response => response.json())

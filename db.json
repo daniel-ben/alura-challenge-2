@@ -1,15 +1,15 @@
 {
   "cards": [
     {
-      "title": "texs",
-      "description": "teste",
+      "title": "sefs",
+      "description": "ef",
       "language": "Javascript",
-      "color": "#1ed457",
-      "content": "teste",
+      "color": "#d2c31e",
+      "content": "fesf",
       "likes": 0,
       "isLiked": false,
       "comments": [],
-      "user": 74229068,
+      "author": 74229068,
       "id": 1
     }
   ],
@@ -25,6 +25,18 @@
       "login": "daniel-ben",
       "username": "Daniel Ben",
       "photo": "https://github.com/daniel-ben.png?size=32"
+    },
+    {
+      "id": 13791385,
+      "login": "omariosouto",
+      "username": "Mario Souto",
+      "photo": "https://github.com/omariosouto.png?size=32"
+    },
+    {
+      "id": 9919,
+      "login": "github",
+      "username": "GitHub",
+      "photo": "https://github.com/github.png?size=32"
     }
   ]
 }

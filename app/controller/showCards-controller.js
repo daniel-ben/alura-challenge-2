@@ -5,9 +5,9 @@ clientService.showCards()
 .then(cards => {
   const cards_section = document.querySelector('[data-cards-section]');
   cards.forEach(card => {
-    clientService.showUser(card.user)
-    .then(user => {
-      cards_section.appendChild(newCard(card, user));
+    clientService.showUser(card.author)
+    .then(author => {
+      cards_section.appendChild(newCard(card, author));
     })
   });
 });
