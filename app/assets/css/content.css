@@ -19,6 +19,10 @@
     display: grid;
     grid-gap: 0 40px;
     align-items: start;
+    grid-template-columns: fit-content(20%) 752px 1fr;
+  }
+
+  .editor-content {
     grid-template-columns: 1fr 752px 1fr;
   }
 
@@ -30,5 +34,9 @@
 
   .code-highlighter {
     align-self: start;
+  }
+
+  .paleta__container {
+    grid-column: 2 / 4;
   }
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge - Comunidade</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/content.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/color-card.css">
+  </head>
+
+  <body>
+    <nav class="header">
+      <img src="../assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
+      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
+      <div>
+        <img src="../assets/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
+        <img src="../assets/img/bars-solid.svg" alt="Ícone dBe menu" class="icon header__icon header__menu-icon" data-menu-icon>
+        <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
+      </div>
+      <div class="user header__user" data-user-card></div>
+    </nav>
+
+    <main class="content paleta__content">
+
+      <section class="menu" data-menu>
+        <p class="sidebar-title-typ menu__sidebar-title">menu</p>
+        <a class="menu__link" href="./editor.html">
+          <img src="../assets/img/code.svg" class="menu-button menu__code-editor">
+          <p class="body-typ menu__text">Editor de código</p>
+        </a>
+        <a class="menu__link" href="./comunidade.html">
+          <img src="../assets/img/community.svg" class="menu-button menu__community">
+          <p class="body-typ menu__text">Comunidade</p>
+        </a>
+        <a class="menu__link menu__link--active" href="./paleta.html">
+          <img src="../assets/img/palette-solid.svg" class="menu-button menu__palette">
+          <p class="body-typ menu__text">Paleta de cores</p>
+        </a>
+        <span class="menu__separator"></span>
+        <div class="user menu__user" data-user-card></div>
+      </section>
+
+      <section class="paleta__container" data->
+
+        <h2 class="title-typ paleta__title">Cores</h2>
+        <div class="paleta__color-cards">
+          
+          <div class="color__card">
+            <div class="color__input-cover" data-color-cover></div>
+            <input type="color" name="light-color" value="#96B9FD" class="color__input" data-color-picker>
+            <div class="color__info color__hex">
+              <p class="sidebar-title-typ color__title">HEX</p>
+              <p class="color__value" data-color-hex>#96B9FD</p>
+            </div>
+            <div class="color__info color__rgb">
+              <p class="sidebar-title-typ color__title">RGB</p>
+              <p class="color__value" data-color-rgb>150, 185, 253</p>
+            </div>
+          </div>
+
+          <div class="color__card">
+            <div class="color__input-cover" data-color-cover></div>
+            <input type="color" name="medium-color" value="#7BA4FC" class="color__input" data-color-picker>
+            <div class="color__info color__hex">
+              <p class="sidebar-title-typ color__title">HEX</p>
+              <p class="color__value" data-color-hex>#7BA4FC</p>
+            </div>
+            <div class="color__info color__rgb">
+              <p class="sidebar-title-typ color__title">RGB</p>
+              <p class="color__value" data-color-rgb>123, 164, 252</p>
+            </div>
+          </div>
+
+          <div class="color__card">
+            <div class="color__input-cover" data-color-cover></div>
+            <input type="color" name="main-color" value="#5D81FB" class="color__input" data-color-picker>
+            <div class="color__info color__hex">
+              <p class="sidebar-title-typ color__title">HEX</p>
+              <p class="color__value" data-color-hex>#5D81FB</p>
+            </div>
+            <div class="color__info color__rgb">
+              <p class="sidebar-title-typ color__title">RGB</p>
+              <p class="color__value" data-color-rgb>80, 129, 251</p>
+            </div>
+          </div>
+
+          <div class="color__card">
+            <div class="color__input-cover" data-color-cover></div>
+            <input type="color" name="dark-color" value="#051D3B" class="color__input" data-color-picker>
+            <div class="color__info color__hex">
+              <p class="sidebar-title-typ color__title">HEX</p>
+              <p class="color__value" data-color-hex>#051D3B</p>
+            </div>
+            <div class="color__info color__rgb">
+              <p class="sidebar-title-typ color__title">RGB</p>
+              <p class="color__value" data-color-rgb>5, 29, 59</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+    <!-- static js -->
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/searchButton.js"></script>
+    <script src="../assets/js/colorPicker.js"></script>
+
+    <script type="module" src="../controller/showUser-controller.js"></script>
+  </body>
+</html>

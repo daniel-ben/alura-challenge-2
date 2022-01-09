@@ -31,13 +31,17 @@
 
       <section class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-        <a class="menu__link" data-link-editor>
+        <a class="menu__link" href="./editor.html">
           <img src="../assets/img/code.svg" class="menu-button menu__code-editor">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
-        <a class="menu__link menu__link--active" data-link-community>
+        <a class="menu__link menu__link--active" href="./comunidade.html">
           <img src="../assets/img/community.svg" class="menu-button menu__community">
           <p class="body-typ menu__text">Comunidade</p>
+        </a>
+        <a class="menu__link" href="./paleta.html">
+          <img src="../assets/img/palette-solid.svg" class="menu-button menu__palette">
+          <p class="body-typ menu__text">Paleta de cores</p>
         </a>
         <span class="menu__separator"></span>
         <div class="user menu__user" data-user-card></div>
@@ -48,11 +52,11 @@
       </section>
     </main>
 
+    <!-- static js -->
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/searchButton.js"></script>
-    <script src="../assets/js/addLinkHref.js"></script>
 
-    <!-- <script src="../assets/js/like.js"></script> -->
+    <!-- back-end -->
     <script type="module" src="../controller/showCards-controller.js"></script>
     <script type="module" src="../controller/showUser-controller.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>

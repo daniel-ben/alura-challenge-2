@@ -1,0 +1,68 @@
+.paleta__color-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.paleta__title {
+  text-align: center;
+}
+
+.color__card {
+  background-color: white;
+  border-radius: 8px;
+  margin: 16px;
+  width: 254px;
+}
+
+.color__input {
+  width: calc(100% - 16px);
+  height: 109px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.color__input-cover {
+  width: 238px;
+  height: 109px;
+  margin: 8px;
+  border-radius: 8px;
+  z-index: 98;
+  background-color: #96B9FD;
+
+  position: absolute;
+}
+
+.color__info {
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.color__title {
+  margin: 0;
+  color: #A3A3A3;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.color__value {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1320px) {
+  .paleta__color-cards {
+    justify-content: flex-start;
+  }
+
+  .paleta__title {
+    text-align: start;
+    margin-left: 16px;
+  }
+}

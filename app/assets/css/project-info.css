@@ -39,6 +39,12 @@
 }
 
 @media screen and (min-width: 1320px) {
+  .project-info {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 400px;
+  }
+
   .project-info__sidebar-title:nth-child(3) {
     margin-top: 40px;
   }
