@@ -1,8 +1,21 @@
-const Card = (card, user) => {
+const newCard = (card) => {
+  const newCard = document.createElement('a');
+  newCard.href = `../telas/editor.html?id=${card.id}`;
+  newCard.classList.add('card');
+  newCard.innerHTML = Card(card);
 
+  const code_wrapper = newCard.querySelector('[data-code-wrapper]');
+  const code = code_wrapper.querySelector('[data-code-highlighter]');
+  code.textContent = card.content;
+  hljs.highlightElement(code);
+
+  return newCard;
+};
+
+const Card = (card) => {
   return (
     `
-    <div class="code-highlighter__container code-highlighter__container-community" style="border-color:${card.color}" data-code-container>
+    <div class="code-highlighter__container code-highlighter__container-community" style="border-color:${card.color.hex}" data-code-container>
       <div class="code-highlighter__dots">
         <div class="dots dots-community first_dot"></div>
         <div class="dots dots-community second_dot"></div>
@@ -34,8 +47,8 @@ const Card = (card, user) => {
         </div>
         
         <div class="user card__user">
-          <img src=${user.photo} alt="Foto do usuário" class="user-photo user-photo-small">
-          <p class="body-typ">${user.username}</p>
+          <img src=${card.photourl} alt="Foto do usuário" class="user-photo user-photo-small">
+          <p class="body-typ">${card.username}</p>
         </div>
       </div>
     </div>
@@ -43,4 +56,4 @@ const Card = (card, user) => {
   )
 };
 
-export { Card };
+export { newCard };

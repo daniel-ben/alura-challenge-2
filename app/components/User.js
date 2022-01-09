@@ -1,6 +1,6 @@
 const User = (user) => {
   return (
-    `<img src="${user.photo}" alt="Foto do usuário" class="user-photo header__user-photo">
+    `<img src="${user.photourl}" alt="Foto do usuário" class="user-photo header__user-photo">
     <p class="body-typ">${user.username}</p>`
   )
 }

@@ -4,23 +4,19 @@ const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
 const inputContent = document.querySelector('[data-content]');
-
 const inputTitle = document.querySelector('[data-title]');
 const inputDescription = document.querySelector('[data-description]');
-
 const inputLanguage = document.querySelector('[data-language]');
 const inputColor = document.querySelector('[data-color-picker]');
 
 if (id) {
-  clientService.openCard(id)
+  clientService.getCard(id)
   .then(card => {
     inputContent.innerText = card.content;
-    inputContent.parentElement.parentElement.style.borderColor = card.color;
-  
+    inputContent.parentElement.parentElement.style.borderColor = card.color.hex;
     inputTitle.value = card.title;
     inputDescription.value = card.description;
-  
     inputLanguage.value = card.language;
-    inputColor.value = card.color;
+    inputColor.value = card.color.hex;
   })
 }

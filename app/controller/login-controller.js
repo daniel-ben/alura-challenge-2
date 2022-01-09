@@ -7,28 +7,12 @@ login.addEventListener('submit', event => {
 
   const username = event.target.querySelector('[data-login-username]').value;
 
-  //if username is not empty
   if (username) {
-    //get users from db
-    clientService.getUsers()
-    .then(users => {
-      //check if user is in db
-      const user = users.find(user => user.login === username)
-      //if user is not in db
-      if (user === undefined) {
-        //get user from github
-        clientService.login(username)
-        .then(user => {
-          //create user in db
-          clientService.createUser(user)
-          .then(user => {
-            //redirect to user page
-            window.location.href = `./editor.html?userId=${user.id}`;
-          })
-        })
-      } else {
-        window.location.href = `./editor.html?userId=${user.id}`;
-      }
+    clientService.getGitUser(username)
+    .then(user => {
+      const currentUser = {username: user.name, photourl: `https://github.com/${user.login}.png?size=32`};
+      sessionStorage.setItem('user', JSON.stringify(currentUser));
+      window.location.href = './editor.html';
     })
   } else {
     alert('Please enter a username')
