@@ -49,59 +49,64 @@
         <h2 class="title-typ paleta__title">Cores</h2>
         <div class="paleta__color-cards">
           
-          <div class="color__card">
+          <div class="color__card" data-color-card>
             <div class="color__input-cover" data-color-cover></div>
-            <input type="color" name="light-color" value="#96B9FD" class="color__input" data-color-picker>
+            <input type="color" name="lightest-color" value="#96B9FD" class="color__input" data-color-picker>
             <div class="color__info color__hex">
               <p class="sidebar-title-typ color__title">HEX</p>
-              <p class="color__value" data-color-hex>#96B9FD</p>
+              <p class="color__value" contenteditable data-color-hex>#96B9FD</p>
             </div>
             <div class="color__info color__rgb">
               <p class="sidebar-title-typ color__title">RGB</p>
-              <p class="color__value" data-color-rgb>150, 185, 253</p>
+              <p class="color__value" contenteditable data-color-rgb>150, 185, 253</p>
             </div>
+            <p class="body-typ color__reset" data-color-reset>Resetar</p>
           </div>
 
-          <div class="color__card">
+          <div class="color__card" data-color-card>
             <div class="color__input-cover" data-color-cover></div>
-            <input type="color" name="medium-color" value="#7BA4FC" class="color__input" data-color-picker>
+            <input type="color" name="light-color" value="#7BA4FC" class="color__input" data-color-picker>
             <div class="color__info color__hex">
               <p class="sidebar-title-typ color__title">HEX</p>
-              <p class="color__value" data-color-hex>#7BA4FC</p>
+              <p class="color__value" contenteditable data-color-hex>#7BA4FC</p>
             </div>
             <div class="color__info color__rgb">
               <p class="sidebar-title-typ color__title">RGB</p>
-              <p class="color__value" data-color-rgb>123, 164, 252</p>
+              <p class="color__value" contenteditable data-color-rgb>123, 164, 252</p>
             </div>
+            <p class="body-typ color__reset" data-color-reset>Resetar</p>
           </div>
 
-          <div class="color__card">
+          <div class="color__card" data-color-card>
             <div class="color__input-cover" data-color-cover></div>
-            <input type="color" name="main-color" value="#5D81FB" class="color__input" data-color-picker>
+            <input type="color" name="primary-color" value="#5D81FB" class="color__input" data-color-picker>
             <div class="color__info color__hex">
               <p class="sidebar-title-typ color__title">HEX</p>
-              <p class="color__value" data-color-hex>#5D81FB</p>
+              <p class="color__value" contenteditable data-color-hex>#5D81FB</p>
             </div>
             <div class="color__info color__rgb">
               <p class="sidebar-title-typ color__title">RGB</p>
-              <p class="color__value" data-color-rgb>80, 129, 251</p>
+              <p class="color__value" contenteditable data-color-rgb>80, 129, 251</p>
             </div>
+            <p class="body-typ color__reset" data-color-reset>Resetar</p>
           </div>
 
-          <div class="color__card">
+          <div class="color__card" data-color-card>
             <div class="color__input-cover" data-color-cover></div>
             <input type="color" name="dark-color" value="#051D3B" class="color__input" data-color-picker>
             <div class="color__info color__hex">
               <p class="sidebar-title-typ color__title">HEX</p>
-              <p class="color__value" data-color-hex>#051D3B</p>
+              <p class="color__value" contenteditable data-color-hex>#051D3B</p>
             </div>
             <div class="color__info color__rgb">
               <p class="sidebar-title-typ color__title">RGB</p>
-              <p class="color__value" data-color-rgb>5, 29, 59</p>
+              <p class="color__value" contenteditable data-color-rgb>5, 29, 59</p>
             </div>
+            <p class="body-typ color__reset" data-color-reset>Resetar</p>
           </div>
 
         </div>
+
       </section>
 
     </main>
@@ -109,6 +114,7 @@
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/searchButton.js"></script>
     <script src="../assets/js/colorPicker.js"></script>
+    <script src="../assets/js/colorScheme.js"></script>
 
     <script type="module" src="../controller/showUser-controller.js"></script>
   </body>

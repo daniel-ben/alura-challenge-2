@@ -1,28 +1,18 @@
-const covers = document.querySelectorAll('[data-color-cover]');
-const colorPickers = document.querySelectorAll('[data-color-picker]');
+const cards = document.querySelectorAll('[data-color-card]');
 
-covers.forEach(cover => {
-  cover.style.backgroundColor = cover.parentNode.querySelector('[data-color-picker]').value;
-  cover.addEventListener('click', event => {
-    const target = event.target;
-    const colorPicker = target.parentNode.querySelector('[data-color-picker]');
+const defaultScheme = 
+{
+  'lightest-color' : '150, 185, 253',
+  'light-color' : '123, 164, 252',
+  'primary-color' : '80, 129, 251',
+  'dark-color' : '5, 29, 59'
+}
+
+const openColorPickerOnClick = (cover, colorPicker) => {
+  cover.addEventListener('click', () => {
     colorPicker.click();
   });
-});
-
-colorPickers.forEach(colorPicker => {
-  colorPicker.addEventListener('change', event => {
-    const target = event.target;
-    const color = target.value;
-    const cover = target.parentNode.querySelector('[data-color-cover]');
-    const hex = target.parentNode.querySelector('[data-color-hex]');
-    const rgb = target.parentNode.querySelector('[data-color-rgb]');
-    cover.style.backgroundColor = color;
-    hex.innerText = color;
-    const rgbColor = hexToRgb(color);
-    rgb.innerText = `${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}`;
-  });
-});
+};
 
 const hexToRgb = hex => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -31,4 +21,52 @@ const hexToRgb = hex => {
     g: parseInt(result[2], 16),
     b: parseInt(result[3], 16)
   } : null;
+};
+
+const saveColorScheme = (colorName, rgbColor) => {
+  const localStorage = window.localStorage;
+  const colorScheme =  !localStorage.colorScheme ?  {}  :  JSON.parse(localStorage.colorScheme); 
+
+  colorScheme[colorName] = rgbColor;
+  localStorage.setItem('colorScheme', JSON.stringify(colorScheme));
 }
+
+const changeColorValues = (colorPicker, name, hex, rgb) => {
+  colorPicker.addEventListener('change', () => {
+    const color = colorPicker.value;
+    const rgbObject = hexToRgb(color);
+    const rgbColor = `${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}`;
+    
+    hex.innerText = color;
+    rgb.innerText = rgbColor;
+
+    //change root color values
+    document.documentElement.style.setProperty(`--${name}`, rgbColor);    
+  
+    saveColorScheme(name, rgbColor);
+  });
+}
+
+const resetColor = (button, name) => {
+  button.addEventListener('click', () => {
+    const defaultColor = defaultScheme[`${name}`];
+    saveColorScheme(name, defaultColor);
+    location.reload();
+  });
+}
+
+cards.forEach(card => {
+  const cover = card.querySelector('[data-color-cover]');
+  const colorPicker = card.querySelector('[data-color-picker]');
+  const colorName = colorPicker.getAttribute('name');
+  const hex = card.querySelector('[data-color-hex]');
+  const rgb = card.querySelector('[data-color-rgb]');
+  const resetButton = card.querySelector('[data-color-reset]');
+
+  cover.style.backgroundColor = `rgb(var(--${colorName}))`;    
+
+  openColorPickerOnClick(cover, colorPicker);
+  changeColorValues(colorPicker, colorName, hex, rgb);
+  resetColor(resetButton, colorName);
+});
+
