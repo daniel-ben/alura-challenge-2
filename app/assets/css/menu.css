@@ -13,7 +13,7 @@
   height: auto;
   padding: 24px;
 
-  background: rgba(45, 65, 91, 1);
+  background: rgb(var(--menu-color));
   border-radius: 8px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .menu__link:hover > .menu-button {
-  background: rgba(80, 129, 251, 0.64);
+  background: rgba(var(--primary-color), 0.64);
 }
 
 .menu__link:active {
@@ -47,7 +47,7 @@
 }
 
 .menu__link:active > .menu-button {
-  background: rgba(80, 129, 251, 1);
+  background: rgba(var(--primary-color), 1);
 }
 
 .menu__link--active {
@@ -55,7 +55,7 @@
 }
 
 .menu__link--active > .menu-button {
-  background: rgba(80, 129, 251, 1);
+  background: rgba(var(--primary-color), 1);
 }
 
 .menu__code-editor {

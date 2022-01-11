@@ -26,9 +26,6 @@
   box-sizing: border-box;
 }
 
-.project-info__submit-button {
-  background: #5081FB;
-}
 
 @media screen and (min-width: 670px) {
   .project-info__customization {

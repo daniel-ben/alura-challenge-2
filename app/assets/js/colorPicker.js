@@ -5,7 +5,9 @@ const defaultScheme =
   'lightest-color' : '150, 185, 253',
   'light-color' : '123, 164, 252',
   'primary-color' : '80, 129, 251',
-  'dark-color' : '5, 29, 59'
+  'dark-color' : '5, 29, 59',
+  'input-color': '255, 255, 255',
+  'menu-color': '45, 65, 91',
 }
 
 const openColorPickerOnClick = (cover, colorPicker) => {

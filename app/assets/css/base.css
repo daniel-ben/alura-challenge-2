@@ -3,6 +3,8 @@
   --light-color: 123, 164, 252;
   --primary-color: 80, 129, 251;
   --dark-color: 5, 29, 59;
+  --input-color: 255, 255, 255;
+  --menu-color: 45, 65, 91;
 }
 
 a, a:hover, a:visited, a:active {
@@ -39,6 +41,27 @@ a, a:hover, a:visited, a:active {
   text-transform: uppercase;
 
   margin-top: 40px;
+}
+
+/* FORM COMPONENTS */
+.input {
+  width: 100%;
+  max-width: 752px;
+  padding: 16px 14px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: rgba(var(--input-color), 0.16);
+  color: rgba(var(--input-color), 0.64);
+}
+
+.text-input {
+  max-width: 724px;
+  width: calc(100% - 28px);
+
+}
+
+.text-input:hover, .select-input:hover {
+  background: rgba(var(--input-color), 0.24);
 }
 
 /* BUTTONS */
@@ -98,44 +121,18 @@ a, a:hover, a:visited, a:active {
 }
 
 .icon:hover {
-  background: rgba(80, 129, 251, 0.08);
+  background: rgba(var(--primary-color), 0.08);
 }
 
 .icon:active {
-  background: rgba(80, 129, 251, 0.16);
+  background: rgba(var(--primary-color), 0.16);
 }
 
 .menu-button {
-  background: rgba(80, 129, 251, 0.16);
+  background: rgba(var(--primary-color), 0.16);
   border-radius: 16px;
   height: 20px;
   padding: 14px;
-}
-
-/* FORM COMPONENTS */
-.input {
-  width: 100%;
-  max-width: 752px;
-  padding: 16px 14px;
-  margin-top: 16px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.text-input {
-  max-width: 724px;
-  width: calc(100% - 28px);
-
-  background: rgba(255, 255, 255, 0.16);
-  color: rgba(255, 255, 255, 0.64);
-}
-
-.select-input {
-  color: rgba(255, 255, 255, 0.64);
-}
-
-.text-input:hover, .select-input:hover {
-  background: rgba(255, 255, 255, 0.24);
 }
 
 /* USER */
@@ -150,7 +147,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .user:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(var(--input-color), 0.08);
   border-radius: 8px;
 }
 
