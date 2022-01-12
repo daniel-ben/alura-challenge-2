@@ -80,8 +80,11 @@ const createCard = (card, user, id) => {
   localStorage.setItem("cards", JSON.stringify(cards));
 };
 
-const editCard = (id, card) => {
-  console.log('editCard');
+const updateCard = (card, id) => {
+  const localStorage = window.localStorage;
+  const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  cards[id] = card;
+  localStorage.setItem("cards", JSON.stringify(cards));
 };
 
 // GIT API
@@ -104,6 +107,6 @@ export const clientService = {
   getCards,
   getCard,
   createCard,
-  editCard,
+  updateCard,
   getGitUser,
 };

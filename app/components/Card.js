@@ -2,6 +2,7 @@ const newCard = (card) => {
   const newCard = document.createElement('a');
   newCard.href = `../telas/editor.html?id=${card.id}`;
   newCard.classList.add('card');
+  newCard.dataset.cardId = card.id;
   newCard.innerHTML = Card(card);
 
   const code_wrapper = newCard.querySelector('[data-code-wrapper]');
@@ -38,9 +39,9 @@ const Card = (card) => {
             <span class="body-typ card-actions__numbers">${card.comments.length}</span>
           </div>
           
-          <div class="card-actions__buttons card-actions__likes">
-            <img src="../assets/img/like.svg" alt="ícone de comentários" class="card-actions__icon" data-like-button>
-            <span class="body-typ card-actions__numbers">${card.likes}</span>
+          <div class="card-actions__buttons card-actions__likes" data-like-button>
+            <img src=${card.isliked ? "../assets/img/like-active.svg" : "../assets/img/like.svg"} alt="ícone de likes" class="card-actions__icon">
+            <span class="body-typ card-actions__numbers" data-likes-counter>${card.likes}</span>
 
           </div>
         
