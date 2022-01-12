@@ -38,6 +38,12 @@
   cursor: pointer;
 }
 
+.color__label {
+  margin-left: 12px;
+  color: #A3A3A3;
+  font-size: 14px;
+}
+
 .color__info {
   margin: 16px;
   display: flex;
