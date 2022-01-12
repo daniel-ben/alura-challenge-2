@@ -33,13 +33,14 @@ Foi fornecido um template no [figma](https://www.figma.com/file/Ve4hpTfmMa7yAFne
 - Você também pode editar as cores do site na página de *paleta de cores*. As mudanças ficarão salvas no local storage
 
 ## Screenshots
-![](./assets/img/editor-screen.png)
-![](./assets/img/comunidade-screen.png)
-![](./assets/img/style_guide-screen.png)
+![](./app/assets/img/editor-screen.png)
+![](./app/assets/img/comunidade-screen.png)
+![](./app/assets/img/style_guide-screen.png)
 
 ## Construido com 
 - HTML
 - CSS
+- BEM (Block, Element, Modifier)
 - Javascript
 - Flexbox 
 - Grid Layout
