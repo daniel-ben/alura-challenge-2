@@ -1,7 +1,7 @@
 const readOnlyToken = "33c9b5a3cba02275c1ee49fc0d79d9";
 
 // READ ONLY
-const getCards = () => {
+const getCards = () => { //from db
   return fetch(
     'https://graphql.datocms.com/',
     {
@@ -33,7 +33,7 @@ const getCards = () => {
   .then((response) => (response.data.allCards));
 }
 
-const getCard = (id) => {
+const getCard = (id) => { 
   return fetch(
     'https://graphql.datocms.com/',
     {
@@ -59,45 +59,29 @@ const getCard = (id) => {
   .then(response => response.data.card);
 };
 
-// FULL ACCESS
-const createCard = (card, user) => {
-  return fetch("http://localhost:3000/cards", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      title: card.title,
-      description: card.description,
-      language: card.language,
-      color: card.color,
-      content: card.content,
-      likes: 0,
-      isLiked: false,
-      comments: [],
-      author: user.id,
-    }),
-  });
+// LOCAL STORAGE
+const createCard = (card, user, id) => {
+  const localStorage = window.localStorage;
+  const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  const newCard = {
+    id: id || cards.length,
+    title: card.title,
+    description: card.description,
+    content: card.content,
+    language: card.language,
+    color: card.color,
+    likes: 0,
+    isliked: false,
+    comments: [],
+    username: user.username,
+    photourl: user.photourl
+  };
+  cards[newCard.id] = newCard;
+  localStorage.setItem("cards", JSON.stringify(cards));
 };
 
 const editCard = (id, card) => {
-  return fetch(`http://localhost:3000/cards/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      title: card.title,
-      description: card.description,
-      language: card.language,
-      color: card.color,
-      content: card.content,
-      likes: card.likes,
-      isLiked: card.isLiked,
-      comments: card.comments,
-      author: card.author,
-    }),
-  }).then((response) => response.json());
+  console.log('editCard');
 };
 
 // GIT API
