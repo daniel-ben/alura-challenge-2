@@ -55,6 +55,7 @@ Essa foi minha primeira vez construindo um site todo do zero. Eu aprendi:
 - Salvar dados no local storage e no session storage
 - Estruturar os arquivos do site (e como é difícil organizar tudo)
 - Variáveis CSS e como elas ajudam na manutenção
+- Conversão de hex para rgb e vice-versa
 
 ## Em breve
 Pretendo adicionar mais algumas funcionalidades, como:

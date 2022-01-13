@@ -25,6 +25,10 @@ const hexToRgb = hex => {
   } : null;
 };
 
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
 const saveColorScheme = (colorName, rgbColor) => {
   const localStorage = window.localStorage;
   const colorScheme =  !localStorage.colorScheme ?  {}  :  JSON.parse(localStorage.colorScheme); 
@@ -33,19 +37,21 @@ const saveColorScheme = (colorName, rgbColor) => {
   localStorage.setItem('colorScheme', JSON.stringify(colorScheme));
 }
 
-const changeColorValues = (colorPicker, name, hex, rgb) => {
-  colorPicker.addEventListener('change', () => {
-    const color = colorPicker.value;
-    const rgbObject = hexToRgb(color);
-    const rgbColor = `${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}`;
-    
-    hex.innerText = color;
-    rgb.innerText = rgbColor;
+const changeColorValues = (card, colorPicker, name, hex, rgb) => {
+  card.addEventListener('change', (event) => {
+    const color = event.target.value.replace(/\s/g, '').split(',');
 
-    //change root color values
-    document.documentElement.style.setProperty(`--${name}`, rgbColor);    
+    const hexColor = color[0][0] === '#' ? color : rgbToHex(...color.map(item => parseInt(item)));
+    const rgbColor = color[0][0] !== '#' ? {r: color[0], g: color[1], b: color[2]} : hexToRgb(...color);
+    
+    colorPicker.value = hexColor;
+    hex.placeholder = hexColor;
+    rgb.placeholder = `${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}`;
+
+    // change root color values
+    document.documentElement.style.setProperty(`--${name}`, `${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}`);    
   
-    saveColorScheme(name, rgbColor);
+    saveColorScheme(name, `${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}`);
   });
 }
 
@@ -58,6 +64,7 @@ const resetColor = (button, name) => {
 }
 
 cards.forEach(card => {
+  
   const cover = card.querySelector('[data-color-cover]');
   const colorPicker = card.querySelector('[data-color-picker]');
   const colorName = colorPicker.getAttribute('name');
@@ -65,10 +72,10 @@ cards.forEach(card => {
   const rgb = card.querySelector('[data-color-rgb]');
   const resetButton = card.querySelector('[data-color-reset]');
 
-  cover.style.backgroundColor = `rgb(var(--${colorName}))`;    
+  cover.style.backgroundColor = `rgb(var(--${colorName}))`; 
 
   openColorPickerOnClick(cover, colorPicker);
-  changeColorValues(colorPicker, colorName, hex, rgb);
+  changeColorValues(card, colorPicker, colorName, hex, rgb);
   resetColor(resetButton, colorName);
 });
 

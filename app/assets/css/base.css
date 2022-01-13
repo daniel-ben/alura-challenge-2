@@ -51,13 +51,16 @@ a, a:hover, a:visited, a:active {
   margin-top: 16px;
   border-radius: 8px;
   background: rgba(var(--input-color), 0.16);
-  color: rgba(var(--input-color), 0.64);
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
 }
 
 .text-input {
   max-width: 724px;
   width: calc(100% - 28px);
-
 }
 
 .text-input:hover, .select-input:hover {
