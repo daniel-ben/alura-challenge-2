@@ -11,7 +11,7 @@ Website made during a Code Challenge called Alura Challenge Front-end from Alura
 It was given a base template on [figma](https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Alura-Challenge---Edição-Front-end?node-id=207%3A1446) and Trello cards to orient the students. 
 
 ## Website on it's natural environment
-** will be deployed on vercel soon enough**
+[Code editor](https://daniel-ben.github.io/alura-challenge-2/)
 
 ## Objectives
 
