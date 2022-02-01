@@ -15,12 +15,12 @@ It was given a base template on [figma](https://www.figma.com/file/Ve4hpTfmMa7yA
 
 ## Summary
 
-- [Objectives](https://github.com/daniel-ben/alura-challenge-2#objectives)
+- [Objectives](https://github.com/daniel-ben/alura-challenge-2/blobl/main/README.en.md#objectives)
 - [How to use it](https://github.com/daniel-ben/alura-challenge-2#how-to-use-it)
 - [Screenshots](https://github.com/daniel-ben/alura-challenge-2#screenshots)
 - [Built with](https://github.com/daniel-ben/alura-challenge-2#built-with)
 - [Journey](https://github.com/daniel-ben/alura-challenge-2#journey)
-- [Soon...](https://github.com/daniel-ben/alura-challenge-2#soon)
+- [Soon...](https://github.com/daniel-ben/alura-challenge-2/blobl/main/README.en.md#soon)
 
 ## Objectives
 
