@@ -1,8 +1,10 @@
-# Alura Challenge Front-end - Editor de código
+# Alura Challenge Front-end - Editor de código (Vanilla)
 
 #alurachallengefront2
 
 Read this in [english](./README.en.md)
+
+** Estou passando esse código para React usando Nextjs [neste outro repositório](https://github.com/daniel-ben/code-editor) **
 
 Site criado durante o Alura Challenge 2 de Front-end da Alura. O desafio tem como objetivo simular uma situação de trabalho real, onde o usuário deve criar um site para um cliente seguindo um pedido. 
 
@@ -57,7 +59,9 @@ Essa foi minha primeira vez construindo um site todo do zero. Eu aprendi:
 - Variáveis CSS e como elas ajudam na manutenção
 - Conversão de hex para rgb e vice-versa
 
-## Em breve
+## Em breve 
+** Novas funções sendo adicionadas no [novo repositório](https://github.com/daniel-ben/code-editor) **
+
 Pretendo adicionar mais algumas funcionalidades, como:
 - Opção de exportar o código como png, jpeg ou svg
 - Opção de mudar o estilo do highlight
