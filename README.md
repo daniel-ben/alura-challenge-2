@@ -13,6 +13,20 @@ Foi fornecido um template no [figma](https://www.figma.com/file/Ve4hpTfmMa7yAFne
 ## Projeto no seu habitat natural
 - Clique aqui: [Editor de código](https://daniel-ben.github.io/alura-challenge-2/)
 
+## Sumário
+
+- [Objetivos](https://github.com/daniel-ben/alura-challenge-2#objetivos)
+
+- [Como utilizar](https://github.com/daniel-ben/alura-challenge-2#como-utilizar)
+
+- [Screenshots](https://github.com/daniel-ben/alura-challenge-2#screenshots)
+
+- [Construido com](https://github.com/daniel-ben/alura-challenge-2#construido-com)
+
+- [Jornada](https://github.com/daniel-ben/alura-challenge-2#jornada)
+
+- [Em breve](https://github.com/daniel-ben/alura-challenge-2#em-breve)
+
 ## Objetivos
 
 - Criar um site do zero a partir de um template
