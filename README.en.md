@@ -13,6 +13,15 @@ It was given a base template on [figma](https://www.figma.com/file/Ve4hpTfmMa7yA
 ## Website on it's natural environment
 [Code editor](https://daniel-ben.github.io/alura-challenge-2/)
 
+## Summary
+
+- [Objectives](https://github.com/daniel-ben/alura-challenge-2#objectives)
+- [How to use it](https://github.com/daniel-ben/alura-challenge-2#how-to-use-it)
+- [Screenshots](https://github.com/daniel-ben/alura-challenge-2#screenshots)
+- [Built with](https://github.com/daniel-ben/alura-challenge-2#built-with)
+- [Journey](https://github.com/daniel-ben/alura-challenge-2#journey)
+- [Soon...](https://github.com/daniel-ben/alura-challenge-2#soon)
+
 ## Objectives
 
 - Create a website from start based on a given template
