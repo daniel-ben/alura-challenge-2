@@ -15,3 +15,4 @@ Refactoring code with screaming architecture and clean code by Uncle Bob
 
 - change px to rem/em
 - fix palette colors that are using rgb + opacity instead of different colors
+- wrong font

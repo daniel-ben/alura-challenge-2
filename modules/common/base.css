@@ -20,6 +20,7 @@
 
   --font-family: Inter;
   --title-font-color: white;
+  --input-font-color: white;
 }
 
 /* TYPOGRAPHY */
@@ -53,21 +54,18 @@
   padding: 1rem 0.9rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
-  background: var(--dark-color-400);
-  color: white;
+
+  background-color: var(--neutral-color-400);
+  color: var(--input-font-color);
 }
 
 .input::placeholder {
-  opacity: 0.6;
+  color: var(--input-font-color);
+  opacity: 0.5;
 }
 
-.text-input {
-  max-width: 724px;
-  width: calc(100% - 28px);
-}
-
-.text-input:hover, .select-input:hover {
-  background: rgba(var(--input-color), 0.24);
+.input:hover {
+  background: var(--neutral-color-300);
 }
 
 /* BUTTONS */

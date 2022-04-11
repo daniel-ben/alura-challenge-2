@@ -1,7 +1,7 @@
 .header {
-  height: 56px;
-  width: 100%;
-  margin: 0 0 40px;
+  height: 3.5rem;
+  width: 100vw;
+  margin: 0 0 2.5rem;
 
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .header__logo {
-  height: 34.05px;
+  height: 2.1rem;
   width: auto;
 
   /* when desktop, display changes to grid */
@@ -30,14 +30,14 @@
     display: none;
   }
 
-  .header__text-input {
+  .header__search-bar {
     display: block;
   }
 }
 
 /* make header text input align with content as screen grows */
 @media screen and (min-width: 952px) {
-  .header__text-input {
+  .header__search-bar {
     position: absolute;
     right: calc( (100vw - 752px) / 2 - 42px );
 
@@ -68,7 +68,7 @@
     display: none;
   }
 
-  .header__text-input {
+  .header__search-bar {
     margin: 0;
     position: static;
 
