@@ -12,3 +12,6 @@ Website created during a front-end code challenge called Alura Challenge. The ch
 
 ## Currently working on
 Refactoring code with screaming architecture and clean code by Uncle Bob
+
+- change px to rem/em
+- fix palette colors that are using rgb + opacity instead of different colors

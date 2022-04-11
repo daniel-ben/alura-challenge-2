@@ -5,6 +5,15 @@
   --dark-color: 5, 29, 59;
   --input-color: 255, 255, 255;
   --menu-color: 45, 65, 91;
+
+  --primary-color-200: #96B9FC;
+  --primary-color-300: #7Ba4FC;
+  --primary-color-400: #4F81FB;
+  --primary-color-500: #173569;
+  --primary-color-600: #112D5A;
+  --primary-color-700: #0B254A;
+  --primary-color-800: #051D3B;
+  --primary-color-900: #041832;
 }
 
 a, a:hover, a:visited, a:active {

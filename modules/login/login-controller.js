@@ -1,5 +1,3 @@
-import getGitUser from "./getGitUser.js";
-
 function loginController() {
   const login_form = document.querySelector("[data-login-form]");
 
@@ -13,7 +11,6 @@ function onSubmit(event) {
   event.preventDefault();
 
   const username = document.querySelector("[data-login-username]").value;
-  if (!username) return alert("Please enter a username");
 
   getGitUser(username)
     .then((user) => storeUser(user))
