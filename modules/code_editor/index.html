@@ -4,49 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge - Editor</title>
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/code-themes/dracula.css">
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/content.css">
-    <link rel="stylesheet" href="../assets/css/code-highlighter.css">
-    <link rel="stylesheet" href="../assets/css/project-info.css">
-    <link rel="stylesheet" href="../assets/css/menu.css">
+    <!-- refactored -->
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="../common/base.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+
+    <!-- work in progress -->
+    <link rel="stylesheet" href="../../app/assets/css/code-themes/dracula.css">
+    <link rel="stylesheet" href="../../app/assets/css/content.css">
+    <link rel="stylesheet" href="../../app/assets/css/code-highlighter.css">
+    <link rel="stylesheet" href="../../app/assets/css/project-info.css">
+    <link rel="stylesheet" href="../../app/assets/css/menu.css">
     <!-- link to fontawesome license https://fontawesome.com/license/free -->
   </head>
 
   <body spellcheck="false">
-    <nav class="header">
-      <img src="../assets/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
-      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__text-input" data-search-input></input>
+    <!-- HEADER -->
+    <header class="header">
+      <img src="../../public/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
+      <input type="text" placeholder="Busque por algo" class="body-typ input text-input header__search-bar" data-search-bar></input>
       <div>
-        <img src="../assets/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
-        <img src="../assets/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
-        <img src="../assets/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
+        <img src="../../public/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
+        <img src="../../public/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
+        <img src="../../public/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
       </div>
       <div class="user header__user" data-user-card></div>
-    </nav>
+    </header>
 
     <main class="content editor-content">
 
-      <section class="menu" data-menu>
+      <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-        <a class="menu__link menu__link--active" href="./editor.html">
-          <img src="../assets/img/code.svg" class="menu-button menu__code-editor">
+        <a class="menu__link menu__link--active" href="../code_editor/">
+          <img src="../../public/img/code.svg" class="menu-button menu__code-editor">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
         <a class="menu__link" href="./comunidade.html">
-          <img src="../assets/img/community.svg" class="menu-button menu__community">
+          <img src="../../public/img/community.svg" class="menu-button menu__community">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
         <a class="menu__link" href="./paleta.html">
-          <img src="../assets/img/palette-solid.svg" class="menu-button menu__palette">
+          <img src="../../public/img/palette-solid.svg" class="menu-button menu__palette">
           <p class="body-typ menu__text">Paleta de cores</p>
         </a>
         <span class="menu__separator"></span>
         <div class="user menu__user" data-user-card>
         </div>
-      </section>
+      </nav>
 
       <form class="project" data-form>
 
@@ -89,8 +93,12 @@
       </form>
     </main>
     <!-- static js -->
+
+    <!-- refactored -->
+    <script src="../common/header/searchBar.js"></script>
+    
+    <!-- work in progress -->
     <script src="../assets/js/menu.js"></script>
-    <script src="../assets/js/searchButton.js"></script>
     <script src="../assets/js/changeCodeColor.js"></script>
     <script src="../assets/js/clearCode.js"></script>
     <script src="../assets/js/highlight.js"></script>

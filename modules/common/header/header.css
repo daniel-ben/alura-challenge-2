@@ -16,7 +16,7 @@
   grid-column: 1 / 2;
 }
 
-.header__text-input {
+.header__search-bar {
   display: none;
   margin: 0 40px;
 }

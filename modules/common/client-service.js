@@ -87,25 +87,9 @@ const updateCard = (card, id) => {
   localStorage.setItem("cards", JSON.stringify(cards));
 };
 
-// GIT API
-const getGitUser = (username) => {
-  return (
-    fetch(`https://api.github.com/users/${username}`)
-    .then((response) => {
-      if (response.status == 404) {
-        alert("User not found");
-        throw new Error("User not found");
-      } else {
-        return response.json();
-      }
-    })
-  );
-};
-
 export const clientService = {
   getCards,
   getCard,
   createCard,
   updateCard,
-  getGitUser,
 };

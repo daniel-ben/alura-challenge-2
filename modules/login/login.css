@@ -1,4 +1,3 @@
-/* used only here */
 :root {
   --font-color: black;
 }
@@ -9,13 +8,12 @@
   height: 90vh;
 }
 
-.login__container {
+.login__form {
   width: 80vw;
   max-width: 500px;
   margin: auto;
   border-radius: 10px;
-  padding: 24px 12px 36px;
-  background-color: #fafafa50;
+  padding: 16px 10%;
   background-color: white;
 
   display: flex;
@@ -23,17 +21,16 @@
   align-items: center;
 }
 
+.warning {
+  color: red;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
 .login__title {
   margin: 14px;
   font-size: 24px;
   color: var(--font-color);
-}
-
-.login__form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .login__input {
@@ -46,8 +43,9 @@
   color: var(--font-color);
 }
 
-::placeholder {
+.login__input::placeholder {
   color: var(--font-color);
+  opacity: 0.5;
 }
 
 .login__link {

@@ -1,5 +1,5 @@
 const logo = document.querySelector('[data-logo]');
-const searchInput = document.querySelector('[data-search-input]');
+const searchBar = document.querySelector('[data-search-bar]');
 const searchButton = document.querySelector('[data-search-icon]');
 const menu_Button = document.querySelector('[data-menu-icon]');
 const close_Button = document.querySelector('[data-close-icon]');
@@ -10,7 +10,7 @@ let isActive = false;
 searchButton.addEventListener('click', () => {
   if (!isActive) {
     logo.classList.add('hidden');
-    searchInput.classList.add('active');
+    searchBar.classList.add('active');
     searchButton.classList.add('hidden');
     menu_Button.classList.add('hidden');
     close_Button.classList.remove('hidden');
@@ -21,7 +21,7 @@ searchButton.addEventListener('click', () => {
 close_Button.addEventListener('click', () => {
   if (isActive) {
     logo.classList.remove('hidden');
-    searchInput.classList.remove('active');
+    searchBar.classList.remove('active');
     searchButton.classList.remove('hidden');
     menu_Button.classList.remove('hidden');
     close_Button.classList.add('hidden');
