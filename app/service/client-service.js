@@ -102,7 +102,6 @@ const getGitUser = (username) => {
   );
 };
 
-
 export const clientService = {
   getCards,
   getCard,
