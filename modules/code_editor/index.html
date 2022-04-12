@@ -5,34 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Editor</title>
     <!-- refactored -->
-    <link rel="stylesheet" href="../common/reset.css">
-    <link rel="stylesheet" href="../common/base.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/main.css">
     <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/menu/menu.css">
+    <link rel="stylesheet" href="../user/user.css">
+    <link rel="stylesheet" href="./code-editor.css">
 
     <!-- work in progress -->
     <link rel="stylesheet" href="../../app/assets/css/code-themes/dracula.css">
-    <link rel="stylesheet" href="../../app/assets/css/content.css">
     <link rel="stylesheet" href="../../app/assets/css/code-highlighter.css">
     <link rel="stylesheet" href="../../app/assets/css/project-info.css">
-    <link rel="stylesheet" href="../../app/assets/css/menu.css">
     <!-- link to fontawesome license https://fontawesome.com/license/free -->
   </head>
 
   <body spellcheck="false">
     <!-- HEADER -->
     <header class="header">
-      <img src="../../public/img/logo.svg" alt="Logo da Alura Dev" class="header__logo" data-logo>
-      <input type="text" placeholder="Busque por algo" class="body-typ input header__search-bar" data-search-bar></input>
+      <img src="../../../public/img/logo.svg" alt="Alura Dev logo" class="header__logo" data-logo>
+      <input type="text" placeholder="search for something" class="body-typ input header__search-bar" data-search-bar></input>
+      
       <div>
-        <img src="../../public/img/search-solid.svg" alt="Ícone de busca" class="icon header__icon header__search-icon" data-search-icon>
-        <img src="../../public/img/bars-solid.svg" alt="Ícone de menu" class="icon header__icon header__menu-icon" data-menu-icon>
-        <img src="../../public/img/x.svg" alt="Ícone de fechar" class="icon header__icon header__close-icon hidden" data-close-icon>
+        <img src="../../public/img/search-solid.svg" alt="Search icon" class="icon header__search-icon" data-search-icon>
+        <img src="../../public/img/bars-solid.svg" alt="Menu icon" class="icon header__menu-icon" data-menu-icon>
+        <img src="../../public/img/x.svg" alt="Close icon" class="icon header__close-icon hidden" data-close-icon>
       </div>
-      <div class="user header__user" data-user-card></div>
+      
+      <a class="header__user" href="/modules/login/" data-user>
+        <img src="../../../public/img/default-user-image.svg" alt="User photo" class="header__user-photo">
+        <p class="body-typ header__user-name">Login</p>
+      </a>
     </header>
 
-    <main class="content editor-content">
+    <!-- MAIN -->
+    <main class="code-editor__main">
 
+      <!-- MENU -->
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
         <a class="menu__link menu__link--active" href="../code_editor/">
@@ -92,11 +101,15 @@
         </section>
       </form>
     </main>
-    <!-- static js -->
-
-    <!-- refactored -->
-    <script src="../common/header/searchBar.js"></script>
     
+    <!-- refactored -->
+
+    <!-- render blocking js -->
+    <script src="../common/header/searchBar.js"></script>
+
+    <!-- after first paint -->
+    <script defer src="../user/updateUser.js"></script>
+
     <!-- work in progress -->
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/changeCodeColor.js"></script>
@@ -109,6 +122,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script type="module" src="../controller/saveCard-controller.js"></script>
     <script type="module" src="../controller/openCard-controller.js"></script>
-    <script type="module" src="../controller/showUser-controller.js"></script>
   </body>
 </html>

@@ -23,9 +23,10 @@
   --title-font-color: white;
   --input-font-color: white;
 
-  --mobile-size: 425px;
-  --tablet-size: 768px;
-  --desktop-size: 1024px;
+  /* can't be used on media query call, it's just for reference */
+  --mobile-breakpoint: 425px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 1024px;
 }
 
 /* TYPOGRAPHY */
