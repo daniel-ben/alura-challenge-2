@@ -38,42 +38,19 @@
     grid-template-columns: 20% 60% 20%;
   }
 
+  .header__search-bar {
+    width: 100%;
+  }
+  
   .header__menu-icon {
     display: none;
   }
 
-  .header__search-bar {
-    width: 100%;
+  .header__close-icon {
+    display: none;
   }
 
   .header__user {
     display: flex;
-    align-items: center;
-    justify-self: end;
-
-    grid-column: 3 / 4;
-    grid-row: 1 / 1;
-
-    padding: 0.75rem;
-    color: white;
-  }
-
-  .header__user:hover {
-    background: var(--neutral-color-400);
-    border-radius: 0.5rem;
-  }
-
-  .header__user-photo {
-    height: 2rem;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-  }
-
-  .header__user-photo-small {
-    height: 1.5rem;
-  }
-
-  .header__user-name {
-    color: white;
   }
 }

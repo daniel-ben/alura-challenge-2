@@ -1,0 +1,26 @@
+.user {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    
+    grid-column: 3 / 4;
+    grid-row: 1 / 1;
+
+    padding: 0.75rem;
+    color: white;
+}
+
+.user:hover {
+    background: var(--neutral-color-400);
+    border-radius: 0.5rem;
+}
+
+.user__photo  {
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.user__name {
+    color: white;
+}

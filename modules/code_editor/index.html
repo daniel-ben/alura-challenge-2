@@ -6,37 +6,39 @@
     <title>Code Editor</title>
     <!-- refactored -->
     <!-- css -->
-    <link rel="stylesheet" href="../common/css/reset.css">
-    <link rel="stylesheet" href="../common/css/main.css">
-    <link rel="stylesheet" href="../common/header/header.css">
-    <link rel="stylesheet" href="../common/menu/menu.css">
-    <link rel="stylesheet" href="../user/user.css">
+    <link rel="stylesheet" href="/modules/common/css/reset.css">
+    <link rel="stylesheet" href="/modules/common/css/main.css">
+    <link rel="stylesheet" href="/modules/user/user.css">
+    <link rel="stylesheet" href="/modules/common/header/header.css">
+    <link rel="stylesheet" href="/modules/common/menu/menu.css">
     <link rel="stylesheet" href="./code-editor.css">
 
     <!-- work in progress -->
-    <link rel="stylesheet" href="../../app/assets/css/code-themes/dracula.css">
-    <link rel="stylesheet" href="../../app/assets/css/code-highlighter.css">
-    <link rel="stylesheet" href="../../app/assets/css/project-info.css">
+    <link rel="stylesheet" href="/app/assets/css/code-themes/dracula.css">
+    <link rel="stylesheet" href="/app/assets/css/code-highlighter.css">
+    <link rel="stylesheet" href="/app/assets/css/project-info.css">
     <!-- link to fontawesome license https://fontawesome.com/license/free -->
   </head>
 
   <body spellcheck="false">
     <!-- HEADER -->
     <header class="header">
-      <img src="../../../public/img/logo.svg" alt="Alura Dev logo" class="header__logo" data-logo>
-      <input type="text" placeholder="search for something" class="body-typ input header__search-bar" data-search-bar></input>
+      <img src="/public/img/logo.svg" alt="Alura Dev logo" class="header__logo" data-logo>
+      <input type="text" placeholder="Search for something" class="body-typ input header__search-bar" data-search-bar></input>
       
       <div>
-        <img src="../../public/img/search-solid.svg" alt="Search icon" class="icon header__search-icon" data-search-icon>
-        <img src="../../public/img/bars-solid.svg" alt="Menu icon" class="icon header__menu-icon" data-menu-icon>
-        <img src="../../public/img/x.svg" alt="Close icon" class="icon header__close-icon hidden" data-close-icon>
+        <img src="/public/img/search-solid.svg" alt="Search icon" class="icon header__search-icon" data-search-icon>
+        <img src="/public/img/bars-solid.svg" alt="Menu icon" class="icon header__menu-icon" data-menu-icon>
+        <img src="/public/img/x.svg" alt="Close icon" class="icon header__close-icon hidden" data-close-icon>
       </div>
       
-      <a class="header__user" href="/modules/login/" data-user>
-        <img src="../../../public/img/default-user-image.svg" alt="User photo" class="header__user-photo">
-        <p class="body-typ header__user-name">Login</p>
+      <a class="user header__user" href="/modules/login/" data-user>
+        <img src="/public/img/default-user-image.svg" alt="User photo" class="user__photo">
+        <p class="body-typ user__name">Login</p>
       </a>
     </header>
+    <!-- HEADER -->
+
 
     <!-- MAIN -->
     <main class="code-editor__main">
@@ -44,22 +46,30 @@
       <!-- MENU -->
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
-        <a class="menu__link menu__link--active" href="../code_editor/">
-          <img src="../../public/img/code.svg" class="menu-button menu__code-editor">
+
+        <a class="menu__link menu__link--active" href="/modules/code_editor/">
+          <img src="/public/img/code.svg" class="icon menu__icon">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
-        <a class="menu__link" href="./comunidade.html">
-          <img src="../../public/img/community.svg" class="menu-button menu__community">
+
+        <a class="menu__link" href="./">
+          <img src="/public/img/community.svg" class="icon menu__icon">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
-        <a class="menu__link" href="./paleta.html">
-          <img src="../../public/img/palette-solid.svg" class="menu-button menu__palette">
+
+        <a class="menu__link" href="./">
+          <img src="/public/img/palette-solid.svg" class="icon menu__icon">
           <p class="body-typ menu__text">Paleta de cores</p>
         </a>
+
         <span class="menu__separator"></span>
-        <div class="user menu__user" data-user-card>
-        </div>
+        <a class="user menu__user" href="/modules/login/" data-user>
+          <img src="/public/img/default-user-image.svg" alt="User photo" class="user__photo">
+          <p class="body-typ user__name">Login</p>
+        </a>
       </nav>
+      <!-- MENU -->
+
 
       <form class="project" data-form>
 
@@ -105,13 +115,13 @@
     <!-- refactored -->
 
     <!-- render blocking js -->
-    <script src="../common/header/searchBar.js"></script>
+    <script src="/modules/common/header/searchBar.js"></script>
 
     <!-- after first paint -->
-    <script defer src="../user/updateUser.js"></script>
+    <script defer src="/modules/user/updateUser.js"></script>
+    <script defer src="/modules/common/menu/handleMenuDisplay.js"></script>
 
     <!-- work in progress -->
-    <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/changeCodeColor.js"></script>
     <script src="../assets/js/clearCode.js"></script>
     <script src="../assets/js/highlight.js"></script>

@@ -25,7 +25,7 @@
 
   /* can't be used on media query call, it's just for reference */
   --mobile-breakpoint: 425px;
-  --tablet-breakpoint: 768px;
+  --tablet-breakpoint: 880px;
   --desktop-breakpoint: 1024px;
 }
 
@@ -136,10 +136,6 @@
 }
 
 .icon:active {
-  background: var(--primary-color-600);
-}
-
-.icon__menu {
   background: var(--primary-color-600);
 }
 

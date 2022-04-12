@@ -1,10 +1,10 @@
 .menu {
   display: none;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 
   position: absolute;
-  top: 92px;
+  top: 5.7rem;
   right: 2px;
   bottom: 2px;
   z-index: 99;
@@ -13,8 +13,8 @@
   height: auto;
   padding: 24px;
 
-  background: rgb(var(--menu-color));
-  border-radius: 8px;
+  background: var(--neutral-color-400);
+  border-radius: 0.5rem;
 }
 
 .menu--active {
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 
   opacity: 0.56;
 }
@@ -38,34 +38,16 @@
   opacity: 0.72;
 }
 
-.menu__link:hover > .menu-button {
-  background: rgba(var(--primary-color), 0.64);
-}
-
 .menu__link:active {
   opacity: 1;
-}
-
-.menu__link:active > .menu-button {
-  background: rgba(var(--primary-color), 1);
 }
 
 .menu__link--active {
   opacity: 1;
 }
 
-.menu__link--active > .menu-button {
-  background: rgba(var(--primary-color), 1);
-}
-
-.menu__code-editor {
-  padding-left: 11.5px;
-  padding-right: 11.5px;
-}
-
-.menu__community {
-  padding-left: 10px;
-  padding-right: 10px;
+.menu__icon {
+  background-color: var(--primary-color-400);
 }
 
 .menu__text {
@@ -79,7 +61,11 @@
   margin: 8px 0;
 }
 
-@media screen and (min-width: 1320px) {
+.menu__user {
+  display: flex;
+}
+
+@media screen and (min-width: 880px) {
   .menu {
     display: flex;
     position: static;
