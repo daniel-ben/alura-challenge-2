@@ -26,10 +26,10 @@
       <img src="/public/img/logo.svg" alt="Alura Dev logo" class="header__logo" data-logo>
       <input type="text" placeholder="Search for something" class="body-typ input header__search-bar" data-search-bar></input>
       
-      <div>
+      <div class="header__icons">
         <img src="/public/img/search-solid.svg" alt="Search icon" class="icon header__search-icon" data-search-icon>
         <img src="/public/img/bars-solid.svg" alt="Menu icon" class="icon header__menu-icon" data-menu-icon>
-        <img src="/public/img/x.svg" alt="Close icon" class="icon header__close-icon hidden" data-close-icon>
+        <img src="/public/img/x.svg" alt="Close icon" class="icon header__close-icon" data-close-icon>
       </div>
       
       <a class="user header__user" href="/modules/login/" data-user>
@@ -70,56 +70,56 @@
       </nav>
       <!-- MENU -->
 
+      <!-- Code Highlighter -->
+      <section class="code-highlighter">
+        <div class="code-highlighter__container" data-code-container>
 
-      <form class="project" data-form>
-
-        <section class="code-highlighter">
-          <div class="code-highlighter__container" data-code-container>
-  
-            <div class="code-highlighter__dots">
-              <div class="dots first_dot"></div>
-              <div class="dots second_dot"></div>
-              <div class="dots third_dot"></div>
-            </div>
-
-            <div class="code-wrapper code-wrapper-editor" data-code-wrapper>
-              <code class="code-highlighter__code-editor hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
-            </div>
-
+          <div class="code-highlighter__dots">
+            <div class="dots first_dot"></div>
+            <div class="dots second_dot"></div>
+            <div class="dots third_dot"></div>
           </div>
-          <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
-        </section>
-  
-        <section class="project-info">
-          <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
-          <fieldset class="project-info__info">
-            <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title" data-title></input>
-            <textarea placeholder="Descrição do seu projeto" maxlength="200" class="body-typ input text-input project-info__description" data-description></textarea>
-          </fieldset>
 
-          <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
-          <fieldset class="project-info__customization">
-            <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-info__language" data-language required>
-              <option value="Javascript" class="option">Javascript</option>
-              <option value="CSS" class="option">CSS</option>
-              <option value="HTML" class="option">HTML</option>
-            </select>
-            <input type="color" value="#1ed457" class="project-info__color" data-color-picker required></input>
-          </fieldset>
-          
-          <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-info__submit-button"></input>
-        </section>
+          <div class="code-wrapper code-wrapper-editor" data-code-wrapper>
+            <code class="code-highlighter__code-editor hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
+          </div>
+
+        </div>
+        <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
+      </section>
+      <!-- Code Highlighter -->
+
+      <!-- Form -->
+      <form class="project-info">
+        <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
+        <fieldset class="project-info__info">
+          <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title" data-title></input>
+          <textarea placeholder="Descrição do seu projeto" maxlength="200" class="body-typ input text-input project-info__description" data-description></textarea>
+        </fieldset>
+
+        <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
+        <fieldset class="project-info__customization">
+          <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-info__language" data-language required>
+            <option value="Javascript" class="option">Javascript</option>
+            <option value="CSS" class="option">CSS</option>
+            <option value="HTML" class="option">HTML</option>
+          </select>
+          <input type="color" value="#1ed457" class="project-info__color" data-color-picker required></input>
+        </fieldset>
+        
+        <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-info__submit-button"></input>
       </form>
+      <!-- Form -->
+
     </main>
     
     <!-- refactored -->
 
     <!-- render blocking js -->
-    <script src="/modules/common/header/searchBar.js"></script>
-
+    
     <!-- after first paint -->
     <script defer src="/modules/user/updateUser.js"></script>
-    <script defer src="/modules/common/menu/handleMenuDisplay.js"></script>
+    <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
 
     <!-- work in progress -->
     <script src="../assets/js/changeCodeColor.js"></script>

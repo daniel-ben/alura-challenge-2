@@ -132,15 +132,6 @@ body {
   margin: 0 auto;
 }
 
-/* Utilities */
-.hidden {
-  display: none !important;
-}
-
-.active {
-  display: block !important;
-}
-
 @media screen and (min-width: 1320px) {
   body {
     padding: 2rem;

@@ -18,9 +18,18 @@
   margin: 0 2.5rem;
 }
 
+.header__icons {
+  display: flex;
+}
+
+.header__close-icon {
+  display: none;
+}
+
 .header__user {
   display: none;
 }
+
 
 @media screen and (min-width: 425px) {
   .header__search-icon {

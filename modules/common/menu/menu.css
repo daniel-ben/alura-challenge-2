@@ -38,11 +38,7 @@
   opacity: 0.72;
 }
 
-.menu__link:active {
-  opacity: 1;
-}
-
-.menu__link--active {
+.menu__link:active, .menu__link--active {
   opacity: 1;
 }
 
