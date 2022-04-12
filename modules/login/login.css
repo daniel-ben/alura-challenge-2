@@ -37,7 +37,16 @@
   border-radius: 0.5rem;
   border: 2px solid var(--font-color);
   padding: 0.25rem 0.5rem;
+  background-color: white;
   color: var(--font-color);
+}
+
+.login__input:hover {
+  background-color: white;
+}
+
+.login__input:active {
+  background-color: white;
 }
 
 .login__input::placeholder {
