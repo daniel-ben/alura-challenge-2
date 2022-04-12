@@ -17,10 +17,6 @@
   border-radius: 0.5rem;
 }
 
-.menu--active {
-  display: flex;
-}
-
 .menu__sidebar-title {
   display: none;
 }

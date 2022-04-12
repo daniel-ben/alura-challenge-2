@@ -30,14 +30,13 @@
   display: none;
 }
 
-
 @media screen and (min-width: 425px) {
   .header__search-icon {
-    display: none;
+    display: none !important;
   }
 
   .header__search-bar {
-    display: block;
+    display: flex !important;
   }
 }
 
@@ -52,7 +51,7 @@
   }
   
   .header__menu-icon {
-    display: none;
+    display: none !important;
   }
 
   .header__close-icon {
