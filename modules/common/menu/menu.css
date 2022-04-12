@@ -46,7 +46,7 @@
   opacity: 1;
 }
 
-.menu__icon {
+.menu__icon, .menu__icon:hover, .menu__icon:active, .menu__icon:focus {
   background-color: var(--primary-color-400);
 }
 
