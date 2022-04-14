@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <object type="text/html" data="./modules/login/login.html"></object>
+    <link rel="stylesheet" href="/modules/common/css/reset.css" />
+    <link rel="stylesheet" href="/modules/common/css/main.css" />
+    <link rel="stylesheet" href="/modules/login/login.css" />
   </head>
+
+  <body class="login__body" spellcheck="false">
+    <form class="login__form" action="" data-login-form>
+      <h1 class="sidebar-title-typ login__title">Login</h1>
+      <input
+        class="body-typ input login__input"
+        data-login-username
+        type="text"
+        placeholder="Git username"
+        required
+      />
+      <button class="body-typ input login__button" type="submit">Entrar</button>
+    </form>
+
+    <script type="module" src="/modules/login/login-controller.js"></script>
+  </body>
+</html>

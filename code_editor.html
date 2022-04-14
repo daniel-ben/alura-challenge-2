@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <!-- refactored -->
+    <!-- css -->
+    <link rel="stylesheet" href="/modules/common/css/reset.css">
+    <link rel="stylesheet" href="/modules/common/css/main.css">
+    <link rel="stylesheet" href="/modules/code_editor/code-editor.css">
+    <link rel="stylesheet" href="/modules/code_highlighter/code-highlighter.css">
+    <!-- css -->
+
+    <!-- still duplicated on different pages -->
+    <link rel="stylesheet" href="/modules/user/user.css">
+    <link rel="stylesheet" href="/modules/common/header/header.css">
+    <link rel="stylesheet" href="/modules/common/menu/menu.css">
+    <!-- still duplicated on different pages -->
+    <!-- refactored -->
+
+    <!-- work in progress -->
+    <link rel="stylesheet" href="/app/assets/css/code-themes/dracula.css">
+    <link rel="stylesheet" href="/app/assets/css/code-highlighter.css">
+    <link rel="stylesheet" href="/app/assets/css/project-info.css">
+    <!-- work in progress -->
+    <!-- link to fontawesome license https://fontawesome.com/license/free -->
+  </head>
+
+  <body spellcheck="false">
+    <!-- HEADER -->
+    <header class="header">
+      <img class="header__logo" src="/public/img/logo.svg" alt="Alura Dev logo"  data-logo>
+      <input class="body-typ input header__search-bar" data-search-bar type="text" placeholder="Search for something"></input>
+      
+      <div class="header__icons">
+        <img class="icon header__search-icon" data-search-icon src="/public/img/search-solid.svg" alt="Search icon">
+        <img class="icon header__menu-icon" data-menu-icon src="/public/img/bars-solid.svg" alt="Menu icon">
+        <img class="icon header__close-icon" data-close-icon src="/public/img/x.svg" alt="Close icon">
+      </div>
+      
+      <a class="user header__user" href="/login.html" data-user>
+        <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
+        <p class="body-typ user__name">Login</p>
+      </a>
+    </header>
+    <!-- HEADER -->
+
+
+    <!-- MAIN -->
+    <main class="code-editor__main">
+
+      <!-- MENU -->
+      <nav class="menu" data-menu>
+        <p class="sidebar-title-typ menu__sidebar-title">menu</p>
+
+        <a class="menu__link menu__link--active" href="/modules/code_editor/">
+          <img class="icon menu__icon" src="/public/img/code.svg">
+          <p class="body-typ menu__text">Editor de código</p>
+        </a>
+
+        <a class="menu__link" href="./">
+          <img class="icon menu__icon" src="/public/img/community.svg">
+          <p class="body-typ menu__text">Comunidade</p>
+        </a>
+
+        <a class="menu__link" href="./">
+          <img class="icon menu__icon" src="/public/img/palette-solid.svg">
+          <p class="body-typ menu__text">Paleta de cores</p>
+        </a>
+
+        <span class="menu__separator"></span>
+        <a class="user menu__user" data-user href="/modules/login/">
+          <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
+          <p class="body-typ user__name">Login</p>
+        </a>
+      </nav>
+      <!-- MENU -->
+
+      <!-- Code Highlighter -->
+      <section class="code-highlighter">
+        <div class="code-highlighter__code-container" data-code-container>
+
+          <div class="code-highlighter__dots">
+            <span></span> <span></span> <span></span>
+          </div>
+
+          <div class="code-wrapper code-wrapper-editor" data-code-wrapper>
+            <code class="code-highlighter__code-editor hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
+          </div>
+
+        </div>
+        <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
+      </section>
+      <!-- Code Highlighter -->
+
+      <!-- Form -->
+      <form class="project-info">
+        <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
+        <fieldset class="project-info__info">
+          <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title" data-title></input>
+          <textarea placeholder="Descrição do seu projeto" maxlength="200" class="body-typ input text-input project-info__description" data-description></textarea>
+        </fieldset>
+
+        <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
+        <fieldset class="project-info__customization">
+          <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-info__language" data-language required>
+            <option value="Javascript" class="option">Javascript</option>
+            <option value="CSS" class="option">CSS</option>
+            <option value="HTML" class="option">HTML</option>
+          </select>
+          <input type="color" value="#1ed457" class="project-info__color" data-color-picker required></input>
+        </fieldset>
+        
+        <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-info__submit-button"></input>
+      </form>
+      <!-- Form -->
+
+    </main>
+    
+    <!-- refactored -->
+
+    <!-- render blocking js -->
+    
+    <!-- after first paint -->
+    <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
+    <script defer src="/modules/user/updateUser.js"></script>
+
+    <!-- work in progress -->
+    <script src="../assets/js/changeCodeColor.js"></script>
+    <script src="../assets/js/clearCode.js"></script>
+    <script src="../assets/js/highlight.js"></script>
+    <script src="../assets/js/unformattedPaste.js"></script>
+    <script src="../assets/js/colorScheme.js"></script>
+
+    <!-- api -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script type="module" src="../controller/saveCard-controller.js"></script>
+    <script type="module" src="../controller/openCard-controller.js"></script>
+  </body>
+</html>
