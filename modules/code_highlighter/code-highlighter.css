@@ -1,0 +1,114 @@
+.code-highlighter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 752px;
+}
+
+.code-highlighter__code-container {
+  background: #141414;
+  width: auto;
+
+  border: 2rem solid #1ed457;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* ----  3 dots on top of editor ---- */
+.code-highlighter__dots {
+  display: flex;
+}
+
+.code-highlighter__dots span {
+  height: 0.75rem;
+  width: 0.75rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.code-highlighter__dots > span:first-child {
+  background: #FF5F56;
+}
+
+.code-highlighter__dots > span:nth-child(2) {
+  background: #FFBD2E;
+}
+
+.code-highlighter__dots > span:last-child {
+  background: #27C93F;
+}
+/* ----  3 dots on top of editor ---- */
+
+/* ----  code editor ---- */
+.code-wrapper-editor {
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+.code-highlighter__code {
+  font-family: Roboto Mono;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  white-space: pre-wrap;
+
+  margin-left: -10px;
+  max-height: 195px;
+
+  background-color: transparent;
+}
+
+.code-highlighter__code-editor {
+  color: white;
+  font-family: Roboto Mono;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  white-space: pre-wrap;
+
+  background: transparent;
+  width: 100%;
+  height: fit-content;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(50, 50, 50);
+  opacity: 0.5;
+  border-radius: 0.5rem;
+}
+/* ----  code editor ---- */
+
+
+/* button */
+.code-highlighter__button {
+  background: rgba(80, 129, 251, 0.08);
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+
+  color: white;
+  font-family: Inter;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+@media screen and (min-width: 880px) {
+  .code-highlighter {
+    align-self: start;
+    grid-column: 1 / 1;
+  }
+}
+
+/* .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  grid-column: 2 / 4;
+} */

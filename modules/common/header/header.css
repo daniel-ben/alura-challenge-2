@@ -55,7 +55,7 @@
   }
 
   .header__close-icon {
-    display: none;
+    display: none !important;
   }
 
   .header__user {

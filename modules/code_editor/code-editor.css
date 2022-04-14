@@ -1,29 +1,15 @@
-.code-editor__main {
+.code-editor {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  grid-column: 2 / 4;
-}
-
 @media screen and (min-width: 880px) {
-  .code-editor__main {
+  .code-editor {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     /* grid-gap: 0 40px; */
     /* align-items: start; */
   }
-
-  .code-highlighter {
-    align-self: start;
-  }
-
 }
