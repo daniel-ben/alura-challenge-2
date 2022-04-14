@@ -43,11 +43,12 @@
 @media screen and (min-width: 880px) {
   .header {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 25% minmax(50%, 752px) 25%;
   }
 
   .header__search-bar {
     width: 100%;
+    margin: 0;
   }
   
   .header__menu-icon {
