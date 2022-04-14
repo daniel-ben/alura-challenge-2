@@ -10,20 +10,17 @@
     <link rel="stylesheet" href="/modules/common/css/main.css">
     <link rel="stylesheet" href="/modules/code_editor/code-editor.css">
     <link rel="stylesheet" href="/modules/code_highlighter/code-highlighter.css">
+    <link rel="stylesheet" href="/modules/code_editor/code-form.css">
+
+    <link rel="stylesheet" href="/modules/common/code-themes/dracula.css">
     <!-- css -->
+    <!-- refactored -->
 
     <!-- still duplicated on different pages -->
     <link rel="stylesheet" href="/modules/user/user.css">
     <link rel="stylesheet" href="/modules/common/header/header.css">
     <link rel="stylesheet" href="/modules/common/menu/menu.css">
     <!-- still duplicated on different pages -->
-    <!-- refactored -->
-
-    <!-- work in progress -->
-    <link rel="stylesheet" href="/app/assets/css/code-themes/dracula.css">
-    <link rel="stylesheet" href="/app/assets/css/project-info.css">
-    <!-- work in progress -->
-    <!-- link to fontawesome license https://fontawesome.com/license/free -->
   </head>
 
   <body spellcheck="false">
@@ -69,7 +66,7 @@
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="/modules/login/">
+        <a class="user menu__user" data-user href="/login.html">
           <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
@@ -91,24 +88,24 @@
       <!-- Code Highlighter -->
 
       <!-- Form -->
-      <form class="project-info">
-        <p class="sidebar-title-typ project-info__sidebar-title">seu projeto</p>
-        <fieldset class="project-info__info">
-          <input type="text" placeholder="Nome do seu projeto" class="body-typ input text-input project-info__title" data-title></input>
-          <textarea placeholder="Descrição do seu projeto" maxlength="200" class="body-typ input text-input project-info__description" data-description></textarea>
+      <form class="code-form">
+        <fieldset class="code-form__your-project">
+          <legend class="sidebar-title-typ code-form__sidebar-title">Your project</legend>
+          <input class="body-typ input code-form__title" data-title type="text" placeholder="Nome do seu projeto"></input>
+          <textarea class="body-typ input code-form__description" data-description placeholder="Descrição do seu projeto" maxlength="200"></textarea>
         </fieldset>
 
-        <p class="sidebar-title-typ project-info__sidebar-title">Personalização</p>
-        <fieldset class="project-info__customization">
-          <select placeholder="Escolha sua linguagem" class="body-typ input select-input project-info__language" data-language required>
-            <option value="Javascript" class="option">Javascript</option>
-            <option value="CSS" class="option">CSS</option>
-            <option value="HTML" class="option">HTML</option>
+        <fieldset class="code-form__customization">
+          <legend class="sidebar-title-typ code-form__sidebar-title">Personalização</legend>
+          <select class="body-typ input code-form__language" data-language required placeholder="Escolha sua linguagem" >
+            <option class="code-form__language__option" value="Javascript" >Javascript</option>
+            <option class="code-form__language__option" value="CSS" >CSS</option>
+            <option class="code-form__language__option" value="HTML" >HTML</option>
           </select>
-          <input type="color" value="#1ed457" class="project-info__color" data-color-picker required></input>
+          <input type="color" value="#1ed457" class="code-form__color" data-color-picker required></input>
         </fieldset>
         
-        <input type="submit" value="Salvar projeto" class="body-typ input button-filled project-info__submit-button"></input>
+        <input type="submit" value="Salvar projeto" class="body-typ input button-filled code-form__submit-button"></input>
       </form>
       <!-- Form -->
 
@@ -117,10 +114,13 @@
     <!-- refactored -->
 
     <!-- render blocking js -->
+    <!-- render blocking js -->
     
     <!-- after first paint -->
     <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
     <script defer src="/modules/user/updateUser.js"></script>
+    <!-- after first paint -->
+    <!-- refactored -->
 
     <!-- work in progress -->
     <script src="../assets/js/changeCodeColor.js"></script>
@@ -133,5 +133,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script type="module" src="../controller/saveCard-controller.js"></script>
     <script type="module" src="../controller/openCard-controller.js"></script>
+    <!-- api -->
+    <!-- work in progress -->
   </body>
 </html>
