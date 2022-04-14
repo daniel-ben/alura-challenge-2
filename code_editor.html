@@ -21,7 +21,6 @@
 
     <!-- work in progress -->
     <link rel="stylesheet" href="/app/assets/css/code-themes/dracula.css">
-    <link rel="stylesheet" href="/app/assets/css/code-highlighter.css">
     <link rel="stylesheet" href="/app/assets/css/project-info.css">
     <!-- work in progress -->
     <!-- link to fontawesome license https://fontawesome.com/license/free -->
@@ -48,7 +47,7 @@
 
 
     <!-- MAIN -->
-    <main class="code-editor__main">
+    <main class="code-editor">
 
       <!-- MENU -->
       <nav class="menu" data-menu>
@@ -85,10 +84,7 @@
             <span></span> <span></span> <span></span>
           </div>
 
-          <div class="code-wrapper code-wrapper-editor" data-code-wrapper>
-            <code class="code-highlighter__code-editor hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
-          </div>
-
+          <code class="code-highlighter__code hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
         </div>
         <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
       </section>

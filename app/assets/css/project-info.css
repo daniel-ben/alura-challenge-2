@@ -2,7 +2,6 @@
   width: 100%;
   max-width: 752px;
   /* when desktop, display changes to grid */
-  grid-column: 2 / 2;
 }
 
 .project-info__language {
@@ -35,14 +34,12 @@
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 880px) {
   .project-info {
-    margin-left: auto;
-    margin-right: 0;
+    padding-left: 1rem;
     max-width: 400px;
-  }
 
-  .project-info__sidebar-title:nth-child(3) {
-    margin-top: 40px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 1;
   }
 }

@@ -8,8 +8,7 @@
 @media screen and (min-width: 880px) {
   .code-editor {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    /* grid-gap: 0 40px; */
-    /* align-items: start; */
+    grid-template-columns: 25% minmax(50%, 752px) 25%;
+    align-items: start;
   }
 }

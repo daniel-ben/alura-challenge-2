@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   width: 100%;
   max-width: 752px;
+  margin: auto;
 }
 
 .code-highlighter__code-container {
   background: #141414;
-  width: auto;
 
   border: 2rem solid #1ed457;
   border-radius: 0.5rem;
@@ -18,6 +19,7 @@
 /* ----  3 dots on top of editor ---- */
 .code-highlighter__dots {
   display: flex;
+  margin-bottom: 1.5rem;
 }
 
 .code-highlighter__dots span {
@@ -41,36 +43,17 @@
 /* ----  3 dots on top of editor ---- */
 
 /* ----  code editor ---- */
-.code-wrapper-editor {
-  margin-top: 1rem;
-  margin-left: 0;
-}
-
 .code-highlighter__code {
-  font-family: Roboto Mono;
-  font-size: 0.7rem;
-  line-height: 0.9rem;
-  white-space: pre-wrap;
-
-  margin-left: -10px;
-  max-height: 195px;
-
-  background-color: transparent;
-}
-
-.code-highlighter__code-editor {
-  color: white;
   font-family: Roboto Mono;
   font-size: 0.9rem;
   line-height: 1.1rem;
-  white-space: pre-wrap;
+  color: white;
 
-  background: transparent;
   width: 100%;
-  height: fit-content;
+  margin-left: -6px;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.5rem;
   background-color: transparent;
 }
@@ -79,36 +62,20 @@
   background-color: rgb(50, 50, 50);
   opacity: 0.5;
   border-radius: 0.5rem;
-}
+} */
 /* ----  code editor ---- */
 
 
 /* button */
 .code-highlighter__button {
-  background: rgba(80, 129, 251, 0.08);
-  border-radius: 0.5rem;
   margin-top: 2rem;
-  padding: 1rem;
-
-  color: white;
-  font-family: Inter;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 
 @media screen and (min-width: 880px) {
   .code-highlighter {
-    align-self: start;
-    grid-column: 1 / 1;
+    margin: 0;
+    grid-column: 2 / 3;
+    justify-content: flex-start;
   }
 }
-
-/* .project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  grid-column: 2 / 4;
-} */
