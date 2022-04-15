@@ -6,13 +6,13 @@
     <title>Code Editor</title>
     <!-- refactored -->
     <!-- css -->
+    <link rel="stylesheet" href="/modules/common/code-themes/dracula.css">
+
     <link rel="stylesheet" href="/modules/common/css/reset.css">
     <link rel="stylesheet" href="/modules/common/css/main.css">
     <link rel="stylesheet" href="/modules/code_editor/code-editor.css">
     <link rel="stylesheet" href="/modules/code_highlighter/code-highlighter.css">
     <link rel="stylesheet" href="/modules/code_editor/code-form.css">
-
-    <link rel="stylesheet" href="/modules/common/code-themes/dracula.css">
     <!-- css -->
     <!-- refactored -->
 
@@ -100,7 +100,7 @@
           <input type="color" value="#1ed457" class="code-form__color" data-color-picker required></input>
         </fieldset>
         
-        <input type="submit" value="Salvar projeto" class="body-typ input button-filled code-form__submit-button"></input>
+        <button class="body-typ button-filled code-form__submit-button" type="submit">Salvar projeto</button>
       </form>
       <!-- Form -->
     </main>
@@ -119,15 +119,16 @@
     <script defer src="/modules/code_editor/changeCodeBorderColor.js"></script>
     
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <script defer src="/modules/code_highlighter/highlightCode.js"></script>
     <!-- after first paint -->
     <!-- refactored -->
 
     <!-- work in progress -->
-    <script src="../assets/js/highlight.js"></script>
 
     <!-- api -->
-    <script type="module" src="../controller/saveCard-controller.js"></script>
-    <script type="module" src="../controller/openCard-controller.js"></script>
+    <!-- <script type="module" src="../controller/saveCard-controller.js"></script> -->
+    <!-- <script type="module" src="../controller/openCard-controller.js"></script> -->
     <!-- api -->
     <!-- work in progress -->
   </body>
