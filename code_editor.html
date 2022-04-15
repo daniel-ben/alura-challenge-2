@@ -55,7 +55,7 @@
           <p class="body-typ menu__text">Editor de código</p>
         </a>
 
-        <a class="menu__link" href="/code_editor.html">
+        <a class="menu__link" href="/community.html">
           <img class="icon menu__icon" src="/public/img/community.svg">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
@@ -81,7 +81,7 @@
             <span></span> <span></span> <span></span>
           </div>
 
-          <code class="code-highlighter__code hljs" contenteditable="true" aria-label="Editor de código" data-content required>Escreva seu código aqui</code>
+          <code class="code-highlighter__code hljs" contenteditable="false" data-code aria-label="Editor de código" required>Escreva seu código aqui</code>
         </div>
         <button class="body-typ button-outlined code-highlighter__button" data-highlighter-button>Visualizar com o highlight</button>
       </section>
@@ -118,12 +118,12 @@
     <!-- after first paint -->
     <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
     <script defer src="/modules/user/updateUser.js"></script>
+    <script defer src="/modules/code_editor/changeCodeColor.js"></script>
+    <script defer src="modules/code_editor/editCode.js"></script>
     <!-- after first paint -->
     <!-- refactored -->
 
     <!-- work in progress -->
-    <script src="../assets/js/changeCodeColor.js"></script>
-    <script src="../assets/js/clearCode.js"></script>
     <script src="../assets/js/highlight.js"></script>
     <script src="../assets/js/unformattedPaste.js"></script>
     <script src="../assets/js/colorScheme.js"></script>
