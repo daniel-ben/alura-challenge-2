@@ -113,18 +113,19 @@
     <!-- after first paint -->
     <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
     <script defer src="/modules/user/updateUser.js"></script>
-    <script defer src="/modules/code_editor/changeCodeColor.js"></script>
+
     <script defer src="modules/code_editor/editCode.js"></script>
+    <script defer src="/modules/code_editor/convertPasteToUnformattedText.js"></script>
+    <script defer src="/modules/code_editor/changeCodeBorderColor.js"></script>
+    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <!-- after first paint -->
     <!-- refactored -->
 
     <!-- work in progress -->
     <script src="../assets/js/highlight.js"></script>
-    <script src="../assets/js/unformattedPaste.js"></script>
-    <script src="../assets/js/colorScheme.js"></script>
 
     <!-- api -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script type="module" src="../controller/saveCard-controller.js"></script>
     <script type="module" src="../controller/openCard-controller.js"></script>
     <!-- api -->
