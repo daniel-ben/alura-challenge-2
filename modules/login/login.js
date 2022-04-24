@@ -1,11 +1,5 @@
-function loginController() {
-  const login_form = document.querySelector("[data-login-form]");
-
-  login_form.addEventListener("submit", onSubmit);
-}
-
-// ##########  Need refactoring ##########
-// Look for the difference between controller, service, util, etc and distribute functions accordingly
+const login_form = document.querySelector("[data-login-form]");
+login_form.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
   event.preventDefault();
@@ -39,5 +33,3 @@ function storeUser(user) {
   };
   sessionStorage.setItem("user", JSON.stringify(currentUser));
 }
-
-loginController();

@@ -1,5 +1,4 @@
-import { newCard } from "../components/Card.js";
-import { clientService } from "../service/client-service.js";
+import { newCard } from "./Card.js";
 
 const cards_section = document.querySelector('[data-cards-section]');
 

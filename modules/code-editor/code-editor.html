@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" href="/modules/common/css/reset.css">
     <link rel="stylesheet" href="/modules/common/css/main.css">
-    <link rel="stylesheet" href="/modules/code_editor/code-editor.css">
-    <link rel="stylesheet" href="/modules/code_highlighter/code-highlighter.css">
-    <link rel="stylesheet" href="/modules/code_editor/code-form.css">
+    <link rel="stylesheet" href="/modules/code-highlighter/code-highlighter.css">
+    <link rel="stylesheet" href="code-editor.css">
+    <link rel="stylesheet" href="code-form.css">
     <!-- css -->
     <!-- refactored -->
 
@@ -35,7 +35,7 @@
         <img class="icon header__close-icon" data-close-icon src="/public/img/x.svg" alt="Close icon">
       </div>
       
-      <a class="user header__user" href="/login.html" data-user>
+      <a class="user header__user" href="/modules/login/login.html" data-user>
         <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
         <p class="body-typ user__name">Login</p>
       </a>
@@ -61,7 +61,7 @@
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="/login.html">
+        <a class="user menu__user" data-user href="/modules/login/login.html">
           <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
@@ -83,7 +83,7 @@
       <!-- Code Highlighter -->
 
       <!-- Form -->
-      <form class="code-form">
+      <form class="code-form" data-form>
         <fieldset class="code-form__your-project">
           <legend class="sidebar-title-typ code-form__sidebar-title">Your project</legend>
           <input class="body-typ input code-form__title" data-title type="text" placeholder="Nome do seu projeto"></input>
@@ -96,6 +96,7 @@
             <option class="code-form__language__option" value="Javascript" >Javascript</option>
             <option class="code-form__language__option" value="CSS" >CSS</option>
             <option class="code-form__language__option" value="HTML" >HTML</option>
+            <option class="code-form__language__option" value="Python" >Python</option>
           </select>
           <input type="color" value="#1ed457" class="code-form__color" data-color-picker required></input>
         </fieldset>
@@ -114,22 +115,23 @@
     <script defer src="/modules/common/header/handleHeaderEvents.js"></script>
     <script defer src="/modules/user/updateUser.js"></script>
 
-    <script defer src="modules/code_editor/editCode.js"></script>
-    <script defer src="/modules/code_editor/convertPasteToUnformattedText.js"></script>
-    <script defer src="/modules/code_editor/changeCodeBorderColor.js"></script>
-    
+    <script defer src="/modules/code-editor/editCode.js"></script>
+    <script defer src="/modules/code-editor/changeCodeBorderColor.js"></script>
+
+    <!-- 3rd party libs -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
-    <script defer src="/modules/code_highlighter/highlightCode.js"></script>
+    <script defer src="/modules/code-highlighter/highlightCode.js"></script>
+    <!-- 3rd party libs -->
+    
+    <!-- api -->
+    <script defer type="module" src="saveCode.js"></script>
+    <!-- api -->
     <!-- after first paint -->
     <!-- refactored -->
 
     <!-- work in progress -->
-
-    <!-- api -->
-    <!-- <script type="module" src="../controller/saveCard-controller.js"></script> -->
-    <!-- <script type="module" src="../controller/openCard-controller.js"></script> -->
-    <!-- api -->
+    <!-- <script defer type="module" src="openCard-controller.js"></script> -->
     <!-- work in progress -->
   </body>
 </html>

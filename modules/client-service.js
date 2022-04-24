@@ -60,25 +60,6 @@ const getCard = (id) => {
 };
 
 // LOCAL STORAGE
-const createCard = (card, user, id) => {
-  const localStorage = window.localStorage;
-  const cards = JSON.parse(localStorage.getItem("cards")) || [];
-  const newCard = {
-    id: id || cards.length,
-    title: card.title,
-    description: card.description,
-    content: card.content,
-    language: card.language,
-    color: card.color,
-    likes: 0,
-    isliked: false,
-    comments: [],
-    username: user.username,
-    photourl: user.photourl
-  };
-  cards[newCard.id] = newCard;
-  localStorage.setItem("cards", JSON.stringify(cards));
-};
 
 const updateCard = (card, id) => {
   const localStorage = window.localStorage;
