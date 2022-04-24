@@ -1,37 +1,7 @@
 const readOnlyToken = "33c9b5a3cba02275c1ee49fc0d79d9";
 
 // READ ONLY
-const getCards = () => { //from db
-  return fetch(
-    'https://graphql.datocms.com/',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        Authorization: `Bearer ${readOnlyToken}`,
-    },
-    body: JSON.stringify({
-      query: 
-      `{
-        allCards {
-          id,
-          title,
-          description,
-          content,
-          language,
-          color { hex },
-          likes,
-          isliked,
-          comments,
-          username,
-          photourl,
-        }
-      }`
-    })
-  }).then((response) => response.json())
-  .then((response) => (response.data.allCards));
-}
+
 
 const getCard = (id) => { 
   return fetch(
@@ -71,6 +41,5 @@ const updateCard = (card, id) => {
 export const clientService = {
   getCards,
   getCard,
-  createCard,
   updateCard,
 };

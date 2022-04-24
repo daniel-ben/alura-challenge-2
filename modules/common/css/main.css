@@ -134,6 +134,21 @@ body {
   margin: 0 auto;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 880px) {
+  .content {
+    display: grid;
+    grid-template-columns: 25% minmax(50%, 752px) 25%;
+    align-items: start;
+  }
+}
+
 @media screen and (min-width: 1320px) {
   body {
     padding: 2rem;

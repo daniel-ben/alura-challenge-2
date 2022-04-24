@@ -1,55 +1,48 @@
-const newCard = (card) => {
+function newCard(code) {
   const newCard = document.createElement('a');
-  newCard.href = `../telas/editor.html?id=${card.id}`;
+  newCard.href = `/modules/code-editor/code-editor.html?id=${code.id}`;
   newCard.classList.add('card');
-  newCard.dataset.cardId = card.id;
-  newCard.innerHTML = Card(card);
+  newCard.dataset.cardId = code.id;
+  newCard.innerHTML = addCodeCardInnerHTML(code);
 
-  const code_wrapper = newCard.querySelector('[data-code-wrapper]');
-  const code = code_wrapper.querySelector('[data-code-highlighter]');
-  code.textContent = card.content;
-  hljs.highlightElement(code);
+  const codeText = newCard.querySelector('[data-code]');
+  hljs.highlightElement(codeText);
 
   return newCard;
 };
 
-const Card = (card) => {
+function addCodeCardInnerHTML(code) {
   return (
     `
-    <div class="code-highlighter__container code-highlighter__container-community" style="border-color:${card.color.hex}" data-code-container>
+    <div class="code-highlighter__code-container" data-code-container style="border-color:${code.color}" >
       <div class="code-highlighter__dots">
-        <div class="dots dots-community first_dot"></div>
-        <div class="dots dots-community second_dot"></div>
-        <div class="dots dots-community third_dot"></div>
+        <span></span> <span></span> <span></span>
       </div>
-      <div class="code-wrapper" data-code-wrapper>
-        <pre><code class="code-highlighter__code hljs ${card.language}" data-code-highlighter></code></pre>
-      </div>
+      <code class="code-highlighter__code hljs" data-code aria-label="Code editor" required>${code.content}</code>
     </div>
 
     <div class="card-content">
-      <p class="title-typ card-content__title">${card.title}</p>
-      <p class="body-typ card-content__description">${card.description}</p>
+      <p class="title-typ card-content__title">${code.title}</p>
+      <p class="body-typ card-content__description">${code.description}</p>
 
       <div class="card-actions">
         <div class="card-actions__buttons-container">
 
           <div class="card-actions__buttons card-actions__comments">
-            <img src="../assets/img/comment.svg" alt="ícone de comentários" class="card-actions__icon">
-            <span class="body-typ card-actions__numbers">${card.comments.length}</span>
+            <img src="/public/img/comment.svg" alt="comments icon" class="card-actions__icon">
+            <span class="body-typ card-actions__numbers">${code.comments.length}</span>
           </div>
           
           <div class="card-actions__buttons card-actions__likes" data-like-button>
-            <img src=${card.isliked ? "../assets/img/like-active.svg" : "../assets/img/like.svg"} alt="ícone de likes" class="card-actions__icon">
-            <span class="body-typ card-actions__numbers" data-likes-counter>${card.likes}</span>
-
+            <img src=${code.isliked ? "/public/img/like-active.svg" : "/public/img/like.svg"} alt="like icon" class="card-actions__icon">
+            <span class="body-typ card-actions__numbers" data-likes-counter>${code.likes}</span>
           </div>
         
         </div>
         
-        <div class="user card__user">
-          <img src=${card.photourl} alt="Foto do usuário" class="user-photo user-photo-small">
-          <p class="body-typ">${card.username}</p>
+        <div class="user author">
+          <img src=${code.author.photourl} alt="Author photo" class="user-photo author-photo">
+          <p class="body-typ">${code.author.username}</p>
         </div>
       </div>
     </div>

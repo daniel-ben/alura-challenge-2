@@ -11,7 +11,7 @@ function makeCodeEditable() {
 }
 
 function clearPlaceholder() {
-  if (code.innerText == 'Escreva seu código aqui') {
+  if (code.innerText == 'Write your code here') {
     code.innerText = '';
   }
 }
