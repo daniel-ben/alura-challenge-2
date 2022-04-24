@@ -68,10 +68,15 @@
 }
 
 /* BUTTONS */
-.button-filled {
-  background: var(--primary-color-400);
+.button {
   font-family: Inter;
   line-height: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;  
+}
+
+.button-filled {
+  background: var(--primary-color-400);
   color: var(--primary-color-800);
 }
 
@@ -89,12 +94,8 @@
 
 .button-outlined {
   background: var(--primary-color-700);
-  font-family: Inter;
-  line-height: 1.5rem;
   text-align: center;
   color: #FFFFFF;
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 
 .button-outlined:hover {
