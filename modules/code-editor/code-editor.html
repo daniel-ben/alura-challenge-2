@@ -38,7 +38,6 @@
     </header>
     <!-- HEADER -->
 
-
     <!-- MAIN -->
     <main class="content">
 
@@ -98,36 +97,23 @@
         </fieldset>
         
         <button class="body-typ button button-filled code-form__submit-button" type="submit">Save project</button>
+        <button class="body-typ button button-outlined">Delete project</button>
       </form>
       <!-- Form -->
+
     </main>
     
-    <!-- refactored -->
-
-    <!-- render blocking js -->
-    <!-- render blocking js -->
-    
-    <!-- after first paint -->
     <script src="/modules/common/header/handleHeaderEvents.js"></script>
     <script src="/modules/user/updateUser.js"></script>
+    
+    <script src="makeCodeEditable.js"></script>
+    <script src="fiillForm.js" type="module" ></script>
+    <script src="changeCodeBorderColor.js" type="module" ></script>
+    <script src="saveCode.js" type="module" ></script>
 
-    <script src="/modules/code-editor/editCode.js"></script>
-    <script src="/modules/code-editor/changeCodeBorderColor.js"></script>
-
-    <!-- 3rd party libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
     <script src="/modules/code-highlighter/highlightCode.js"></script>
-    <!-- 3rd party libs -->
-    
-    <!-- api -->
-    <script type="module" src="saveCode.js"></script>
-    <!-- api -->
-    <!-- after first paint -->
-    <!-- refactored -->
 
-    <!-- work in progress -->
-    <!-- <script defer type="module" src="openCard-controller.js"></script> -->
-    <!-- work in progress -->
   </body>
 </html>

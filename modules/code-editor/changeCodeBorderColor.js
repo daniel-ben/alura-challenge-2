@@ -1,7 +1,6 @@
-const colorPicker = document.querySelector('[data-color-picker]');
-const codeContainer = document.querySelector('[data-code-container]');
+document.querySelector('[data-color-picker]').addEventListener('change', changeBorderColor);
 
-colorPicker.addEventListener('change', () => {
-  const color = colorPicker.value;
-  codeContainer.style.borderColor = color;
-})
+export function changeBorderColor() {
+  const color = document.querySelector('[data-color-picker]').value;
+  document.querySelector('[data-code-container]').style.borderColor = color;
+}

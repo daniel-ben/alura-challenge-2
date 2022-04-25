@@ -1,13 +1,10 @@
 const code = document.querySelector('[data-code]');
-
-code.addEventListener('click', () => {
-  makeCodeEditable();
-  clearPlaceholder();
-  focusOnText();
-})
+code.addEventListener('click', makeCodeEditable)
 
 function makeCodeEditable() {
   code.setAttribute('contenteditable', 'true');
+  clearPlaceholder();
+  focusOnText();
 }
 
 function clearPlaceholder() {
