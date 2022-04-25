@@ -18,7 +18,7 @@ function addCodeCardInnerHTML(code) {
       <div class="code-highlighter__dots">
         <span></span> <span></span> <span></span>
       </div>
-      <code class="code-highlighter__code hljs" data-code aria-label="Code editor" required>${code.content}</code>
+      <code class="code-highlighter__code hljs" data-code aria-label="Code editor" required>${code.code}</code>
     </div>
 
     <div class="card-content">
