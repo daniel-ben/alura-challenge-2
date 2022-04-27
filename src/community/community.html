@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="/modules/common/code-themes/dracula.css">
-    <link rel="stylesheet" href="/modules/common/css/reset.css">
-    <link rel="stylesheet" href="/modules/common/css/main.css">
-    <!-- css -->
-    
+    <link rel="stylesheet" href="/src/code-editor/highlight/code-themes/dracula.css">
+    <link rel="stylesheet" href="/src/common/css/reset.css">
+    <link rel="stylesheet" href="/src/common/css/main.css">
+
     <!-- still duplicated on different pages -->
-    <link rel="stylesheet" href="/modules/code-highlighter/code-highlighter.css">
-    <link rel="stylesheet" href="/modules/user/user.css">
-    <link rel="stylesheet" href="/modules/common/header/header.css">
-    <link rel="stylesheet" href="/modules/common/menu/menu.css">
+    <link rel="stylesheet" href="/src/code-editor/highlight/code-highlighter.css">
+    <link rel="stylesheet" href="/src/login/user/user.css">
+    <link rel="stylesheet" href="/src/common/header/header.css">
+    <link rel="stylesheet" href="/src/common/menu/menu.css">
     <!-- still duplicated on different pages -->
 
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="./CodeCards/card.css">
   </head>
 
   <body>
@@ -33,7 +31,7 @@
         <img class="icon header__close-icon" data-close-icon src="/public/img/x.svg" alt="Close icon">
       </div>
       
-      <a class="user header__user" href="/modules/login/login.html" data-user>
+      <a class="user header__user" href="/src/login/login.html" data-user>
         <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
         <p class="body-typ user__name">Login</p>
       </a>
@@ -46,18 +44,18 @@
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
 
-        <a class="menu__link" href="/modules/code-editor/code-editor.html">
+        <a class="menu__link" href="/src/code-editor/code-editor.html">
           <img class="icon menu__icon" src="/public/img/code.svg">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
 
-        <a class="menu__link menu__link--active" href="/modules/community/community.html">
+        <a class="menu__link menu__link--active" href="/src/community/community.html">
           <img class="icon menu__icon" src="/public/img/community.svg">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="/modules/login/login.html">
+        <a class="user menu__user" data-user href="/src/login/login.html">
           <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
@@ -67,10 +65,10 @@
       <section class="code-cards-section" data-code-cards-section></section>
     </main>
     
-    <script src="/modules/common/header/handleHeaderEvents.js"></script>
-    <script src="/modules/user/updateUser.js"></script>
+    <script src="/src/common/header/handleHeaderEvents.js"></script>
+    <script src="/src/login/user/updateUser.js"></script>
+    <script type="module" src="./CodeCards/populate.js"></script>
+    <script type="module" src="./CodeCards/showCodes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-    <script type="module" src="populate.js"></script>
-    <script type="module" src="showCodes.js"></script>
   </body>
 </html>

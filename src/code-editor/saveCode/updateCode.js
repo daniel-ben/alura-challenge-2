@@ -1,5 +1,4 @@
-import { getAllSavedCodes } from "./getAllSavedCodes.js";
-import { getCodeById } from "./getCodeById.js";
+import { getAllSavedCodes, getCodeById } from "../services.js";
 
 export function updateCode(id, formData) {
   let codeData = getCodeById(id);

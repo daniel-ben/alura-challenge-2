@@ -1,6 +1,6 @@
 function newCard(code) {
   const newCard = document.createElement('a');
-  newCard.href = `/modules/code-editor/code-editor.html?id=${code.id}`;
+  newCard.href = `/src/code-editor/code-editor.html?id=${code.id}`;
   newCard.classList.add('card');
   newCard.dataset.cardId = code.id;
   newCard.innerHTML = addCodeCardInnerHTML(code);

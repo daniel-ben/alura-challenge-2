@@ -13,7 +13,5 @@ Refactoring code with screaming architecture and clean code by Uncle Bob
 - wrong font
 - find a way to reuse header on multiple pages
     - https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
-- organize api files
-- remove addListeners from controllers
-    - saveCode.js
 - add delete code option
+- figuring out scream architecture

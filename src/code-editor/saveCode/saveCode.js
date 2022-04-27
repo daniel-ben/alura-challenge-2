@@ -1,5 +1,6 @@
-import { getPageId } from "../utils/index.js";
-import { createNewCode, updateCode } from "../services/codeEditor-services.js";
+import { getPageId } from "../utils.js";
+import { createNewCode } from "./createNewCode.js";
+import { updateCode } from "./updateCode.js";
 
 const form = document.querySelector("[data-form]");
 form.addEventListener("submit", saveCode);
