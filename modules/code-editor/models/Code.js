@@ -1,17 +1,17 @@
 export default class Code {
-  constructor(title, description, code, language, color, user) {
+  constructor(formData) {
     this.id = this.createNewId();
-    this.title = title;
-    this.description = description;
-    this.code = code;
-    this.language = language;
-    this.color = color;
+    this.title = formData.title;
+    this.description = formData.description;
+    this.code = formData.code;
+    this.language = formData.language;
+    this.color = formData.color;
     this.likes = 0;
     this.isliked = false;
     this.comments = [];
     this.author = {
-      username: user.username,
-      photourl: user.photourl,
+      username: formData.author.username,
+      photourl: formData.author.photourl,
     };
   }
 

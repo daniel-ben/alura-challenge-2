@@ -1,10 +1,9 @@
-import { changeBorderColor } from "./changeCodeBorderColor.js";
-import { getSavedCode } from "./getSavedCode.js";
-import { getPageId } from "./getPageId.js";
+import { changeBorderColor, getPageId } from "./utils/index.js";
+import { getCodeById } from "./services/codeEditor-services.js";
 
 function fillForm() {
   const id = getPageId();
-  const codeData = getSavedCode(id);
+  const codeData = getCodeById(id);
   if (!codeData) return;
   
   document.querySelector("[data-code]").innerText = codeData.code;

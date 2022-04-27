@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "gitignore": "^0.7.0"
-  }
+  },
+  "name": "code-highlighter",
+  "description": "#alurachallengefront2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-ben/code-highlighter.js.git"
+  },
+  "author": "daniel-ben",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-ben/code-highlighter.js/issues"
+  },
+  "homepage": "https://github.com/daniel-ben/code-highlighter.js#readme"
 }
