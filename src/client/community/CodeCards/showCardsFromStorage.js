@@ -1,6 +1,6 @@
 import { newCard } from "./Card.js";
 
-async function showCodes() {
+async function showCardsFromStorage() {
   const cards_section = document.querySelector('[data-code-cards-section]');
   const codes = await getCodes(); 
 
@@ -9,9 +9,10 @@ async function showCodes() {
   });
 }
 
+// call from api and remove this from here
 function getCodes() {
   const codes = JSON.parse(window.localStorage.getItem("codes")) || {};
   return codes;
 }
 
-showCodes();
+showCardsFromStorage();

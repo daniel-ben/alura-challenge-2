@@ -1,5 +1,5 @@
-import { getPageId } from "../utils.js";
-import { getAllSavedCodes } from "../services.js";
+import { getPageId } from "../client/code-editor/utils.js";
+import { getAllSavedCodes } from "../client/code-editor/services.js";
 
 const deleteButton = document.querySelector("[data-delete-button]");
 deleteButton.addEventListener("click", deleteCode);
@@ -15,5 +15,5 @@ function deleteCode(event) {
 
   window.localStorage.setItem("codes", JSON.stringify(codes));
   alert("Code deleted");
-    window.location.href = "/src/code-editor/code-editor.html";
+    window.location.href = "/src/client/code-editor/code-editor.html";
 }

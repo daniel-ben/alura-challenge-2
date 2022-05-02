@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Editor</title>
-    <link rel="stylesheet" href="/src/code-editor/highlight/code-themes/dracula.css">
-    <link rel="stylesheet" href="/src/common/css/reset.css">
-    <link rel="stylesheet" href="/src/common/css/main.css">
+    <link rel="stylesheet" href="/src/client/code-editor/highlight/code-themes/dracula.css">
+    <link rel="stylesheet" href="/src/client/reset.css">
+    <link rel="stylesheet" href="/src/client/main.css">
     <link rel="stylesheet" href="code-form.css">
     
     <!-- still duplicated on different pages -->
-    <link rel="stylesheet" href="/src/login/user/user.css">
-    <link rel="stylesheet" href="/src/common/header/header.css">
-    <link rel="stylesheet" href="/src/common/menu/menu.css">
-    <link rel="stylesheet" href="/src/code-editor/highlight/code-highlighter.css">
+    <link rel="stylesheet" href="/src/client/login/user/user.css">
+    <link rel="stylesheet" href="/src/client/common/header/header.css">
+    <link rel="stylesheet" href="/src/client/common/menu/menu.css">
+    <link rel="stylesheet" href="/src/client/code-editor/highlight/code-highlighter.css">
     <!-- still duplicated on different pages -->
   </head>
 
   <body spellcheck="false">
     <!-- HEADER -->
     <header class="header">
-      <img class="header__logo" src="/public/img/logo.svg" alt="Alura Dev logo"  data-logo>
+      <img class="header__logo" src="/src/client/public/img/logo.svg" alt="Alura Dev logo"  data-logo>
       <input class="body-typ input header__search-bar" data-search-bar type="text" placeholder="Search for something"></input>
       
       <div class="header__icons">
-        <img class="icon header__search-icon" data-search-icon src="/public/img/search-solid.svg" alt="Search icon">
-        <img class="icon header__menu-icon" data-menu-icon src="/public/img/bars-solid.svg" alt="Menu icon">
-        <img class="icon header__close-icon" data-close-icon src="/public/img/x.svg" alt="Close icon">
+        <img class="icon header__search-icon" data-search-icon src="/src/client/public/img/search-solid.svg" alt="Search icon">
+        <img class="icon header__menu-icon" data-menu-icon src="/src/client/public/img/bars-solid.svg" alt="Menu icon">
+        <img class="icon header__close-icon" data-close-icon src="/src/client/public/img/x.svg" alt="Close icon">
       </div>
       
-      <a class="user header__user" href="/src/login/login.html" data-user>
-        <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
+      <a class="user header__user" href="/src/client/login/login.html" data-user>
+        <img class="user__photo" src="/src/client/public/img/default-user-image.svg" alt="User photo">
         <p class="body-typ user__name">Login</p>
       </a>
     </header>
@@ -43,19 +43,19 @@
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
 
-        <a class="menu__link menu__link--active" href="/src/code-editor/code-editor.html">
-          <img class="icon menu__icon" src="/public/img/code.svg">
+        <a class="menu__link menu__link--active" href="/src/client/code-editor/code-editor.html">
+          <img class="icon menu__icon" src="/src/client/public/img/code.svg">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
 
-        <a class="menu__link" href="/src/community/community.html">
-          <img class="icon menu__icon" src="/public/img/community.svg">
+        <a class="menu__link" href="/src/client/community/community.html">
+          <img class="icon menu__icon" src="/src/client/public/img/community.svg">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="/src/login/login.html">
-          <img class="user__photo" src="/public/img/default-user-image.svg" alt="User photo">
+        <a class="user menu__user" data-user href="/src/client/login/login.html">
+          <img class="user__photo" src="/src/client/public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
       </nav>
@@ -98,22 +98,22 @@
         <button class="body-typ button button-outlined" type=button"" data-delete-button>Delete project</button>
       </form>
       <!-- Form -->
-
+      
     </main>
     
-    <script src="/src/common/header/handleHeaderEvents.js"></script>
-    <script src="/src/login/user/updateUser.js"></script>
+    <script src="/src/client/common/header/handleHeaderEvents.js"></script>
+    <script src="/src/client/login/user/updateUser.js"></script>
     
     <script src="./editCode/makeCodeEditable.js"></script>
-    <script src="./editCode/fillForm.js" type="module" ></script>
     <script src="./editCode/changeCodeBorderColor.js" type="module" ></script>
-
-    <script src="./saveCode/saveCode.js" type="module" ></script>
-    <script src="./deleteCode/deleteCode.js" type="module"></script>
+    
+    <!-- <script src="./editCode/fillForm.js" type="module" ></script> -->
+    <!-- <script src="./saveCode/saveCode.js" type="module" ></script>
+    <script src="./deleteCode/deleteCode.js" type="module"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
-    <script src="/src/code-editor/highlight/highlightCode.js"></script>
+    <script src="/src/client/code-editor/highlight/highlightCode.js"></script>
 
   </body>
 </html>

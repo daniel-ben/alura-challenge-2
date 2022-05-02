@@ -1,5 +1,5 @@
-import Code from "../Code.js"
-import { getAllSavedCodes } from "../services.js";
+import Code from "../src/code-editor/Code.js"
+import { getAllSavedCodes } from "../src/code-editor/services.js";
 
 export function createNewCode(formData) {
   if (!window.localStorage.codes) window.localStorage.setItem("codes", "{}");
