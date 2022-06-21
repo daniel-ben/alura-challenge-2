@@ -1,7 +1,4 @@
-function populateCommunity() {
-  if (window.localStorage.codes) return;
-
-  const codes = {
+export const mockDB = {
     0: {
       author: {
         username: "Daniel Ben",
@@ -30,11 +27,6 @@ function populateCommunity() {
       isliked: false,
       language: "Python",
       likes: 0,
-      title: "Euclide's algorithm .py",
+      title: "Euclide's algorithm.py",
     },
   };
-
-  window.localStorage.codes = JSON.stringify(codes);
-}
-
-populateCommunity();

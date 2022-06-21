@@ -1,6 +1,6 @@
 import { changeBorderColor } from "./changeCodeBorderColor.js";
-import { getPageId } from "../utils.js";
-import { getCodeById } from "../services.js";
+import { getPageId } from "/src/utils/getPageId.js";
+import { getCodeById } from "/api/controller/codesController.js";
 
 function fillForm() {
   const id = getPageId();

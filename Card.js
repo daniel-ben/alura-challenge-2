@@ -1,6 +1,6 @@
 function newCard(code) {
   const newCard = document.createElement('a');
-  newCard.href = `/src/code-editor/code-editor.html?id=${code.id}`;
+  newCard.href = `/src/pages/code-editor.html?id=${code.id}`;
   newCard.classList.add('card');
   newCard.dataset.cardId = code.id;
   newCard.innerHTML = addCodeCardInnerHTML(code);
@@ -11,7 +11,6 @@ function newCard(code) {
   return newCard;
 };
 
-// i should move it to an html file and import it
 function addCodeCardInnerHTML(code) {
   return (
     `
@@ -30,12 +29,12 @@ function addCodeCardInnerHTML(code) {
         <div class="card-actions__buttons-container">
 
           <div class="card-actions__buttons card-actions__comments">
-            <img src="/src/client/public/img/comment.svg" alt="comments icon" class="card-actions__icon">
+            <img src="/src/public/img/comment.svg" alt="comments icon" class="card-actions__icon">
             <span class="body-typ card-actions__numbers">${code.comments.length}</span>
           </div>
           
           <div class="card-actions__buttons card-actions__likes" data-like-button>
-            <img src=${code.isliked ? "/src/client/public/img/like-active.svg" : "/src/client/public/img/like.svg"} alt="like icon" class="card-actions__icon">
+            <img src=${code.isliked ? "/src/public/img/like-active.svg" : "/src/public/img/like.svg"} alt="like icon" class="card-actions__icon">
             <span class="body-typ card-actions__numbers" data-likes-counter>${code.likes}</span>
           </div>
         
