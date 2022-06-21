@@ -19,3 +19,16 @@ function populate() {
   window.localStorage.setItem("codes", JSON.stringify(mockDB));
   return mockDB;
 }
+
+// does the samething as create. It's here just as an hypothetical update
+export function update(code) {
+  let codes = JSON.parse(window.localStorage.getItem("codes"));
+  codes[code.id] = code;
+  window.localStorage.setItem("codes", JSON.stringify(codes));
+}
+
+export function create(code) {
+  let codes = JSON.parse(window.localStorage.getItem("codes"));
+  codes[code.id] = code;
+  window.localStorage.setItem("codes", JSON.stringify(codes));
+}
