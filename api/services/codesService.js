@@ -7,17 +7,7 @@ export function get(id) {
 
 export function getAll() {
   let codes = JSON.parse(localStorage.getItem("codes"));
-
-  if (!codes) {
-    codes = populate();
-  }
-
   return codes;
-}
-
-function populate() {
-  window.localStorage.setItem("codes", JSON.stringify(mockDB));
-  return mockDB;
 }
 
 // does the samething as create. It's here just as an hypothetical update
@@ -30,5 +20,11 @@ export function update(code) {
 export function create(code) {
   let codes = JSON.parse(window.localStorage.getItem("codes"));
   codes[code.id] = code;
+  window.localStorage.setItem("codes", JSON.stringify(codes));
+}
+
+export function deleteCode(id) {
+  let codes = JSON.parse(window.localStorage.getItem("codes"));
+  delete codes[id];
   window.localStorage.setItem("codes", JSON.stringify(codes));
 }

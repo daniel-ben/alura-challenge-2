@@ -1,4 +1,4 @@
-import { get, getAll, update, create } from "/api/services/codesService.js";
+import { get, getAll, update, create, deleteCode } from "/api/services/codesService.js";
 import Code from "/api/models/Code.js";
 import { getPageId } from "/src/utils/getPageId.js";
 
@@ -12,7 +12,7 @@ export function getAllCodes() {
   return codes;
 }
 
-export async function saveCode(formData) {
+export function saveCode(formData) {
   const id = getPageId();
 
   if (id) {
@@ -28,4 +28,10 @@ export async function saveCode(formData) {
     alert("Code saved");
     window.location.href = "/src/pages/community.html";
   }
+}
+
+export function deleteCodeById(id) {
+  deleteCode(id);
+  alert("Code deleted");
+  window.location.href = "/src/pages/code-editor.html";
 }
