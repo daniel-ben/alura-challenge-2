@@ -6,12 +6,3 @@ Website created during a front-end code challenge called Alura Challenge. The ch
 
 ## Deployed at
 [Editor de código](https://daniel-ben.github.io/code-highlighter.js/)
-
-## Currently working on
-Refactoring code with screaming architecture and clean code by Uncle Bob
-
-- wrong font
-- find a way to reuse header on multiple pages
-    - https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
-- figuring out scream architecture and apis
-- organize Card.js
