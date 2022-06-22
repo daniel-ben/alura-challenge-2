@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
 
-    <link rel="stylesheet" href="/src/styles/themes/dracula.css">
-    <link rel="stylesheet" href="/src/styles/reset.css">
-    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/themes/dracula.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/main.css">
 
     <!-- still duplicated on different pages -->
-    <link rel="stylesheet" href="/src/styles/code-highlighter.css">
-    <link rel="stylesheet" href="/src/styles/user.css">
-    <link rel="stylesheet" href="/src/styles/header.css">
-    <link rel="stylesheet" href="/src/styles/menu.css">
+    <link rel="stylesheet" href="src/styles/code-highlighter.css">
+    <link rel="stylesheet" href="src/styles/user.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/menu.css">
     <!-- still duplicated on different pages -->
 
-    <link rel="stylesheet" href="/src/styles/card.css">
+    <link rel="stylesheet" href="src/styles/card.css">
   </head>
 
   <body>
     <!-- HEADER -->
     <header class="header">
-      <img class="header__logo" src="/src/public/img/logo.svg" alt="Alura Dev logo"  data-logo>
+      <img class="header__logo" src="src/public/img/logo.svg" alt="Alura Dev logo"  data-logo>
       <input class="body-typ input header__search-bar" data-search-bar type="text" placeholder="Search for something"></input>
       
       <div class="header__icons">
-        <img class="icon header__search-icon" data-search-icon src="/src/public/img/search-solid.svg" alt="Search icon">
-        <img class="icon header__menu-icon" data-menu-icon src="/src/public/img/bars-solid.svg" alt="Menu icon">
-        <img class="icon header__close-icon" data-close-icon src="/src/public/img/x.svg" alt="Close icon">
+        <img class="icon header__search-icon" data-search-icon src="src/public/img/search-solid.svg" alt="Search icon">
+        <img class="icon header__menu-icon" data-menu-icon src="src/public/img/bars-solid.svg" alt="Menu icon">
+        <img class="icon header__close-icon" data-close-icon src="src/public/img/x.svg" alt="Close icon">
       </div>
       
-      <a class="user header__user" href="/src/pages/login.html" data-user>
-        <img class="user__photo" src="/src/public/img/default-user-image.svg" alt="User photo">
+      <a class="user header__user" href="src/pages/login.html" data-user>
+        <img class="user__photo" src="src/public/img/default-user-image.svg" alt="User photo">
         <p class="body-typ user__name">Login</p>
       </a>
     </header>
@@ -44,19 +44,19 @@
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
 
-        <a class="menu__link" href="/src/pages/code-editor.html">
-          <img class="icon menu__icon" src="/src/public/img/code.svg">
+        <a class="menu__link" href="src/pages/code-editor.html">
+          <img class="icon menu__icon" src="src/public/img/code.svg">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
 
-        <a class="menu__link menu__link--active" href="/src/pages/community.html">
-          <img class="icon menu__icon" src="/src/public/img/community.svg">
+        <a class="menu__link menu__link--active" href="src/pages/community.html">
+          <img class="icon menu__icon" src="src/public/img/community.svg">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="/src/pages/login.html">
-          <img class="user__photo" src="/src/public/img/default-user-image.svg" alt="User photo">
+        <a class="user menu__user" data-user href="src/pages/login.html">
+          <img class="user__photo" src="src/public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
       </nav>
@@ -65,9 +65,9 @@
       <section class="code-cards-section" data-code-cards-section></section>
     </main>
     
-    <script src="/src/utils/handleHeaderEvents.js"></script>
-    <script src="/src/utils/updateUser.js"></script>
-    <script type="module" src="/src/utils/displayCodes.js"></script>
+    <script src="src/utils/handleHeaderEvents.js"></script>
+    <script src="src/utils/updateUser.js"></script>
+    <script type="module" src="src/utils/displayCodes.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </body>
