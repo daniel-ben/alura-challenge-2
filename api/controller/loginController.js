@@ -5,7 +5,7 @@ export async function login(username) {
   const validatedUser = await validateUser(user);
   if (validatedUser) {
     storeUser(validatedUser);
-    window.location.href = "/";
+    window.location.href = "../../src/pages/code-editor.html";
   }
 }
 
