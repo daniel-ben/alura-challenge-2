@@ -1,4 +1,4 @@
-import { saveCode } from "/api/controller/codesController.js";
+import { saveCode } from "api/controller/codesController.js";
 
 const saveButton = document.querySelector('[data-save-button]');
 
