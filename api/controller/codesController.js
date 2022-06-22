@@ -1,6 +1,6 @@
 import { get, getAll, update, create, deleteCode } from "../services/codesService.js";
 import Code from "../models/Code.js";
-import { getPageId } from "../..../../src/utils/getPageId.js";
+import { getPageId } from "../../src/utils/getPageId.js";
 
 export function getCodeById(id) {
     const codeData = get(id);
