@@ -1,5 +1,5 @@
-import { deleteCodeById } from '/api/controller/codesController.js';
-import { getPageId } from '/src/utils/getPageId.js';
+import { deleteCodeById } from '../../api/controller/codesController.js';
+import { getPageId } from './getPageId.js';
 
 const deleteButton = document.querySelector('[data-delete-button]');
 
