@@ -1,4 +1,4 @@
-import { mockDB } from "/api/infra/mockDB.js";
+import { mockDB } from "../infra/mockDB.js";
 
 export function get(id) {
   const codeData = JSON.parse(window.localStorage.getItem("codes"))[id];

@@ -1,4 +1,4 @@
-import { getGitUser, storeUser} from '/api/services/loginService.js';
+import { getGitUser, storeUser} from '../services/loginService.js';
 
 export async function login(username) {
   const user = await getGitUser(username)
