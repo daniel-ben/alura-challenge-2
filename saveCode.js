@@ -1,5 +1,3 @@
-import { saveCode } from "../../api/controller/codesController.js";
-
 const saveButton = document.querySelector('[data-save-button]');
 
 saveButton.addEventListener('click', save);
@@ -20,6 +18,4 @@ function save(event) {
           photourl: author.photourl,
         }
     }
-
-    saveCode(formData);
 }

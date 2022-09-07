@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
 
-    <link rel="stylesheet" href="../styles/themes/dracula.css">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../lib/themes/dracula.css">
+    <link rel="stylesheet" href="../layout/styles/reset.css">
+    <link rel="stylesheet" href="../layout/styles/main.css">
+    <link rel="stylesheet" href="../layout/header/header.css">
+    <!-- !!!!!!! -->
+    <link rel="stylesheet" href="../layout/code-highlighter/code-highlighter.css">
+    <link rel="stylesheet" href="./card.css">
 
-    <!-- still duplicated on different pages -->
-    <link rel="stylesheet" href="../styles/code-highlighter.css">
-    <link rel="stylesheet" href="../styles/user.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/menu.css">
-    <!-- still duplicated on different pages -->
+    <link rel="stylesheet" href="../layout/menu/menu.css">
+    <link rel="stylesheet" href="../layout/styles/user.css">
 
-    <link rel="stylesheet" href="../styles/card.css">
   </head>
 
   <body>
@@ -31,7 +30,7 @@
         <img class="icon header__close-icon" data-close-icon src="../public/img/x.svg" alt="Close icon">
       </div>
       
-      <a class="user header__user" href="../pages/login.html" data-user>
+      <a class="user header__user" href="../login/login.html" data-user>
         <img class="user__photo" src="../public/img/default-user-image.svg" alt="User photo">
         <p class="body-typ user__name">Login</p>
       </a>
@@ -44,18 +43,18 @@
       <nav class="menu" data-menu>
         <p class="sidebar-title-typ menu__sidebar-title">menu</p>
 
-        <a class="menu__link" href="../pages/code-editor.html">
+        <a class="menu__link" href="../code-editor/code-editor.html">
           <img class="icon menu__icon" src="../public/img/code.svg">
           <p class="body-typ menu__text">Editor de código</p>
         </a>
 
-        <a class="menu__link menu__link--active" href="../pages/community.html">
+        <a class="menu__link menu__link--active" href="../community/community.html">
           <img class="icon menu__icon" src="../public/img/community.svg">
           <p class="body-typ menu__text">Comunidade</p>
         </a>
 
         <span class="menu__separator"></span>
-        <a class="user menu__user" data-user href="../pages/login.html">
+        <a class="user menu__user" data-user href="../login/login.html">
           <img class="user__photo" src="../public/img/default-user-image.svg" alt="User photo">
           <p class="body-typ user__name">Login</p>
         </a>
@@ -65,9 +64,10 @@
       <section class="code-cards-section" data-code-cards-section></section>
     </main>
     
-    <script src="../utils/handleHeaderEvents.js"></script>
-    <script src="../utils/updateUser.js"></script>
+    <script src="../layout/header/handleHeaderEvents.js"></script>
+
     <script type="module" src="../utils/displayCodes.js"></script>
+    <script src="../utils/updateUser.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   </body>

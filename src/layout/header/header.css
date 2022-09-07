@@ -26,7 +26,7 @@
   display: none;
 }
 
-.header__user {
+.header .header__user {
   display: none;
 }
 
@@ -56,10 +56,10 @@
   }
 
   .header__close-icon {
-    display: none !important;
+    display: none;
   }
 
-  .header__user {
+  .header .header__user {
     display: flex;
   }
 }

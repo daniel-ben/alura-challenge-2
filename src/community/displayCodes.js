@@ -1,4 +1,4 @@
-import { newCard } from "./Card.js";
+import { newCard } from "../../Card.js";
 import { getAllCodes } from "../../api/controller/codesController.js";
 
 async function displayCodes() {
