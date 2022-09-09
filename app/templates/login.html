@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../layout/styles/reset.css" />
-    <link rel="stylesheet" href="../layout/styles/main.css" />
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="../static/template/reset.css" />
+    <link rel="stylesheet" href="../static/template/main.css" />
+    <link rel="stylesheet" href="../static/login/login.css" />
   </head>
 
   <body class="login__body" spellcheck="false">
-    <form class="login__form" action="" data-login-form>
+    <form class="login__form" data-login-form>
       <h1 class="sidebar-title-typ login__title">Login</h1>
       <input
+        id="login_form"
         class="body-typ input login__input"
         data-login-username
+        name="username"
         type="text"
         placeholder="Git username"
         required
       />
       <button class="body-typ input login__button" type="submit">Entrar</button>
+      <a class="logout" data-logout href="/logout">Logout</a>
     </form>
-
-    <script type="module" src="./login.js"></script>
   </body>
+
+  <script src="../static/login/login.js"></script>
 </html>

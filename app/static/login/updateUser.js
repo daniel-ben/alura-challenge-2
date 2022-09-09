@@ -9,7 +9,7 @@ function updateUser() {
 
 function updateUserPicutreAndName(userData, userContainer) {
   if (userData) {
-    userContainer.querySelector('img').src = userData.photourl;
+    userContainer.querySelector('img').src = userData.photo_url;
     userContainer.querySelector('p').innerHTML = userData.username;
   }
 }

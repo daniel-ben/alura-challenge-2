@@ -3,11 +3,9 @@ import { getPageId } from "./getPageId.js";
 
 function fillForm() {
   const id = getPageId();
-
   // !!!!!!!!!
   const codeData = false;
   // !!!!!!!!!
-  
   if (!codeData) return;
   
   document.querySelector("[data-code]").innerText = codeData.code;

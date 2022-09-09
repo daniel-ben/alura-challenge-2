@@ -76,6 +76,7 @@
 }
 
 .author-photo {
+  width: 1.5rem;
   border-radius: 50%;
 }
 
@@ -85,7 +86,7 @@
   }
 
   .card {
-    width: calc(48%);
+    width: 48%;
   }
 
   .card-actions {

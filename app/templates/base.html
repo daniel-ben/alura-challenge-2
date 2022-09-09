@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %}</title>
+    <!-- highlighter themes -->
+    <link rel="stylesheet" href="../static/lib/themes/dracula.css">
+    <!-- template styles -->
+    <link rel="stylesheet" href="../static/template/reset.css">
+    <link rel="stylesheet" href="../static/template/main.css">
+    <link rel="stylesheet" href="../static/template/header/header.css">
+    <link rel="stylesheet" href="../static/template/menu/menu.css">
+    <link rel="stylesheet" href="../static/template/user/user.css">
+    <link rel="stylesheet" href="../static/template/code-highlighter/code-highlighter.css">
+    <!-- page styles -->
+    {% block page_style %} {% endblock %}
+  </head>
+
+  <body spellcheck="false">
+    <!-- HEADER -->
+    <header class="header">
+      <img class="header__logo" src="../static/img/logo.svg" alt="Alura Dev logo"  data-logo>
+      <input class="body-typ input header__search-bar" data-search-bar type="text" placeholder="Search for something"></input>
+
+      <div class="header__icons">
+        <img class="icon header__search-icon" data-search-icon src="../static/img/search-solid.svg" alt="Search icon">
+        <img class="icon header__menu-icon" data-menu-icon src="../static/img/bars-solid.svg" alt="Menu icon">
+        <img class="icon header__close-icon" data-close-icon src="../static/img/x.svg" alt="Close icon">
+      </div>
+
+      {% if session['user'] %}
+        <a class="user header__user" href="./login" data-user>
+          <img class="user__photo" src="{{ session['user'].photo_url }}" alt="User photo">
+          <p class="body-typ user__name">{{ session['user'].username }}</p>
+        </a>
+      {% else %}
+        <a class="user header__user" href="./login" data-user>
+          <img class="user__photo" src="../static/img/default-user-image.svg" alt="User photo">
+          <p class="body-typ user__name">Login</p>
+        </a>
+      {% endif %}
+    </header>
+    <!-- HEADER -->
+
+    <!-- MAIN -->
+    <main class="content">
+
+      <!-- MENU -->
+      <nav class="menu" data-menu>
+        <p class="sidebar-title-typ menu__sidebar-title">menu</p>
+
+        <a name="code-editor" class="menu__link" href="./code-editor" data-menu-item>
+          <img class="icon menu__icon" src="../static/img/code.svg">
+          <p class="body-typ menu__text">Code editor</p>
+        </a>
+
+        <a name="community" class="menu__link" href="./community" data-menu-item>
+          <img class="icon menu__icon" src="../static/img/community.svg">
+          <p class="body-typ menu__text">Community</p>
+        </a>
+
+        <span class="menu__separator"></span>
+
+        {% if session['user'] %}
+          <a class="user menu__user" data-user href="./login">
+            <img class="user__photo" src="{{ session['user'].photo_url }}" alt="User photo">
+            <p class="body-typ user__name">{{ session['user'].username }}</p>
+          </a>
+        {% else %}
+          <a class="user menu__user" data-user href="./login">
+            <img class="user__photo" src="../static/img/default-user-image.svg" alt="User photo">
+            <p class="body-typ user__name">Login</p>
+          </a>
+        {% endif %}
+      </nav>
+      <!-- MENU -->
+
+      {% block content %} {% endblock %}
+
+    </main>
+    <!-- template js -->
+    <script src="../static/template/header/handleHeaderEvents.js"></script>
+    <script src="../static/template/menu/updateMenuActiveButton.js"></script>
+    <script src="../static/login/updateUser.js"></script>
+    <!-- page js -->
+    {% block page_js %} {% endblock %}
+    <!-- highlighter js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+  </body>
+</html>

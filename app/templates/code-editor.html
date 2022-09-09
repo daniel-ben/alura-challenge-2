@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} Code Editor {% endblock %}
+
+{% block page_style %} 
+  <link rel="stylesheet" href="../static/code-editor/code-form.css">
+{% endblock %}
+
+{% block content %}
+  <!-- Code Highlighter -->
+  <section class="code-highlighter">
+    <div class="code-highlighter__code-container" data-code-container>
+      <div class="code-highlighter__dots"><span></span> <span></span> <span></span></div>
+      <code class="code-highlighter__code hljs" contenteditable="false" form="code_form" name="code" data-code aria-label="Code editor" required>Write your code here</code>
+    </div>
+    <button class="body-typ button button-outlined code-highlighter__button" data-highlighter-button>Highlight code</button>
+  </section>
+  <!-- Code Highlighter -->
+
+  <!-- Form -->
+  <form id="code_form" class="code-form" data-form action="/create_code" method="post">
+    <fieldset class="code-form__your-project">
+      <legend class="sidebar-title-typ code-form__sidebar-title">Your project</legend>
+      <input class="body-typ input code-form__title" name="title" data-title type="text" placeholder="Project title"></input>
+      <textarea class="body-typ input code-form__description" name="description" data-description placeholder="Project description" maxlength="200"></textarea>
+    </fieldset>
+
+    <fieldset class="code-form__customization">
+      <legend class="sidebar-title-typ code-form__sidebar-title">Personalization</legend>
+      <select class="body-typ input code-form__language" name="language" data-language required placeholder="Escolha sua linguagem" >
+        <option class="code-form__language__option" value="Javascript" >Javascript</option>
+        <option class="code-form__language__option" value="CSS" >CSS</option>
+        <option class="code-form__language__option" value="HTML" >HTML</option>
+        <option class="code-form__language__option" value="Python" >Python</option>
+      </select>
+      <input type="color" value="#1ed457" class="code-form__color" name="color" data-color-picker required></input>
+    </fieldset>
+    
+    {% if session['user'] %}
+    <button class="body-typ button button-filled code-form__submit-button" data-save-button type="submit">Save project</button>
+    <button class="body-typ button button-outlined" type=button"" data-delete-button>Delete project</button>
+    {% else %}
+    <a class="button button-filled" style="text-align: center;" href="/login">Login to save</a>
+    {% endif %}
+  </form>
+  <!-- Form -->
+{% endblock %}
+
+{% block page_js %}
+  <script src="../static/code-editor/makeCodeEditable.js"></script>
+  <script src="../static/code-editor/changeCodeBorderColor.js" type="module" ></script>
+  <script src="../static/code-editor/fillForm.js" type="module" ></script>
+  <script src="../static/lib/highlightCode.js"></script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %} Community {% endblock %}
+
+{% block page_style %} 
+<link rel="stylesheet" href="../static/community/card.css">
+{% endblock %}
+
+{% block content %}
+  <section class="code-cards-section" data-code-cards-section>
+  {% for code in codes %}
+    <div class="card">
+      <div class="code-highlighter__code-container" data-code-container style="border-color:{{ code.color }}" >
+        <div class="code-highlighter__dots"><span></span> <span></span> <span></span></div>
+        <code class="code-highlighter__code hljs" data-code aria-label="Code editor" required>{{ code.code }}</code>
+      </div>
+        
+      <div class="card-content">
+        <p class="title-typ card-content__title">{{code.title}}</p>
+        <p class="body-typ card-content__description">{{code.description}}</p>
+  
+        <div class="card-actions">
+          <div class="card-actions__buttons-container">
+  
+            <div class="card-actions__buttons card-actions__comments">
+              <img src="../static/img/comment.svg" alt="comments icon" class="card-actions__icon">
+              <span class="body-typ card-actions__numbers">0</span>
+            </div>
+            
+            <div class="card-actions__buttons card-actions__likes" data-like-button>
+              <img src="../static/img/like.svg" alt="like icon" class="card-actions__icon">
+              <span class="body-typ card-actions__numbers" data-likes-counter>0</span>
+            </div>
+          
+          </div>
+          
+          <div class="user author">
+            <img src={{ code.photo }} alt="Author photo" class="user-photo author-photo">
+            <p class="body-typ">{{ code.author }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </section>
+{% endblock %}
