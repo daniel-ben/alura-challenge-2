@@ -43,14 +43,29 @@
 /* ----  3 dots on top of editor ---- */
 
 /* ----  code editor ---- */
-.code-highlighter__code {
+.code-highlighter__hidden_code, .code-highlighter__visible_code { 
   font-family: Roboto Mono;
   font-size: 0.9rem;
   line-height: 1.1rem;
-  color: white;
 
-  width: 100%;
   margin-left: -6px;
+}
+
+
+.code-highlighter__hidden_code {
+  width: 100%;
+  color: rgba(0,0,0,0);
+  caret-color: white;
+  white-space: pre-wrap;
+}
+
+.code-highlighter__visible_code {
+  display: block;
+  white-space: pre-wrap;
+  color: white;
+  pointer-events: none;
+
+  position: absolute;
 }
 
 /* ::-webkit-scrollbar {

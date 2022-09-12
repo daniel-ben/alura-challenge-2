@@ -23,6 +23,14 @@
   border-radius: 0.5rem;
 }
 
+.code-form__buttons {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 
 @media screen and (min-width: 425px) {
   .code-form__customization {
@@ -34,12 +42,22 @@
 
 @media screen and (min-width: 880px) {
   .code-form {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 0;
+    grid-column: 2 / 4;
+    max-width: 100%;
+  }
+
+  .code-form__details {
     margin-top: 0;
     padding-left: 1rem;
     max-width: 400px;
 
     grid-column: 3 / 4;
     grid-row: 1 / 1;
+
   }
 
   .code-form__customization {

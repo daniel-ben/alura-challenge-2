@@ -38,7 +38,7 @@ codes = [ code1, code2 ]
 
 
 @app.route('/')
-def starter_page():
+def index():
     return redirect('/code-editor') 
 
 
@@ -59,8 +59,13 @@ def create_code():
     photo = 'https://avatars.githubusercontent.com/u/74229068?v=4'
 
     code = Code(title, description, code, language, color, author, photo)
-    codes.append(code)
-    return redirect('/community')
+    app.logger.info(' -------------------------------')
+    app.logger.info(request.form)
+    app.logger.info(' -------------------------------')
+
+    # codes.append(code)
+    # return redirect('/community')
+    return redirect('/code-editor')
 
 
 @app.route('/community')
