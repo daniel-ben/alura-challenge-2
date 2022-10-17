@@ -7,7 +7,7 @@ try:
     connection = mysql.connector.connect(
         host='127.0.0.1',
         user='root',
-        password='admin'
+        password='Password42-'
     )
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -30,7 +30,7 @@ cursor = connection.cursor()
 # THIS WILL DELETE AN ALREADY EXISTING DATA BASE
 # IF YOU WISH TO RESET PREVIOUS DB, UNCOMMENT FOLLOWING LINES
 
-# cursor.execute("DROP DATABASE IF EXISTS code_highlighter;")
+cursor.execute("DROP DATABASE IF EXISTS code_highlighter;")
 
 ###### WARNING #######
 

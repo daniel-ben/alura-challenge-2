@@ -24,17 +24,8 @@ code1 = Code(
     'https://avatars.githubusercontent.com/u/74229068?v=4'
 )
 
-code2 = Code(
-    'hello python',
-    'Say hello in python',
-    'print("hello world")',
-    'python',
-    '#2c9aef',
-    'Daniel Ben',
-    'https://avatars.githubusercontent.com/u/74229068?v=4'
-)
 
-codes = [ code1, code2 ]
+codes = [ code1 ]
 
 
 @app.route('/')
