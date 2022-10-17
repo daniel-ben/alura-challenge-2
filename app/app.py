@@ -1,33 +1,46 @@
+from contextlib import nullcontext
 from flask import Flask, render_template, redirect, request, session
+from flask_sqlalchemy import SQLAlchemy
 import logging
+logging.basicConfig(level=logging.DEBUG)
 
+# initiate flask
 app = Flask(__name__)
 app.secret_key = 'admin'
 
-class Code:
-    def __init__(self, title, description, code, language, color, author, photo):
-        self.title = title
-        self.description = description
-        self.code = code
-        self.language = language
-        self.color = color
-        self.author = author
-        self.photo = photo
-
-code1 = Code(
-    'Hello world', 
-    'Say hello to the world', 
-    'console.log("hello world")', 
-    'javascript', 
-    '#d7c244', 
-    'Daniel Ben',
-    'https://avatars.githubusercontent.com/u/74229068?v=4'
+# initiate db
+app.config['SQLALCHEMY_DATABASE_URI'] = '{SGBD}://{user}:{password}@{server}/{database}'.format(
+    SGBD = 'mysql+mysqlconnector',
+    user = 'root',
+    password = 'Password42-',
+    server = '127.0.0.1',
+    database = 'code_highlighter'
 )
 
+# connect app to sqlalchemy
+db = SQLAlchemy(app)
 
-codes = [ code1 ]
+# code db model
+class Codes(db.Model):
+    ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(60), nullable=False)
+    descriptor = db.Column(db.String(200), nullable=False)
+    code = db.Column(db.String(1000), nullable=False)
+    language = db.Column(db.String(12), nullable=False)
+    color = db.Column(db.String(7), nullable=False)
+    author_id = db.Column(db.Integer)
+    likes = db.Column(db.Integer)
+
+# user db model
+class Users(db.Model):
+    ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(60), nullable=False)
+    login = db.Column(db.String(30), primary_key=True, nullable=False)
+    photo_url = db.Column(db.String(120), nullable=False)
 
 
+# could have business logic to check if user is logged and choose to send it to login page or editor page
+# not doing that since it's just for show
 @app.route('/')
 def index():
     return redirect('/code-editor') 
@@ -49,7 +62,7 @@ def create_code():
     author = 'Daniel Ben'
     photo = 'https://avatars.githubusercontent.com/u/74229068?v=4'
 
-    code = Code(title, description, code, language, color, author, photo)
+    code = Codes(title, description, code, language, color, author, photo)
     app.logger.info(' -------------------------------')
     app.logger.info(request.form)
     app.logger.info(' -------------------------------')
@@ -61,15 +74,51 @@ def create_code():
 
 @app.route('/community')
 def community():
-    return render_template('community.html', codes=codes)
+    codes = Codes.query.order_by(Codes.ID)
+    authors = getAuthors(codes)
+    return render_template('community.html', codes=codes, authors=authors)
+
+
+def getAuthors(codes):
+    authors = {}
+    for code in codes:
+        user = Users.query.filter_by(ID=code.author_id).first()
+        authors[code.author_id] = {
+            'ID' : user.ID,
+            'name' : user.name,
+            'photo_url' : user.photo_url
+        }
+    return authors
+
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        session['user'] = { 'username': request.form['username'], 'photo_url': request.form['photo_url'] }
+        user = Users.query.filter_by(login=request.form['login']).first()
+        if (user):
+            addUserToSession(user)
+        else:
+            new_user = Users( 
+                name = request.form['name'], 
+                login = request.form['login'], 
+                photo_url = request.form['photo_url'] 
+            )
+            createUser(new_user)
+            addUserToSession(new_user)
+
         return {'status': 200, 'message': 'user logged in'}
     return render_template('login.html')
+
+
+def createUser(new_user):
+    db.session.add(new_user)
+    db.session.commit()
+
+
+def addUserToSession(user):
+    session['user'] = { 'name': user['name'], 'login': user['login'], 'photo_url': user['photo_url'] }
+
 
 @app.route('/logout')
 def logout():

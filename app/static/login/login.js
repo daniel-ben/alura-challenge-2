@@ -28,8 +28,9 @@ async function getUserFromGit() {
 
 function createForm(gitUser) {
     const data = new FormData();
-    data.append("username", gitUser.name)
+    data.append("login", gitUser.login)
     data.append("photo_url", gitUser.avatar_url)
+    data.append("name", gitUser.name)
 
     return data;
 }

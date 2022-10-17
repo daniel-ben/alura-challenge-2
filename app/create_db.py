@@ -41,9 +41,10 @@ TABLES = {}
 TABLES['users'] = (''' 
     CREATE TABLE `users` (
       `ID` smallint NOT NULL AUTO_INCREMENT,
-      `username` varchar(30) NOT NULL,
+      `name` varchar(60) NOT NULL,
+      `login` varchar(30) NOT NULL,
       `photo_url` varchar(120) NOT NULL,
-      PRIMARY KEY (`ID`)
+      PRIMARY KEY (`ID`, `login`)
     ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ''')
 TABLES['codes'] = (''' 
@@ -51,9 +52,9 @@ TABLES['codes'] = ('''
       `ID` smallint NOT NULL AUTO_INCREMENT,
       `title` varchar(60) NOT NULL,
       `descriptor` varchar(200) NOT NULL,
-      `lang` varchar(12) NOT NULL,
+      `language` varchar(12) NOT NULL,
       `color` varchar(7) NOT NULL,
-      `user_code` varchar(1000) NOT NULL,
+      `code` varchar(1000) NOT NULL,
       `author_id` smallint NOT NULL,
       `likes` smallint DEFAULT '0',
       PRIMARY KEY (`ID`),
@@ -79,15 +80,17 @@ for table_name in TABLES:
 insert_in_users = (''' 
     INSERT INTO `users`
         (`ID`,
-        `username`,
+        `name`,
+        `login`,
         `photo_url`)
     VALUES
-        (%s, %s, %s);
+        (%s, %s, %s, %s);
     ''')
 users = [
     (
         1,
-        'Daniel Ben',	
+        'Daniel Ben',
+        'daniel-ben',
         'https://avatars.githubusercontent.com/u/74229068?v=4'
     )
 ]
@@ -106,9 +109,9 @@ insert_in_codes = ('''
     INSERT INTO codes (
         `title`,
         `descriptor`,
-        `lang`,
+        `language`,
         `color`,
-        `user_code`,
+        `code`,
         `author_id`,
         `likes`
     )
