@@ -46,27 +46,46 @@ def index():
     return redirect('/code-editor') 
 
 
-@app.route('/code-editor')
+
+@app.route('/code-editor', methods=['GET', 'POST'])
 def code_editor():
-    return render_template('code-editor.html')
+    if (request.method == 'POST' and isLogged()):
+        createCode(request)
+        return redirect('/community')
+    elif (request.method == 'POST' and not isLogged()):
+        return redirect('/login')
+    else:
+        return render_template('code-editor.html') 
 
 
-@app.route('/create_code', methods=['POST'])
-def create_code():
+
+def createCode(request):
     new_code = Codes(
         title = request.form['title'],
-        description = request.form['description'],
+        descriptor = request.form['description'],
         language = request.form['language'],
         color = request.form['color'],
-        code = 'teste',
-        author_id = 1,
+        code = request.form['code'],
+        author_id = getAuthorId(),
         likes = 0
     )
 
     db.session.add(new_code)
-    db.commit()
+    db.session.commit()
 
-    return redirect('/community')
+
+def getAuthorId():
+    login = session['user']['login']
+    user = Users.query.filter_by(login=login).first()
+    return user.ID
+
+
+def isLogged():
+    if (session['user']): 
+        return True
+    else: 
+        return False
+
 
 
 @app.route('/community')

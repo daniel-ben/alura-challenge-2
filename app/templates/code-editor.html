@@ -8,7 +8,7 @@
 
 {% block content %}
   <!-- Form -->
-  <form id="code_form" class="code-form" data-form action="/create_code" method="post">
+  <form id="code_form" class="code-form" data-form action="/code-editor" method="post">
     <!-- Code Highlighter -->
     <section class="code-highlighter code-form__code-highlighter">
       <div class="code-highlighter__code-container" data-code-container>
@@ -86,7 +86,4 @@
   <script src="../static/code-editor/handleHighlightEvent.js" type="module"></script>
   <script src="../static/code-editor/fillForm.js" type="module" ></script>
   <!-- layout -->
-  <!-- API -->
-  <script src="../static/code-editor/create_code--controller.js"></script>
-  <!-- API -->
 {% endblock %}
