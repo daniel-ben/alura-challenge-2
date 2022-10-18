@@ -53,23 +53,20 @@ def code_editor():
 
 @app.route('/create_code', methods=['POST'])
 def create_code():
-    title = request.form['title']
-    description = request.form['description']
-    language = request.form['language']
-    color = request.form['color']
+    new_code = Codes(
+        title = request.form['title'],
+        description = request.form['description'],
+        language = request.form['language'],
+        color = request.form['color'],
+        code = 'teste',
+        author_id = 1,
+        likes = 0
+    )
 
-    code = 'teste'
-    author = 'Daniel Ben'
-    photo = 'https://avatars.githubusercontent.com/u/74229068?v=4'
+    db.session.add(new_code)
+    db.commit()
 
-    code = Codes(title, description, code, language, color, author, photo)
-    app.logger.info(' -------------------------------')
-    app.logger.info(request.form)
-    app.logger.info(' -------------------------------')
-
-    # codes.append(code)
-    # return redirect('/community')
-    return redirect('/code-editor')
+    return redirect('/community')
 
 
 @app.route('/community')
@@ -117,7 +114,7 @@ def createUser(new_user):
 
 
 def addUserToSession(user):
-    session['user'] = { 'name': user['name'], 'login': user['login'], 'photo_url': user['photo_url'] }
+    session['user'] = { 'name': user.name, 'login': user.login, 'photo_url': user.photo_url }
 
 
 @app.route('/logout')
